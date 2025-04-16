@@ -1,0 +1,29 @@
+/* Imagen de fondo pantalla completa */
+.hero {
+    height: 100vh; /* toda la pantalla */
+    background-image: url('../assets/img/canchapadel1.jpeg'); /* ruta a tu imagen */
+    background-size: cover;
+    background-position: center;
+    position: relative;
+  }
+  
+  /* Capa oscura encima de la imagen */
+  .hero .overlay {
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.4); /* oscuridad suave */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 2rem;
+    text-align: center;
+  }
+  
+  /* Resto del contenido */
+  .contenido {
+    padding: 50px;
+    background-color: #f4f4f4; /* fondo claro para el texto */
+    color: #333;
+  }
+  
