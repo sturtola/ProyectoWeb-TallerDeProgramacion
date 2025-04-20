@@ -12,7 +12,8 @@
 </head>
 
 <body>
-    <section class="container-fluid barraNav">
+  <section class="principal imagen-header">
+    <div class="container-fluid barraNav">
         <nav class="navbar">
             <!-- Checkbox y botón menú hamburguesa -->
             <input type="checkbox" id="menu-toggle" class="menu-toggle">
@@ -47,12 +48,14 @@
             
 
           </nav>
+    </div>
+    </section>
+    <section class="informacion">
     </section>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
 
 </body>
 
-</html>
 
-holaaaaaaaaaa
+</html>
