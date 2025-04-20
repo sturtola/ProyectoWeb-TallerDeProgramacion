@@ -25,10 +25,10 @@
           
             <!-- Menú horizontal (pantallas grandes) -->
             <ul class="nav-list">
-              <li><a href="#">Home</a></li>
-              <li><a href="#">Products</a></li>
-              <li><a href="#">About Us</a></li>
-              <li><a href="#">Contact</a></li>
+              <li><a href="#">Inicio</a></li>
+              <li><a href="#">Productos</a></li>
+              <li><a href="#">Sobre Nosotros</a></li>
+              <li><a href="#">Contacto</a></li>
             </ul>
 
             <a class="navbar-brand" href="#">
@@ -56,6 +56,52 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
 
 </body>
+<section class="about-mini">
+  <div class="about-content">
+    <h2>Nosotros</h2>
+    <p>
+       Auren es una empresa formoseña y correntina con más de 45 años de trayectoria en el mercado.
+       Nacimos con pasión por el deporte, y nuestra primera venta fue una paleta como esta. Hoy seguimos apostando a la calidad y el diseño en cada producto.
+
+    </p>
+  </div>
+  <div class="about-carousel">
+    <div class="carousel-track">
+      <img src="../assets/img/paleta auren.png" class="carousel-img">
+      <img src="../assets/img/paleta auren costado.png" alt="Paleta Auren costado" class="carousel-img">
+    </div>
+  </div>
+</section>
+
+
+<footer class="footer">
+  <div class="footer-container">
+    <div class="footer-item">
+      <img src="../assets/img/ubicacion.png" alt="Ubicación" class="footer-icon">
+      <p>Corrientes, Argentina</p>
+    </div>
+    <div class="footer-item">
+      <img src="../assets/img/gmail.png" alt="Correo" class="footer-icon">
+      <p>auren@gmail.com</p>
+    </div>
+    <div class="footer-item">
+      <img src="../assets/img/telefono.png" alt="Teléfono" class="footer-icon">
+      <p>3704 770647</p>
+    </div>
+    <div class="footer-social">
+      <a href="https://instagram.com" target="_blank">
+        <img src="../assets/img/instagram.png" alt="Instagram" class="social-icon">
+      </a>
+      <a href="https://www.facebook.com/">
+        <img src="../assets/img/facebook.png" alt="Facebook" class="social-icon">
+      </a>
+      <a href="https://x.com/">
+        <img src="../assets/img/x.png" alt="X" class="social-icon">
+      </a>
+    </div>
+  </div>
+  <p class="footer-copy">Auren © 2025</p>
+</footer>
 
 
 </html>
