@@ -55,11 +55,11 @@
       <h2 style="font-weight: bold; margin-bottom: 50px">Auren</h2>
       <p>Auren es una empresa con raíces profundas en Formosa y Corrientes, y más de 45 años de trayectoria en el
         mercado.</p>
-        <p>Nacimos impulsados por una verdadera pasión por el deporte, y fue justamente esa pasión la que nos llevó a
-          realizar nuestra primera venta: una paleta como la que hoy sigue siendo símbolo de nuestros inicios. En Auren,
-          seguimos apostando al desarrollo, al talento local y a la innovación.</p>
-        <p style="font-style: italic; font-weight: bold; margin-top: 30px;">Más que una marca, somos una historia que se
-          construye día a día junto a nuestros clientes.</p>
+      <p>Nacimos impulsados por una verdadera pasión por el deporte, y fue justamente esa pasión la que nos llevó a
+        realizar nuestra primera venta: una paleta como la que hoy sigue siendo símbolo de nuestros inicios. En Auren,
+        seguimos apostando al desarrollo, al talento local y a la innovación.</p>
+      <p style="font-style: italic; font-weight: bold; margin-top: 30px;">Más que una marca, somos una historia que se
+        construye día a día junto a nuestros clientes.</p>
     </div>
     <div class="about-carousel">
       <div class="carousel-track">
@@ -74,9 +74,20 @@
       </div>
     </div>
   </section>
-  <section class="categorias">
+  <section class="seccion-carrusel">
+    <div class="carrusel">
+    <div class="carrusel-contenedor">
+    <div class="slide"><img src="../assets/img/publicidad3.png" alt="Imagen 1"></div>
+    <div class="slide"><img src="../assets/img/publicidad2.png" alt="Imagen 2"></div>
+    <div class="slide"><img src="../assets/img/publicidad1.png" alt="Imagen 3"></div>
+  </div>
+    </div>
   
+
   </section>
+  <!-- Solo el JS de Bootstrap (funcionalidad de carrusel) -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
 
