@@ -415,3 +415,181 @@
   }
 }
 
+.tarjetas-container {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  padding: 60px 20px;
+  flex-wrap: wrap;
+  background-color: #000;
+}
+
+.tarjeta {
+  position: relative;
+  width: 300px;
+  aspect-ratio: 3 / 4;
+  overflow: hidden;
+  border-radius: 20px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s;
+}
+
+.tarjeta:hover {
+  transform: scale(1.05);
+}
+
+.tarjeta img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: opacity 0.5s ease-in-out;
+  border-radius: 20px;
+}
+
+.imagen-hover {
+  opacity: 0;
+  z-index: 2;
+}
+
+.tarjeta:hover .imagen-hover {
+  opacity: 1;
+}
+
+.tarjeta:hover .imagen-front {
+  opacity: 0;
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+  .tarjeta {
+    width: 45%;
+  }
+}
+
+@media (max-width: 600px) {
+  .tarjeta {
+    width: 100%;
+  }
+}
+
+.info {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.9);
+  padding: 15px;
+  box-sizing: border-box;
+  text-align: center;
+  border-radius: 0 0 20px 20px;
+  transition: transform 0.3s;
+}
+
+.info h3 {
+  margin: 0 0 5px;
+  font-size: 18px;
+  font-weight: bold;
+  color: #000;
+}
+
+.info p {
+  margin: 0 0 8px;
+  font-size: 14px;
+  color: #333;
+}
+
+.info span {
+  font-size: 16px;
+  font-weight: 600;
+  color: #000;
+}
+
+.titulo-productos {
+  text-align: center;
+  padding: 40px 20px 10px;
+  background-color: #000;
+}
+
+.titulo-productos h2 {
+  font-size: 42px;
+  font-weight: 700;
+  color: #fff;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  letter-spacing: 1px;
+  position: relative;
+  display: inline-block;
+  padding-bottom: 10px;
+}
+
+.titulo-productos h2::after {
+  content: "";
+  display: block;
+  width: 60%;
+  height: 4px;
+  background: #fff;
+  margin: 10px auto 0;
+  border-radius: 2px;
+}
+
+.titulo-productos .subtitulo {
+  color: #ccc;
+  font-size: 20px;
+  font-weight: 400;
+  margin-top: 10px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.tarjetas-container {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.tarjeta-con-titulo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.titulo-categoria {
+  font-size: 22px;
+  font-weight: bold;
+  color: white;
+  margin-bottom: 10px;
+  text-align: center;
+  width: 100%;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.video-review {
+  padding: 50px 20px;
+  background-color: #000; /* Fondo negro como el resto de la web */
+  color: white;
+  text-align: center;
+}
+
+.video-review h2 {
+  font-size: 2rem;
+  margin-bottom: 30px;
+}
+
+.video-container {
+  position: relative;
+  padding-bottom: 56.25%; /* Proporción 16:9 */
+  height: 0;
+  overflow: hidden;
+  max-width: 90%;
+  margin: 0 auto;
+  border-radius: 12px;
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
+}
+
+.video-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+

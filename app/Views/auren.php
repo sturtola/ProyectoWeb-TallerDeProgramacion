@@ -90,6 +90,67 @@
 
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
+  
+  <div class="titulo-productos">
+  <h2>Productos destacados</h2>
+  <p class="subtitulo">Paletas de alto rendimiento y accesorios esenciales para cada jugador.</p>
+
+</div>
+
+<section class="tarjetas-container">
+  <div class="tarjeta-con-titulo">
+    <div class="titulo-categoria">MUJER</div>
+    <div class="tarjeta">
+      <img src="../assets/img/arisanchez.jpg" alt="paula" class="imagen-front">
+      <img src="../assets/img/speed.jpg" alt="Paleta 1" class="imagen-hover">
+      <div class="info">
+        <h3>Speed Motion</h3>
+        <p>Versátil, ligera y potente. Ideal para jugadores avanzados. </p>
+        <span>$210.000</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="tarjeta-con-titulo">
+    <div class="titulo-categoria">HOMBRE</div>
+    <div class="tarjeta">
+      <img src="../assets/img/Lamperti.jpg" alt="lampe" class="imagen-front">
+      <img src="../assets/img/ml.jpg" alt="Paleta 2" class="imagen-hover">
+      <div class="info">
+        <h3>Nox ML10 Pro Cup</h3>
+        <p>Cómoda, sólida y duradera. Para todo tipo de jugador. </p>
+        <span>$150.000</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="tarjeta-con-titulo">
+    <div class="titulo-categoria">ACCESORIOS</div>
+    <div class="tarjeta">
+      <img src="../assets/img/grip1.jpg" alt="Jugador 3" class="imagen-front">
+      <img src="../assets/img/gripblanco.jpg" alt="Paleta 3" class="imagen-hover">
+      <div class="info">
+        <h3>Overgrips Adidas</h3>
+        <p>Grip blanco, cómodo y adherente.  Para todos los deportes.</p>
+        <span>$8.000</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="video-review">
+<h2><i class="fa-solid fa-film"></i> Review de la Nox ML10 Pro Cup</h2>
+  <div class="video-container">
+    <iframe 
+      src="https://www.youtube.com/embed/Gtr95HTK3Wk" 
+      title="Video Review" 
+      frameborder="0" 
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+      allowfullscreen>
+    </iframe>
+  </div>
+</section>
+
 
 </body>
 
