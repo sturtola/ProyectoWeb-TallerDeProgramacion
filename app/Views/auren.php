@@ -38,18 +38,16 @@
         <!-- Sidebar vertical (pantallas chicas) -->
         <div class="sidebar">
           <ul class="nav-list-vertical">
-            <li><a href="#">Home</a></li>
-            <li><a href="#">Products</a></li>
-            <li><a href="#">About Us</a></li>
-            <li><a href="#">Contact</a></li>
+            <li><a href="#">Inicio</a></li>
+            <li><a href="#">Productos</a></li>
+            <li><a href="#">Nosotros</a></li>
+            <li><a href="#">Información</a></li>
           </ul>
         </div>
-
-
-
       </nav>
     </div>
   </section>
+ 
   <section class="presentacion about-mini">
     <div class="about-content">
       <h2 style="font-weight: bold; margin-bottom: 50px">Auren</h2>
@@ -74,84 +72,86 @@
       </div>
     </div>
   </section>
-  <section class="seccion-carrusel">
-    <div class="carrusel">
-    <div class="carrusel-contenedor">
-    <div class="slide"><img src="../assets/img/publicidad3.png" alt="Imagen 1"></div>
-    <div class="slide"><img src="../assets/img/publicidad2.png" alt="Imagen 2"></div>
-    <div class="slide"><img src="../assets/img/publicidad1.png" alt="Imagen 3"></div>
-  </div>
+
+  <section class="seccion-marcas">
+    <div class="marcas-container">
+      <img src="../assets/img/logoadidas.png" style="height: 70px;">
+      <img src="../assets/img/wilsonlogo.png" style="height: 35px;">
+      <img src="../assets/img/siuxlogo.png" style="height: 30px;">
+      <img src="../assets/img/headlogo.jpeg" style="height: 40px;">
+      <img src="../assets/img/logonike.png" style="height: 65px;">
+      <img src="../assets/img/noxlogo.png" style="height: 30px;">
+      <img src="../assets/img/bullpadellogo.jpeg" style="height: 40px;">
     </div>
-  
 
   </section>
-  <!-- Solo el JS de Bootstrap (funcionalidad de carrusel) -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
+  <section class="seccion-destacados">
+    <div class="led-marco">
+      <div class="container-marcoled">
+        <p class="subtitulo" style="text-align: center; font-weight: bold; font-size: 25px">Elegí calidad, elegí AUREN.</p>
+      </div>
+    </div>
+    <p class="subtitulo" style="color: white;">Explorá nuestras tres categorías principales y encontrá el producto perfecto para tu juego.
+      Desde paletas de alta competencia hasta accesorios esenciales, cada opción está seleccionada para ofrecerte lo
+      mejor en rendimiento, tecnología y confort.</p>
+  </section>
+
+  <section class="tarjetas-container">
+    <div class="tarjeta-con-titulo">
+      <div class="titulo-categoria">MUJER</div>
+      <div class="tarjeta">
+        <img src="../assets/img/arisanchez.jpg" alt="paula" class="imagen-front">
+        <img src="../assets/img/speed.jpg" alt="Paleta 1" class="imagen-hover">
+        <div class="info">
+          <h3>Speed Motion</h3>
+          <p>Versátil, ligera y potente. Ideal para jugadores avanzados. </p>
+          <span>$210.000</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="tarjeta-con-titulo">
+      <div class="titulo-categoria">HOMBRE</div>
+      <div class="tarjeta">
+        <img src="../assets/img/Lamperti.jpg" alt="lampe" class="imagen-front">
+        <img src="../assets/img/ml.jpg" alt="Paleta 2" class="imagen-hover">
+        <div class="info">
+          <h3>Nox ML10 Pro Cup</h3>
+          <p>Cómoda, sólida y duradera. Para todo tipo de jugador. </p>
+          <span>$150.000</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="tarjeta-con-titulo">
+      <div class="titulo-categoria">ACCESORIOS</div>
+      <div class="tarjeta">
+        <img src="../assets/img/grip1.jpg" alt="Jugador 3" class="imagen-front">
+        <img src="../assets/img/gripblanco.jpg" alt="Paleta 3" class="imagen-hover">
+        <div class="info">
+          <h3>Overgrips Adidas</h3>
+          <p>Grip blanco, cómodo y adherente. Para todos los deportes.</p>
+          <span>$8.000</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="video-review">
+    <h2><i class="fa-solid fa-film"></i>Review Nox ML10 Pro Cup</h2>
+    <div class="video-container">
+      <iframe src="https://www.youtube.com/embed/Gtr95HTK3Wk" title="Video Review" frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        allowfullscreen>
+      </iframe>
+    </div>
+  </section>
+
+  <!-- Solo el JS de Bootstrap (funcionalidad de carrusel) -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
-  
-  <div class="titulo-productos">
-  <h2>Productos destacados</h2>
-  <p class="subtitulo">Paletas de alto rendimiento y accesorios esenciales para cada jugador.</p>
-
-</div>
-
-<section class="tarjetas-container">
-  <div class="tarjeta-con-titulo">
-    <div class="titulo-categoria">MUJER</div>
-    <div class="tarjeta">
-      <img src="../assets/img/arisanchez.jpg" alt="paula" class="imagen-front">
-      <img src="../assets/img/speed.jpg" alt="Paleta 1" class="imagen-hover">
-      <div class="info">
-        <h3>Speed Motion</h3>
-        <p>Versátil, ligera y potente. Ideal para jugadores avanzados. </p>
-        <span>$210.000</span>
-      </div>
-    </div>
-  </div>
-
-  <div class="tarjeta-con-titulo">
-    <div class="titulo-categoria">HOMBRE</div>
-    <div class="tarjeta">
-      <img src="../assets/img/Lamperti.jpg" alt="lampe" class="imagen-front">
-      <img src="../assets/img/ml.jpg" alt="Paleta 2" class="imagen-hover">
-      <div class="info">
-        <h3>Nox ML10 Pro Cup</h3>
-        <p>Cómoda, sólida y duradera. Para todo tipo de jugador. </p>
-        <span>$150.000</span>
-      </div>
-    </div>
-  </div>
-
-  <div class="tarjeta-con-titulo">
-    <div class="titulo-categoria">ACCESORIOS</div>
-    <div class="tarjeta">
-      <img src="../assets/img/grip1.jpg" alt="Jugador 3" class="imagen-front">
-      <img src="../assets/img/gripblanco.jpg" alt="Paleta 3" class="imagen-hover">
-      <div class="info">
-        <h3>Overgrips Adidas</h3>
-        <p>Grip blanco, cómodo y adherente.  Para todos los deportes.</p>
-        <span>$8.000</span>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="video-review">
-<h2><i class="fa-solid fa-film"></i> Review de la Nox ML10 Pro Cup</h2>
-  <div class="video-container">
-    <iframe 
-      src="https://www.youtube.com/embed/Gtr95HTK3Wk" 
-      title="Video Review" 
-      frameborder="0" 
-      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-      allowfullscreen>
-    </iframe>
-  </div>
-</section>
-
-
 </body>
 
 <footer>
