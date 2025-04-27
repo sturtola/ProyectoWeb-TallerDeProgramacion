@@ -25,7 +25,7 @@
 
                 <!-- Menú horizontal (pantallas grandes) -->
                 <ul class="nav-list">
-                    <li><a href="#">Inicio</a></li>
+                <li><a href="<?= base_url('auren') ?>">Inicio</a></li>
                     <li class="dropdown">
                         <a href="#">Productos</a>
                         <ul class="menu-vertical-barra">
@@ -34,25 +34,25 @@
                             <li><a href="#">Accesorios</a></li>
                         </ul>
                     </li>
-                    <li><a href="#" class="active">Nosotros</a></li>
+                    <li><a href="<?= base_url('nosotros') ?>">Nosotros</a></li>
                     <li class="dropdown">
-                        <a href="#">Información</a>
+                        <a href="#" class="active">Información</a>
                         <ul class="menu-vertical-barra menu-informacion">
-                            <li><a href="#">Contacto</a></li>
-                            <li><a href="#">Comercialización</a></li>
-                            <li><a href="#">Términos y usos</a></li>
-                            <li><a href="#">Consultas</a></li>
+                            <li><a href="contacto.php">Contacto</a></li>
+                            <li><a href="<?= base_url('comercializacion') ?>">Comercializacion</a></li>
+                            <li><a href="../terminos-y-condiciones.php">Términos y usos</a></li>
+                            <li><a href="../consultas.php">Consultas</a></li>
                         </ul>
                     </li>
                 </ul>
 
-                <a class="navbar-brand" href="#">
+                <a class="navbar-brand" href="../auren.php">
                     <img class="nombreMarca" src="../assets/img/nombremarca1.png">
                 </a>
 
                 <div class="sidebar">
                     <ul class="menu-vertical-lateral">
-                        <li><a href="#">Inicio</a></li>
+                    <li><a href="<?= base_url('auren') ?>">Inicio</a></li>
 
                         <li class="submenu-toggle">
                             <a href="#">Productos</a>
@@ -63,15 +63,15 @@
                             </ul>
                         </li>
 
-                        <li><a href="#" class="active">Nosotros</a></li>
+                        <li><a href="<?= base_url('nosotros') ?>">Nosotros</a></li>
 
                         <li class="submenu-toggle">
-                            <a href="#">Información</a>
+                            <a href="#" class="active">Información</a>
                             <ul class="submenu-vertical-lateral">
-                                <li><a href="#">Contacto</a></li>
-                                <li><a href="#">Comercialización</a></li>
-                                <li><a href="#">Términos y usos</a></li>
-                                <li><a href="#">Consultas</a></li>
+                                <li><a href="contacto.php">Contacto</a></li>
+                                <li><a href="<?= base_url('comercializacion') ?>">Comercializacion</a></li>
+                                <li><a href="../terminos-y-condiciones.php">Términos y usos</a></li>
+                                <li><a href="../consultas.php">Consultas</a></li>
                             </ul>
                         </li>
                     </ul>
@@ -148,14 +148,14 @@
         </div>
         <div class="tarjeta-con-titulo-staff">
             <div class="tarjeta-staff">
-                <img src="../assets/img/staff2.jpeg">
+                <img src="../assets/img/lautaro.jpg">
                 <div class="info-staff">
                     <h3>Lautaro Riveros</h3>
                 </div>
             </div>
             <ul>
                 <li>Director de Estrategias Comerciales</li>
-                <li>Licenciada en Sistemas de Información</li>
+                <li>Licenciado en Sistemas de Información</li>
                 <li>Nacido en Formosa.</li>
                 <li>Experto en marketing deportivo, análisis de datos y expansión de
                      mercados digitales.</li>
@@ -171,5 +171,28 @@
     </section>
 
 </body>
+<footer>
+  <section class="footer">
+    <div class="row social-container">
+      <a href="#"><img class="social-iconos" src="../assets/img/wpp1.png"></img></a>
+      <a href="#"><img class="social-iconos" src="../assets/img/instagram1.png"></img></a>
+      <a href="#"><img class="social-iconos" src="../assets/img/facebook1.webp"></img></a>
+      <a href="#"><img class="social-iconos" src="../assets/img/tiktok1.webp"></img></a>
+    </div>
 
+    <div class="row">
+      <ul>
+        <li><a href="#">Inicio</a></li>
+        <li><a href="#">Productos</a></li>
+        <li><a href="#">Sobre Nosotros</a></li>
+        <li><a href="#">Terminos y Condiciones</a></li>
+        <li><a href="#">Contacto</a></li>
+      </ul>
+    </div>
+
+    <div class="row" align-items="center">
+      AUREN © 2025 - Todos los derechos reservados.
+    </div>
+  </section>
+</footer>
 </html>

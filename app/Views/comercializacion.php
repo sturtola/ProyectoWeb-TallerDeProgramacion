@@ -25,7 +25,7 @@
 
                 <!-- Menú horizontal (pantallas grandes) -->
                 <ul class="nav-list">
-                    <li><a href="#">Inicio</a></li>
+                <li><a href="<?= base_url('auren') ?>">Inicio</a></li>
                     <li class="dropdown">
                         <a href="#">Productos</a>
                         <ul class="menu-vertical-barra">
@@ -34,25 +34,25 @@
                             <li><a href="#">Accesorios</a></li>
                         </ul>
                     </li>
-                    <li><a href="#">Nosotros</a></li>
+                    <li><a href="<?= base_url('nosotros') ?>">Nosotros</a></li>
                     <li class="dropdown">
                         <a href="#" class="active">Información</a>
                         <ul class="menu-vertical-barra menu-informacion">
-                            <li><a href="#">Contacto</a></li>
-                            <li><a href="#" class="active">Comercialización</a></li>
-                            <li><a href="#">Términos y usos</a></li>
-                            <li><a href="#">Consultas</a></li>
+                            <li><a href="contacto.php">Contacto</a></li>
+                            <li><a href="<?= base_url('comercializacion') ?>">Comercializacion</a></li>
+                            <li><a href="../terminos-y-condiciones.php">Términos y usos</a></li>
+                            <li><a href="../consultas.php">Consultas</a></li>
                         </ul>
                     </li>
                 </ul>
 
-                <a class="navbar-brand" href="#">
+                <a class="navbar-brand" href="../auren.php">
                     <img class="nombreMarca" src="../assets/img/nombremarca1.png">
                 </a>
 
                 <div class="sidebar">
                     <ul class="menu-vertical-lateral">
-                        <li><a href="#">Inicio</a></li>
+                    <li><a href="<?= base_url('auren') ?>">Inicio</a></li>
 
                         <li class="submenu-toggle">
                             <a href="#">Productos</a>
@@ -63,15 +63,15 @@
                             </ul>
                         </li>
 
-                        <li><a href="#">Nosotros</a></li>
+                        <li><a href="<?= base_url('nosotros') ?>">Nosotros</a></li>
 
                         <li class="submenu-toggle">
                             <a href="#" class="active">Información</a>
                             <ul class="submenu-vertical-lateral">
-                                <li><a href="#">Contacto</a></li>
-                                <li><a href="#" class="active">Comercialización</a></li>
-                                <li><a href="#">Términos y usos</a></li>
-                                <li><a href="#">Consultas</a></li>
+                                <li><a href="contacto.php">Contacto</a></li>
+                                <li><a href="<?= base_url('comercializacion') ?>">Comercializacion</a></li>
+                                <li><a href="../terminos-y-condiciones.php">Términos y usos</a></li>
+                                <li><a href="../consultas.php">Consultas</a></li>
                             </ul>
                         </li>
                     </ul>
@@ -160,6 +160,45 @@
             </ul>
     </section>
     
+    
+    <footer>
+  <section class="footer">
+    <div class="row social-container">
+      <a href="#"><img class="social-iconos" src="../assets/img/wpp1.png"></img></a>
+      <a href="#"><img class="social-iconos" src="../assets/img/instagram1.png"></img></a>
+      <a href="#"><img class="social-iconos" src="../assets/img/facebook1.webp"></img></a>
+      <a href="#"><img class="social-iconos" src="../assets/img/tiktok1.webp"></img></a>
+    </div>
 
+    <div class="row">
+      <ul>
+        <li><a href="../auren.php">Inicio</a></li>
+        <li><a href="#">Productos</a></li>
+        <li><a href="nosotros.php">Sobre Nosotros</a></li>
+        <li><a href="../terminos-y-condiciones.php">Terminos y Condiciones</a></li>
+        <li><a href="contacto.php">Contacto</a></li>
+      </ul>
+    </div>
 
+    <div class="row" align-items="center">
+      AUREN © 2025 - Todos los derechos reservados.
+    </div>
+  </section>
+</footer>
+
+    <script>
+    // Asegurarse de que los enlaces funcionen correctamente
+    document.addEventListener('DOMContentLoaded', function() {
+        // Para debugging - comprobar si los enlaces tienen los eventos correctos
+        const links = document.querySelectorAll('a');
+        links.forEach(link => {
+            // Verificar si el enlace no es "#" (placeholder)
+            if (link.getAttribute('href') && link.getAttribute('href') !== '#') {
+                console.log('Enlace configurado: ' + link.getAttribute('href'));
+            }
+        });
+    });
+    </script>
 </body>
+
+</html>
