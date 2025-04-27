@@ -77,6 +77,14 @@
   display: inline-block;
 }
 
+.nav-list a.active {
+  color: #e1ff00; /* un amarillo dorado, por ejemplo */
+}
+
+.nav-list a.active:hover {
+  color: #e1ff00; /* un amarillo dorado, por ejemplo */
+}
+
 .nav-list a:hover {
   color: white;
   transform: scale(1.30);
@@ -113,6 +121,35 @@
   }
 }
 
+
+/* Submenú oculto por defecto */
+.submenu-vertical-lateral {
+  list-style: none;
+}
+
+
+/* Links del submenú */
+.submenu-vertical-lateral li a {
+  color: rgb(185, 185, 185);
+  text-decoration: none !important;
+  display: block;
+  font-size: 14px; /* o el tamaño que uses en general */
+  transition: color 0.3s ease, transform 0.3s ease;
+  text-align: center;
+}
+
+/* Hover sobre los links del submenú */
+.submenu-vertical-lateral li a:hover {
+  color: #e1ff00;
+}
+
+.submenu-toggle{
+  justify-content: center;
+  align-items: center;
+
+}
+
+
 /* Ocultar checkbox */
 .menu-toggle {
   display: none;
@@ -140,7 +177,7 @@
 /* Sidebar */
 .sidebar {
   position: fixed;
-  top: 0;
+  top: 20px;
   left: -250px;
   width: 250px;
   height: 100vh;
@@ -148,6 +185,11 @@
   transition: left 0.3s ease;
   padding-top: 150px;
   z-index: 15;
+  padding: 20px;
+}
+
+.sidebar a.active{
+  color: #e1ff00;
 }
 
 .menu-toggle:checked~.sidebar {
@@ -155,22 +197,29 @@
 }
 
 /* Lista vertical */
-.nav-list-vertical {
+.menu-vertical-lateral {
   list-style: none;
   padding: 0;
   margin: 0;
   text-align: center;
 }
 
-.nav-list-vertical li {
+.menu-vertical-lateral li {
   margin: 40px 0;
+  margin-bottom: 15px;
+
 }
 
-.nav-list-vertical a {
-  color: white;
-  text-decoration: none;
+.menu-vertical-lateral a {
+  color: rgb(255, 255, 255);
+  text-decoration: none !important;
   font-size: 20px;
 }
+
+.menu-vertical-lateral a:hover{
+  color: #e1ff00;
+}
+
 
 /* Mostrar ítems horizontalmente solo en pantallas grandes */
 .nav-list {
@@ -197,6 +246,57 @@
     display: block;
   }
 }
+
+
+/* Ítems normales */
+.nav-list li {
+  position: relative;
+}
+
+/* Submenú oculto */
+.menu-vertical-barra {
+  display: none;
+  position: absolute;
+  top: 100%; /* sale abajo de Productos */
+  left: 0;
+  background-color: black; /* mismo color de fondo que tu nav */
+  list-style: none;
+  padding-top: 10px;
+  margin: 0;
+  width: 180px;
+  text-align: center;
+  border-radius: 10px;
+  
+}
+
+/* Estilo de cada link del submenú */
+.menu-vertical-barra li a {
+  display: block;
+  padding: 0px 20px 20px;
+  color: white;
+  text-decoration: none;
+  transition: background-color 0.3s;
+  border-radius: 10px;
+  font-size: 20px;
+  padding-top: 20px;
+}
+
+/* Hover en los ítems del submenú */
+.menu-vertical-barra li a:hover {
+  background-color: #333;
+  border-radius: 10px;
+  align-items: center;
+}
+
+/* Al pasar el mouse por Productos, mostrar el submenú */
+.dropdown:hover .menu-vertical-barra {
+  display: block;
+}
+
+.menu-informacion{
+  width: 220px;
+}
+
 
 .presentacion {
   background-color: black;
@@ -505,7 +605,7 @@
 
 .seccion-destacados {
   text-align: center;
-  padding: 70px 60px 30px 60px;
+  padding: 70px 120px 30px 120px;
   background-color: #000;
   justify-content: center;
   display: flex;
@@ -519,7 +619,6 @@
   font-weight: 400;
   margin-top: 10px;
   font-family: Verdana, sans-serif;
-  text-align: justify;
   padding: 20px 30px 10px 30px;
 }
 

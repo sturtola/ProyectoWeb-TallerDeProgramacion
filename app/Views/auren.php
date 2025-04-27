@@ -25,29 +25,62 @@
 
         <!-- Menú horizontal (pantallas grandes) -->
         <ul class="nav-list">
-          <li><a href="#">Inicio</a></li>
-          <li><a href="#">Productos</a></li>
+          <li><a href="#" class="active">Inicio</a></li>
+          <li class="dropdown">
+            <a href="#">Productos</a>
+            <ul class="menu-vertical-barra">
+              <li><a href="#">Hombre</a></li>
+              <li><a href="#">Mujer</a></li>
+              <li><a href="#">Accesorios</a></li>
+            </ul>
+          </li>
           <li><a href="#">Nosotros</a></li>
-          <li><a href="#">Información</a></li>
+          <li class="dropdown">
+            <a href="#">Información</a>
+            <ul class="menu-vertical-barra menu-informacion">
+              <li><a href="#">Contacto</a></li>
+              <li><a href="#">Comercialización</a></li>
+              <li><a href="#">Términos y usos</a></li>
+              <li><a href="#">Consultas</a></li>
+            </ul>
+          </li>
         </ul>
 
         <a class="navbar-brand" href="#">
           <img class="nombreMarca" src="../assets/img/nombremarca1.png">
         </a>
 
-        <!-- Sidebar vertical (pantallas chicas) -->
         <div class="sidebar">
-          <ul class="nav-list-vertical">
-            <li><a href="#">Inicio</a></li>
-            <li><a href="#">Productos</a></li>
+          <ul class="menu-vertical-lateral">
+            <li><a href="#" class="active">Inicio</a></li>
+
+            <li class="submenu-toggle">
+              <a href="#">Productos</a>
+              <ul class="submenu-vertical-lateral">
+                <li><a href="#">Hombre</a></li>
+                <li><a href="#">Mujer</a></li>
+                <li><a href="#">Accesorios</a></li>
+              </ul>
+            </li>
+
             <li><a href="#">Nosotros</a></li>
-            <li><a href="#">Información</a></li>
+
+            <li class="submenu-toggle">
+              <a href="#">Información</a>
+              <ul class="submenu-vertical-lateral">
+                <li><a href="#">Contacto</a></li>
+                <li><a href="#">Comercialización</a></li>
+                <li><a href="#">Términos y usos</a></li>
+                <li><a href="#">Consultas</a></li>
+              </ul>
+            </li>
           </ul>
         </div>
+
       </nav>
     </div>
   </section>
- 
+
   <section class="presentacion about-mini">
     <div class="about-content">
       <h2 style="font-weight: bold; margin-bottom: 50px">Auren</h2>
@@ -89,10 +122,12 @@
   <section class="seccion-destacados">
     <div class="led-marco">
       <div class="container-marcoled">
-        <p class="subtitulo" style="text-align: center; font-weight: bold; font-size: 25px">Elegí calidad, elegí AUREN.</p>
+        <p class="subtitulo" style="text-align: center; font-weight: bold; font-size: 25px">Elegí calidad, elegí AUREN.
+        </p>
       </div>
     </div>
-    <p class="subtitulo" style="color: white;">Explorá nuestras tres categorías principales y encontrá el producto perfecto para tu juego.
+    <p class="subtitulo" style="color: white;">Explorá nuestras tres categorías principales y encontrá el producto
+      perfecto para tu juego.
       Desde paletas de alta competencia hasta accesorios esenciales, cada opción está seleccionada para ofrecerte lo
       mejor en rendimiento, tecnología y confort.</p>
   </section>
