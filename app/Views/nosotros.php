@@ -34,13 +34,13 @@
                             <li><a href="#">Accesorios</a></li>
                         </ul>
                     </li>
-                    <li><a href="<?= base_url('nosotros') ?>">Nosotros</a></li>
+                    <li ><a href="<?= base_url('nosotros') ?>" class="active">Nosotros</a></li>
                     <li class="dropdown">
-                        <a href="#" class="active">Información</a>
+                        <a href="#" >Información</a>
                         <ul class="menu-vertical-barra menu-informacion">
                             <li><a href="contacto.php">Contacto</a></li>
                             <li><a href="<?= base_url('comercializacion') ?>">Comercializacion</a></li>
-                            <li><a href="../terminos-y-condiciones.php">Términos y usos</a></li>
+                            <li><a href="../terminos-y-condiciones.php">Términos y Condiciones</a></li>
                             <li><a href="../consultas.php">Consultas</a></li>
                         </ul>
                     </li>
@@ -70,7 +70,7 @@
                             <ul class="submenu-vertical-lateral">
                                 <li><a href="contacto.php">Contacto</a></li>
                                 <li><a href="<?= base_url('comercializacion') ?>">Comercializacion</a></li>
-                                <li><a href="../terminos-y-condiciones.php">Términos y usos</a></li>
+                                <li><a href="../terminos-y-condiciones.php">Términos y Condiciones</a></li>
                                 <li><a href="../consultas.php">Consultas</a></li>
                             </ul>
                         </li>
@@ -174,7 +174,7 @@
 <footer>
   <section class="footer">
     <div class="row social-container">
-      <a href="#"><img class="social-iconos" src="../assets/img/wpp1.png"></img></a>
+      <a href="https://wa.me/5493704770647"><img class="social-iconos" src="../assets/img/wpp1.png"></img></a>
       <a href="#"><img class="social-iconos" src="../assets/img/instagram1.png"></img></a>
       <a href="#"><img class="social-iconos" src="../assets/img/facebook1.webp"></img></a>
       <a href="#"><img class="social-iconos" src="../assets/img/tiktok1.webp"></img></a>

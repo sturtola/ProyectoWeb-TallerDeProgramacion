@@ -39,8 +39,8 @@
                         <a href="#" class="active">Información</a>
                         <ul class="menu-vertical-barra menu-informacion">
                             <li><a href="contacto.php">Contacto</a></li>
-                            <li><a href="<?= base_url('comercializacion') ?>">Comercializacion</a></li>
-                            <li><a href="../terminos-y-condiciones.php">Términos y usos</a></li>
+                            <li><a href="<?= base_url('comercializacion') ?>" class="active">Comercializacion</a></li>
+                            <li><a href="../terminos-y-condiciones.php">Términos y Condiciones</a></li>
                             <li><a href="../consultas.php">Consultas</a></li>
                         </ul>
                     </li>
@@ -69,8 +69,8 @@
                             <a href="#" class="active">Información</a>
                             <ul class="submenu-vertical-lateral">
                                 <li><a href="contacto.php">Contacto</a></li>
-                                <li><a href="<?= base_url('comercializacion') ?>">Comercializacion</a></li>
-                                <li><a href="../terminos-y-condiciones.php">Términos y usos</a></li>
+                                <li><a href="<?= base_url('comercializacion') ?>" class="active">Comercializacion</a></li>
+                                <li><a href="../terminos-y-condiciones.php">Términos y Condiciones</a></li>
                                 <li><a href="../consultas.php">Consultas</a></li>
                             </ul>
                         </li>
@@ -79,6 +79,25 @@
 
             </nav>
         </div>
+    </section>
+
+    <section class="contenedor-titulos">
+        <div class="led-marco-entrega">
+            <div class="container-marcoled-entrega">
+                <h3 class="titulos-cm">Horarios de atención</h3>
+            </div>
+        </div>
+    </section>
+    <section class="contenedor-informacion">
+            <ul>
+                <li>LUNES A VIERNES:</li>
+                <p>Horarios: 09:00 - 18:00.</p>
+                <li>SABADOS:</li>
+                <p>Horarios: 09:00 - 13:00.</p>
+                <li>FERIADOS:</li>
+                <p style="padding-bottom: 0px;">Nacionales: CERRADO.</p>
+                <p style="padding-top: 0px;">Provinciales: ATENCIÓN NORMAL.</p>
+            </ul>
     </section>
 
     <section class="contenedor-titulos">
@@ -94,7 +113,7 @@
                 <p>Ofrecemos entregas a domicilio en todo el país. Trabajamos con servicios de mensajería de
                     confianza para garantizar que tu compra llegue en perfecto estado.</p>
                 <li>Retiro en tienda:</li>
-                <p>Podés optar por retirar tu pedido personalmente en nuestra tienda. Esta opción es gratuita,
+                <p>Podés optar por retirar tu pedido personalmente en nuestra tienda (Junín 1557, Corrientes). Esta opción es gratuita,
                     podés hacerlo dentro de nuestros horarios de atención.</p>
                 <li>Envíos EXPRESS (Corrientes):</li>
                 <p>Para compras dentro de Corrientes, contamos con servicio de entrega express en 24 hs hábiles.</p>
@@ -135,7 +154,7 @@
                 <p>Si preferís pagar por transferencia, te enviaremos los datos bancarios al finalizar tu compra. (Recordá enviar el comprobante a traves de nuestro correo: auren@gmail.com.)</p>
                 <li>Efectivo:</li>
                 <p>Sólo disponible para retiros en tienda. Consulta nuestros horarios de atención.</p>
-                <li>Cuotas</li>
+                <li>Cuotas:</li>
                 <p>Ofrecemos financiación hasta 6 o 12 cuotas con tarjetas seleccionadas (sujeto a promociones vigentes).</p>
             </ul>
     </section>
@@ -159,12 +178,26 @@
                 <p>Nuestro equipo está disponible para asesorarte en la elección de los productos que desees. ¡Queremos que encuentres exactamente lo que necesitás!</p>
             </ul>
     </section>
-    
-    
-    <footer>
+
+    <script>
+    // Asegurarse de que los enlaces funcionen correctamente
+    document.addEventListener('DOMContentLoaded', function() {
+        // Para debugging - comprobar si los enlaces tienen los eventos correctos
+        const links = document.querySelectorAll('a');
+        links.forEach(link => {
+            // Verificar si el enlace no es "#" (placeholder)
+            if (link.getAttribute('href') && link.getAttribute('href') !== '#') {
+                console.log('Enlace configurado: ' + link.getAttribute('href'));
+            }
+        });
+    });
+    </script>
+</body>
+
+<footer>
   <section class="footer">
     <div class="row social-container">
-      <a href="#"><img class="social-iconos" src="../assets/img/wpp1.png"></img></a>
+      <a href="https://wa.me/5493704770647"><img class="social-iconos" src="../assets/img/wpp1.png"></img></a>
       <a href="#"><img class="social-iconos" src="../assets/img/instagram1.png"></img></a>
       <a href="#"><img class="social-iconos" src="../assets/img/facebook1.webp"></img></a>
       <a href="#"><img class="social-iconos" src="../assets/img/tiktok1.webp"></img></a>
@@ -185,20 +218,4 @@
     </div>
   </section>
 </footer>
-
-    <script>
-    // Asegurarse de que los enlaces funcionen correctamente
-    document.addEventListener('DOMContentLoaded', function() {
-        // Para debugging - comprobar si los enlaces tienen los eventos correctos
-        const links = document.querySelectorAll('a');
-        links.forEach(link => {
-            // Verificar si el enlace no es "#" (placeholder)
-            if (link.getAttribute('href') && link.getAttribute('href') !== '#') {
-                console.log('Enlace configurado: ' + link.getAttribute('href'));
-            }
-        });
-    });
-    </script>
-</body>
-
 </html>

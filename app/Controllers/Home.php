@@ -6,6 +6,6 @@ class Home extends BaseController
 {
     public function index(): string
     {
-        return view('auren');
+        return view('contacto.php');
     }
 }
