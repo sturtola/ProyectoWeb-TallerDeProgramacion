@@ -77,14 +77,6 @@
   display: inline-block;
 }
 
-.nav-list a.active {
-  color: #e1ff00; /* un amarillo dorado, por ejemplo */
-}
-
-.nav-list a.active:hover {
-  color: #e1ff00; /* un amarillo dorado, por ejemplo */
-}
-
 .nav-list a:hover {
   color: white;
   transform: scale(1.30);
@@ -188,10 +180,6 @@
   padding: 20px;
 }
 
-.sidebar a.active{
-  color: #e1ff00;
-}
-
 .menu-toggle:checked~.sidebar {
   left: 0;
 }
@@ -221,10 +209,6 @@
 }
 
 
-/* Mostrar ítems horizontalmente solo en pantallas grandes */
-.nav-list {
-  display: flex;
-}
 
 /* Ocultar ícono menú y sidebar en pantallas grandes */
 .menu-icon,
@@ -734,7 +718,8 @@
 }
 
 .contenedor-titulos{
-  padding-left: 70px;
+  padding-top: 20px;
+  padding-left: 100px;
 }
 
 .led-marco-entrega {
@@ -768,7 +753,7 @@
 }
 
 .contenedor-informacion {
-  padding: 30px 150px 10px 150px;
+  padding: 30px 150px 0px 200px;
   justify-content: left;
 }
 
@@ -821,6 +806,7 @@
   display: flex;
   padding-bottom: 30px;
   font-size: 16px;
+  justify-content: left;
 }
 
 .led-marco-nosotros {
@@ -952,11 +938,122 @@
 .contenedor-contacto{
   display: flex;
   padding: 20px 150px 100px 150px;
-  justify-content: left;
+  justify-content: space-between;
   color: white;
-  gap: 30px;
+  text-decoration: none;
+  text-align: center;
 }
 
+.contenedor-contacto ul li{
+  text-align: left;
+  list-style-type: none;
+  flex-direction: column;
+  border-left: 2px solid rgba(255, 255, 255, 0.693);
+  padding-left: 20px;
+  height: 40px;
+  font-family: Verdana, sans-serif;
+}
+
+
+@media (max-width: 768px) {
+  .contenedor-contacto {
+    flex-direction: column;
+    align-items: center; /* Opcional: centra las listas al hacer columna */
+  }
+}
+
+.body-contacto{
+  background-color: black;
+}
+
+.barra-nav {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content:space-around;
+  gap: 300px;
+  padding: 0px 20px 0px 20px; /* agregado para que esté más pegada al top */
+  background: linear-gradient(to bottom,
+      rgb(5, 0, 143) 0%,
+      rgb(3, 0, 80) 0%,
+      rgb(1, 1, 1) 100%);
+}
+
+/* LOGO DE LA MARCA */
+.barra-nav-brand img.nombreMarca {
+  width: 180px; /* antes 250px */
+  height: auto;
+  transition: width 0.3s ease;
+  margin-right: -30px; /* corregido para que no se superponga demasiado */
+}
+
+/* LISTA DE NAVEGACIÓN */
+.lista-nav {
+  font-family: Verdana, sans-serif;
+  list-style: none;
+  display: flex;
+  gap: 60px; /* antes 90px para que esté más compacto */
+  margin-left: 30px; /* margen también más chico */
+}
+
+/* ÍTEMS DEL MENÚ */
+.lista-nav li {
+  text-align: center;
+}
+
+.lista-nav a {
+  color: white;
+  text-decoration: none !important;
+  font-size: 20px; /* antes 25px */
+  transition: color 0.3s ease, transform 0.3s ease;
+  display: inline-block;
+}
+
+.lista-nav a:hover {
+  color: white;
+  transform: scale(1.25); /* ajuste leve porque antes escalaba mucho */
+}
+
+/* RESPONSIVE */
+@media (max-width: 992px) {
+  .barra-nav {
+    padding: 8px 20px; /* responsive más cómodo */
+  }
+
+  .barra-nav-brand img.nombreMarca {
+    width: 150px;
+  }
+
+  .lista-nav {
+    flex-direction: column;
+    gap: 20px;
+    margin-top: 20px;
+  }
+
+  .lista-nav a {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 576px) {
+  .barra-nav-brand img.nombreMarca {
+    width: 120px;
+  }
+
+  .lista-nav a {
+    font-size: 16px;
+  }
+}
+
+.contenedor-barra{
+  height: 15vh;
+}
+
+@media (max-width: 1099px) {
+  .lista-nav {
+    display: none;
+  }
+}
 
 
 

@@ -11,10 +11,10 @@
     <title>Contacto | Auren</title>
 </head>
 
-<body class="body-otros">
+<body class="body-contacto">
     <section>
-        <div class="container-fluid">
-            <nav class="navbar">
+        <div class="contenedor-barra">
+            <nav class="barra-nav">
                 <!-- Checkbox y botón menú hamburguesa -->
                 <input type="checkbox" id="menu-toggle" class="menu-toggle">
                 <label for="menu-toggle" class="menu-icon">
@@ -24,7 +24,7 @@
                 </label>
 
                 <!-- Menú horizontal (pantallas grandes) -->
-                <ul class="nav-list">
+                <ul class="lista-nav">
                     <li><a href="<?= base_url('auren') ?>">Inicio</a></li>
                     <li class="dropdown">
                         <a href="#">Productos</a>
@@ -36,9 +36,9 @@
                     </li>
                     <li><a href="<?= base_url('nosotros') ?>">Nosotros</a></li>
                     <li class="dropdown">
-                        <a href="#" class="active">Información</a>
+                        <a href="#">Información</a>
                         <ul class="menu-vertical-barra menu-informacion">
-                            <li><a href="contacto.php" class="active">Contacto</a></li>
+                            <li><a href="contacto.php">Contacto</a></li>
                             <li><a href="<?= base_url('comercializacion') ?>">Comercializacion</a></li>
                             <li><a href="../terminos-y-condiciones.php">Términos y Condiciones</a></li>
                             <li><a href="../consultas.php">Consultas</a></li>
@@ -46,7 +46,7 @@
                     </li>
                 </ul>
 
-                <a class="navbar-brand" href="../auren.php">
+                <a class="barra-nav-brand" href="../auren.php">
                     <img class="nombreMarca" src="../assets/img/nombremarca1.png">
                 </a>
 
@@ -66,9 +66,9 @@
                         <li><a href="<?= base_url('nosotros') ?>">Nosotros</a></li>
 
                         <li class="submenu-toggle">
-                            <a href="#" class="active">Información</a>
+                            <a href="#">Información</a>
                             <ul class="submenu-vertical-lateral">
-                                <li><a href="contacto.php" class="active">Contacto</a></li>
+                                <li><a href="contacto.php">Contacto</a></li>
                                 <li><a href="<?= base_url('comercializacion') ?>">Comercializacion</a></li>
                                 <li><a href="../terminos-y-condiciones.php">Términos y Condiciones</a>
                                 </li>
@@ -82,53 +82,81 @@
         </div>
     </section>
 
-    <section class="contenedor-titulos">
-        <div class="led-marco-entrega" style="width: 250px">
+    <section class="contenedor-titulos" style="padding-top: 120px">
+        <div class="led-marco-entrega" style="width: 200px">
             <div class="container-marcoled-entrega">
-                <h4 class="titulos-cm">Identificación</h4>
+                <h3 class="titulos-cm">Identidicación</h3>
             </div>
         </div>
     </section>
-    <section class="contenedor-contacto">
-        <div>
-            <p>
-                <strong>Titulares:</strong>
-                <ul style="padding-left: 40px">
-                    <li>Turtola, Sabrina. DNI: 44.000.850.</li>
-                    <li>Riveros, Lautaro. DNI: 45.903.006.</li>
-                </ul>
-            </p>
-            <p><strong>Razon social: </strong>Auren SRL.</p>
-            <p><strong>Domicilio legal:</strong> Junín 1557, CP3400, Corrientes, Argentina.</p>
-        </div>
-    </section>
-    <section class="contenedor-titulos">
-        <div class="led-marco-entrega" style="width: 250px">
-            <div class="container-marcoled-entrega">
-                <h4 class="titulos-cm">Contacto</h4>
-            </div>
-        </div>
-    </section>
-    <section >
+    <section>
         <div class="contenedor-contacto">
-            <p><strong>Contacto:</strong> +54 3704 770647.</p>
-            <p><strong>Contacto:</strong> +54 3794 282166.</p>
-            <p><strong>Correo electrónico:</strong> auren@gmail.com</p>
+            <ul>
+                <li><strong>Titulares</strong></li>
+                <li>Turtola, Sabrina. DNI: 44.000.850</li>
+                <li>Riveros, Lautaro. DNI: 45.903.006</li>
+            </ul>
+
+
+            <ul>
+                <li><strong>Razon social</strong></li>
+                <li>Auren SRL</li>
+            </ul>
+
+            <ul>
+                <li><strong>Domicilio legal</strong></li>
+                <li>Junín 1557, CP3400, Corrientes, Argentina</li>
+            </ul>
 
         </div>
     </section>
+
     <section class="contenedor-titulos">
-        <div class="led-marco-entrega" style="width: 250px">
+        <div class="led-marco-entrega" style="width: 150px">
             <div class="container-marcoled-entrega">
-                <h4 class="titulos-cm">Datos bancarios</h4>
+                <h3 class="titulos-cm">Contacto</h3>
             </div>
         </div>
     </section>
-    <section class="contenedor-contacto">
-        <div>
-            <p><strong>Razon social: </strong>Auren SRL.</p>
-            <p><strong>ALIAS:</strong> auren.srl</p>
-            <p><strong>CVU:</strong> 0002393847746589.</p>
+    <section>
+        <div class="contenedor-contacto">
+            <ul>
+                <li><strong>Contacto</strong></li>
+                <li>+54 3794 282166</li>
+            </ul>
+            <ul>
+                <li><strong>Contacto</strong></li>
+                <li>+54 3704 770647</li>
+            </ul>
+            <ul>
+                <li><strong>Correo electrónico</strong></li>
+                <li>auren@gmail.com</li>
+            </ul>
+
+        </div>
+    </section>
+
+    <section class="contenedor-titulos">
+        <div class="led-marco-entrega" style="width: 230px">
+            <div class="container-marcoled-entrega">
+                <h3 class="titulos-cm">Datos bancarios</h3>
+            </div>
+        </div>
+    </section>
+    <section>
+        <div class="contenedor-contacto">
+            <ul>
+                <li><strong>Razon social</strong></li>
+                <li>Auren SRL</li>
+            </ul>
+            <ul>
+                <li><strong>ALIAS</strong></li>
+                <li>auren.srl</li>
+            </ul>
+            <ul>
+                <li><strong>CVU</strong></li>
+                <li>0002393847746589</li>
+            </ul>
         </div>
     </section>
 

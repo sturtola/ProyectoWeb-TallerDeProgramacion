@@ -13,8 +13,8 @@
 
 <body class="body-otros">
     <section>
-        <div class="container-fluid">
-            <nav class="navbar">
+    <div class="contenedor-barra">
+            <nav class="barra-nav">
                 <!-- Checkbox y botón menú hamburguesa -->
                 <input type="checkbox" id="menu-toggle" class="menu-toggle">
                 <label for="menu-toggle" class="menu-icon">
@@ -24,8 +24,8 @@
                 </label>
 
                 <!-- Menú horizontal (pantallas grandes) -->
-                <ul class="nav-list">
-                <li><a href="<?= base_url('auren') ?>">Inicio</a></li>
+                <ul class="lista-nav">
+                    <li><a href="<?= base_url('auren') ?>">Inicio</a></li>
                     <li class="dropdown">
                         <a href="#">Productos</a>
                         <ul class="menu-vertical-barra">
@@ -34,9 +34,9 @@
                             <li><a href="#">Accesorios</a></li>
                         </ul>
                     </li>
-                    <li ><a href="<?= base_url('nosotros') ?>" class="active">Nosotros</a></li>
+                    <li><a href="<?= base_url('nosotros') ?>">Nosotros</a></li>
                     <li class="dropdown">
-                        <a href="#" >Información</a>
+                        <a href="#">Información</a>
                         <ul class="menu-vertical-barra menu-informacion">
                             <li><a href="contacto.php">Contacto</a></li>
                             <li><a href="<?= base_url('comercializacion') ?>">Comercializacion</a></li>
@@ -46,13 +46,13 @@
                     </li>
                 </ul>
 
-                <a class="navbar-brand" href="../auren.php">
+                <a class="barra-nav-brand" href="../auren.php">
                     <img class="nombreMarca" src="../assets/img/nombremarca1.png">
                 </a>
 
                 <div class="sidebar">
                     <ul class="menu-vertical-lateral">
-                    <li><a href="<?= base_url('auren') ?>">Inicio</a></li>
+                        <li><a href="<?= base_url('auren') ?>">Inicio</a></li>
 
                         <li class="submenu-toggle">
                             <a href="#">Productos</a>
@@ -66,11 +66,12 @@
                         <li><a href="<?= base_url('nosotros') ?>">Nosotros</a></li>
 
                         <li class="submenu-toggle">
-                            <a href="#" class="active">Información</a>
+                            <a href="#">Información</a>
                             <ul class="submenu-vertical-lateral">
-                                <li><a href="contacto.php">Contacto</a></li>
+                                <li><a href="contacto.php" >Contacto</a></li>
                                 <li><a href="<?= base_url('comercializacion') ?>">Comercializacion</a></li>
-                                <li><a href="../terminos-y-condiciones.php">Términos y Condiciones</a></li>
+                                <li><a href="../terminos-y-condiciones.php">Términos y Condiciones</a>
+                                </li>
                                 <li><a href="../consultas.php">Consultas</a></li>
                             </ul>
                         </li>
@@ -81,7 +82,7 @@
         </div>
     </section>
 
-    <section class="titulos-nosotros" style="justify-content: center;">
+    <section class="titulos-nosotros" style="justify-content: center; padding-top: 120px;">
         <div class="led-marco-nosotros">
             <div class="container-marcoled-nosotros">
                 <h3 class="titulos-cm">Nosotros</h3>
@@ -117,14 +118,12 @@
                 que nuestro compromiso es ofrecerles lo mejor para que puedan seguir alcanzando nuevas metas.
             </p>
 
-
-
         </div>
 
 
     </section>
     <section class="titulos-nosotros" style="justify-content: center;">
-        <div class="led-marco-nosotros">
+        <div class="led-marco-nosotros" style="width: 130px;">
             <div class="container-marcoled-nosotros">
                 <h3 class="titulos-cm">Staff</h3>
             </div>

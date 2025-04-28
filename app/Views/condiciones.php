@@ -13,8 +13,8 @@
 
 <body class="body-otros">
     <section>
-        <div class="container-fluid">
-            <nav class="navbar">
+    <div class="contenedor-barra">
+            <nav class="barra-nav">
                 <!-- Checkbox y botón menú hamburguesa -->
                 <input type="checkbox" id="menu-toggle" class="menu-toggle">
                 <label for="menu-toggle" class="menu-icon">
@@ -24,7 +24,7 @@
                 </label>
 
                 <!-- Menú horizontal (pantallas grandes) -->
-                <ul class="nav-list">
+                <ul class="lista-nav">
                     <li><a href="<?= base_url('auren') ?>">Inicio</a></li>
                     <li class="dropdown">
                         <a href="#">Productos</a>
@@ -36,17 +36,17 @@
                     </li>
                     <li><a href="<?= base_url('nosotros') ?>">Nosotros</a></li>
                     <li class="dropdown">
-                        <a href="#" class="active">Información</a>
+                        <a href="#">Información</a>
                         <ul class="menu-vertical-barra menu-informacion">
                             <li><a href="contacto.php">Contacto</a></li>
                             <li><a href="<?= base_url('comercializacion') ?>">Comercializacion</a></li>
-                            <li><a href="../terminos-y-condiciones.php" class="active">Términos y Condiciones</a></li>
+                            <li><a href="../terminos-y-condiciones.php">Términos y Condiciones</a></li>
                             <li><a href="../consultas.php">Consultas</a></li>
                         </ul>
                     </li>
                 </ul>
 
-                <a class="navbar-brand" href="../auren.php">
+                <a class="barra-nav-brand" href="../auren.php">
                     <img class="nombreMarca" src="../assets/img/nombremarca1.png">
                 </a>
 
@@ -66,11 +66,11 @@
                         <li><a href="<?= base_url('nosotros') ?>">Nosotros</a></li>
 
                         <li class="submenu-toggle">
-                            <a href="#" class="active">Información</a>
+                            <a href="#">Información</a>
                             <ul class="submenu-vertical-lateral">
                                 <li><a href="contacto.php">Contacto</a></li>
                                 <li><a href="<?= base_url('comercializacion') ?>">Comercializacion</a></li>
-                                <li><a href="../terminos-y-condiciones.php" class="active">Términos y Condiciones</a>
+                                <li><a href="../terminos-y-condiciones.php">Términos y Condiciones</a>
                                 </li>
                                 <li><a href="../consultas.php">Consultas</a></li>
                             </ul>
@@ -82,8 +82,8 @@
         </div>
     </section>
 
-    <section class="titulos-nosotros" style="justify-content: center;">
-        <div class="led-marco-nosotros" style="width: 320px;">
+    <section class="titulos-nosotros" style="justify-content: center; padding-top: 120px">
+        <div class="led-marco-nosotros" style="width: 350px;">
             <div class="container-marcoled-entrega">
                 <h3 class="titulos-cm">Términos y Condiciones</h3>
             </div>
