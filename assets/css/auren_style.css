@@ -6,7 +6,7 @@
 
 /* FONDO */
 .principal {
-  background-image: url('../img/canchapadel3.jpeg');
+  background-image: url("../img/canchapadel3.jpeg");
   background-size: cover;
   background-repeat: no-repeat;
   width: 100%;
@@ -19,21 +19,22 @@
 }
 
 .imagen-header::after {
-  content: '';
+  content: "";
   position: absolute;
   bottom: 0;
   left: 0;
   right: 0;
   height: 150px;
   /* Un poco más alto */
-  background: linear-gradient(to bottom,
-      rgb(1, 1, 1, 0) 0%,
-      rgba(1, 1, 1, 0.449) 50%,
-      rgb(1, 1, 1) 100%);
+  background: linear-gradient(
+    to bottom,
+    rgb(1, 1, 1, 0) 0%,
+    rgba(1, 1, 1, 0.449) 50%,
+    rgb(1, 1, 1) 100%
+  );
   pointer-events: none;
   z-index: 1;
 }
-
 
 /* NAVBAR GENERAL */
 .navbar {
@@ -44,7 +45,6 @@
   gap: 10px;
 }
 
-
 /* LOGO DE LA MARCA */
 .navbar-brand img.nombreMarca {
   width: 250px;
@@ -53,7 +53,6 @@
   margin-right: -40px;
 }
 
-
 /* LISTA DE NAVEGACIÓN */
 .nav-list {
   font-family: Verdana, sans-serif;
@@ -61,7 +60,6 @@
   display: flex;
   gap: 90px;
   margin-left: 50px;
-
 }
 
 /* ÍTEMS DEL MENÚ */
@@ -79,7 +77,7 @@
 
 .nav-list a:hover {
   color: white;
-  transform: scale(1.30);
+  transform: scale(1.3);
 }
 
 /* RESPONSIVE */
@@ -113,12 +111,10 @@
   }
 }
 
-
 /* Submenú oculto por defecto */
 .submenu-vertical-lateral {
   list-style: none;
 }
-
 
 /* Links del submenú */
 .submenu-vertical-lateral li a {
@@ -135,12 +131,10 @@
   color: #e1ff00;
 }
 
-.submenu-toggle{
+.submenu-toggle {
   justify-content: center;
   align-items: center;
-
 }
-
 
 /* Ocultar checkbox */
 .menu-toggle {
@@ -180,7 +174,7 @@
   padding: 20px;
 }
 
-.menu-toggle:checked~.sidebar {
+.menu-toggle:checked ~ .sidebar {
   left: 0;
 }
 
@@ -195,7 +189,6 @@
 .menu-vertical-lateral li {
   margin: 40px 0;
   margin-bottom: 15px;
-
 }
 
 .menu-vertical-lateral a {
@@ -204,11 +197,9 @@
   font-size: 20px;
 }
 
-.menu-vertical-lateral a:hover{
+.menu-vertical-lateral a:hover {
   color: #e1ff00;
 }
-
-
 
 /* Ocultar ícono menú y sidebar en pantallas grandes */
 .menu-icon,
@@ -231,7 +222,6 @@
   }
 }
 
-
 /* Ítems normales */
 .nav-list li {
   position: relative;
@@ -250,7 +240,6 @@
   width: 180px;
   text-align: center;
   border-radius: 10px;
-  
 }
 
 /* Estilo de cada link del submenú */
@@ -277,10 +266,9 @@
   display: block;
 }
 
-.menu-informacion{
+.menu-informacion {
   width: 220px;
 }
-
 
 .presentacion {
   background-color: black;
@@ -291,7 +279,7 @@
   align-items: center;
   padding: 90px 100px 50px 70px;
   color: white;
-  font-family: 'Verdana', sans-serif;
+  font-family: "Verdana", sans-serif;
   flex-wrap: wrap;
   gap: 150px;
 }
@@ -305,7 +293,7 @@
 .footer {
   background: #000;
   padding: 10px 0px;
-  font-family: 'Play', sans-serif;
+  font-family: "Play", sans-serif;
   text-align: center;
 }
 
@@ -346,11 +334,10 @@
   width: 35px;
   height: 35px;
   gap: 60px;
-
 }
 
 .social-container :hover {
-  transform: scale(1.30);
+  transform: scale(1.3);
 }
 
 .social-container {
@@ -358,7 +345,6 @@
   gap: 50px;
   transition: 0.5s;
 }
-
 
 .about-content {
   flex: 1;
@@ -376,9 +362,8 @@
   text-align: justify;
 }
 
-
 .about-carousel {
-  width: 300px;               /* ancho fijo del carrusel */
+  width: 300px; /* ancho fijo del carrusel */
   overflow: hidden;
   position: relative;
   display: flex;
@@ -386,12 +371,12 @@
 
 .carousel-track {
   display: flex;
-  width: 1200px;              /* 4 imágenes x 400px */
+  width: 1200px; /* 4 imágenes x 400px */
   animation: scrollCarousel 16s infinite ease-in-out;
 }
 
 .carousel-img {
-  width: 300px;               /* cada imagen ocupa el ancho completo del carrusel */
+  width: 300px; /* cada imagen ocupa el ancho completo del carrusel */
   object-fit: contain;
 }
 
@@ -403,7 +388,6 @@
     transform: translateX(-1200px); /* se desplaza 4 imágenes (4 x 400px) */
   }
 }
-
 
 /* Responsive para móviles */
 @media (max-width: 768px) {
@@ -418,12 +402,11 @@
     width: 100%;
   }
 
-  .carousel-track{
+  .carousel-track {
     width: 200px;
     height: 200px;
   }
 }
-
 
 .seccion-carrusel {
   overflow: hidden;
@@ -434,7 +417,7 @@
   padding: 100px 0px 70px 0px;
 }
 
-.carrusel{
+.carrusel {
   width: 1344px;
   height: 538px;
 }
@@ -446,9 +429,8 @@
   animation: deslizar 12s infinite ease-in-out;
 }
 
-
 .slide {
-  flex: 0 0 100%;          /* cada slide ocupa 100% del .carrusel */
+  flex: 0 0 100%; /* cada slide ocupa 100% del .carrusel */
   height: 100%;
 }
 
@@ -459,14 +441,25 @@
   object-fit: cover;
 }
 
-
 @keyframes deslizar {
-  0%   { transform: translateX(0%); }
-  25%  { transform: translateX(0%); }
-  35%  { transform: translateX(-100%); }
-  60%  { transform: translateX(-100%); }
-  70%  { transform: translateX(-200%); }
-  100% { transform: translateX(-200%); }
+  0% {
+    transform: translateX(0%);
+  }
+  25% {
+    transform: translateX(0%);
+  }
+  35% {
+    transform: translateX(-100%);
+  }
+  60% {
+    transform: translateX(-100%);
+  }
+  70% {
+    transform: translateX(-200%);
+  }
+  100% {
+    transform: translateX(-200%);
+  }
 }
 
 @media (max-width: 1344px) {
@@ -482,7 +475,6 @@
     height: auto !important;
     aspect-ratio: 1344 / 538;
     padding-right: 200px;
-    
   }
 }
 
@@ -659,16 +651,15 @@
   border: none;
 }
 
-.seccion-marcas{
+.seccion-marcas {
   background-color: black;
   display: flex;
   padding: 70px 10px 0px 10px;
   gap: 40px;
   justify-content: space-between;
-  
 }
 
-.marcas-container{
+.marcas-container {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -677,7 +668,6 @@
   padding: 20px;
   gap: 40px; /* espacio entre logos */
 }
-
 
 .led-marco {
   border-radius: 50px;
@@ -690,7 +680,6 @@
   text-align: center;
   margin-bottom: 20px; /* Para que haya espacio con el texto de abajo */
   background-size: 400% 400%;
-
 }
 
 .container-marcoled {
@@ -713,11 +702,15 @@
 
 /* ESTILOS PARA LA PAGINA COMERCIALIZACION */
 
-.body-otros{
+.comercializacion {
   background-color: black;
 }
 
-.contenedor-titulos{
+.condiciones {
+  background-color: black;
+}
+
+.contenedor-titulos {
   padding-top: 20px;
   padding-left: 100px;
 }
@@ -733,7 +726,6 @@
   text-align: center;
   margin-bottom: 20px; /* Para que haya espacio con el texto de abajo */
   background-size: 400% 400%;
-
 }
 
 .container-marcoled-entrega {
@@ -744,9 +736,9 @@
   padding: 5px 5px 5px 5px;
 }
 
-.titulos-cm{
+.titulos-cm {
   color: white;
-  text-align: center; 
+  text-align: center;
   font-size: 18px;
   padding: 7px;
   font-family: Verdana, sans-serif;
@@ -762,7 +754,6 @@
   font-family: Verdana, sans-serif;
   font-size: 15px;
   color: white;
-  
 }
 
 .contenedor-informacion ul p {
@@ -771,11 +762,9 @@
   font-family: Verdana, sans-serif;
   font-size: 16px;
   color: white;
-  
 }
 
 /* ESTILOS PARA LA PAGINA NOSOTROS */
-
 
 .container-nosotros {
   max-width: 800px;
@@ -785,12 +774,10 @@
   color: white;
 }
 
-.contenido-nosotros{
+.contenido-nosotros {
   padding: 30px 200px 70px 200px;
   text-align: justify;
-
 }
-
 
 .contenido-nosotros p {
   color: white;
@@ -799,10 +786,9 @@
   font-size: 15px;
   line-height: 1.6;
   font-family: Verdana, sans-serif;
-  
 }
 
-.titulos-nosotros{
+.titulos-nosotros {
   display: flex;
   padding-bottom: 30px;
   font-size: 16px;
@@ -820,7 +806,6 @@
   text-align: center;
   margin-bottom: 20px; /* Para que haya espacio con el texto de abajo */
   background-size: 400% 400%;
-
 }
 
 .container-marcoled-nosotros {
@@ -838,7 +823,6 @@
   padding: 60px 20px 100px;
   flex-wrap: wrap;
   background-color: #000;
-
 }
 
 .tarjeta-staff {
@@ -887,7 +871,7 @@
   display: flex;
 }
 
-.tarjeta-con-titulo-staff li{
+.tarjeta-con-titulo-staff li {
   gap: 20px;
 }
 
@@ -915,7 +899,6 @@
   text-align: center;
   margin-bottom: 20px; /* Para que haya espacio con el texto de abajo */
   background-size: 400% 400%;
-
 }
 
 /* ESTILOS PARA LA PAGINA TERMINOS Y CONDICIONES */
@@ -935,7 +918,7 @@
 
 /* ESTILOS PARA LA PAGINA CONTACTO */
 
-.contenedor-contacto{
+.contenedor-contacto {
   display: flex;
   padding: 20px 150px 100px 150px;
   justify-content: space-between;
@@ -944,7 +927,7 @@
   text-align: center;
 }
 
-.contenedor-contacto ul li{
+.contenedor-contacto ul li {
   text-align: left;
   list-style-type: none;
   flex-direction: column;
@@ -954,7 +937,6 @@
   font-family: Verdana, sans-serif;
 }
 
-
 @media (max-width: 768px) {
   .contenedor-contacto {
     flex-direction: column;
@@ -962,7 +944,7 @@
   }
 }
 
-.body-contacto{
+.body-contacto {
   background-color: black;
 }
 
@@ -970,13 +952,15 @@
   width: 100%;
   display: flex;
   align-items: center;
-  justify-content:space-around;
+  justify-content: space-around;
   gap: 300px;
   padding: 0px 20px 0px 20px; /* agregado para que esté más pegada al top */
-  background: linear-gradient(to bottom,
-      rgb(5, 0, 143) 0%,
-      rgb(3, 0, 80) 0%,
-      rgb(1, 1, 1) 100%);
+  background: linear-gradient(
+    to bottom,
+    rgb(5, 0, 143) 0%,
+    rgb(3, 0, 80) 0%,
+    rgb(1, 1, 1) 100%
+  );
 }
 
 /* LOGO DE LA MARCA */
@@ -1045,7 +1029,7 @@
   }
 }
 
-.contenedor-barra{
+.contenedor-barra {
   height: 15vh;
 }
 
@@ -1054,6 +1038,3 @@
     display: none;
   }
 }
-
-
-
