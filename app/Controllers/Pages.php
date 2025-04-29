@@ -39,4 +39,5 @@ class Pages extends BaseController
             'content' => view('pages/comercializacion')
         ]);
     }
+    
 }

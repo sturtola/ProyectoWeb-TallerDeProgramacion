@@ -705,11 +705,21 @@
 .comercializacion {
   background-color: black;
 }
-
+.contenedor-informacion {
+  background-color: black;
+}
 .condiciones {
   background-color: black;
 }
-
+.contenedor-condiciones {
+  background-color: black;
+}
+.container-nostros {
+  background-color: black;
+}
+.container-nostross {
+  background-color: black;
+}
 .contenedor-titulos {
   padding-top: 20px;
   padding-left: 100px;
@@ -1038,3 +1048,4 @@
     display: none;
   }
 }
+

@@ -23,12 +23,12 @@
           </li>
           <li><a href="<?= base_url('/QuienesSomos') ?>">Nosotros</a></li>
           <li class="dropdown">
+            
             <a href="#">Información</a>
             <ul class="menu-vertical-barra menu-informacion">
-              <li><a href="#">Contacto</a></li>
+              <li><a href="<?= base_url('/Contacto') ?>">Contacto</a></li>
               <li><a href="<?= base_url('/Comercializacion') ?>">Comercializacion</a></li>
-              <li><a href="#">Términos y Condiciones</a></li>
-              <li><a href="#">Consultas</a></li>
+              <li><a href="<?= base_url('/TerminosYUsos') ?>">Términos y Condiciones</a></li>
             </ul>
           </li>
         </ul>
@@ -56,10 +56,9 @@
             <li class="submenu-toggle">
               <a href="#">Información</a>
               <ul class="submenu-vertical-lateral">
-                <li><a href="#">Contacto</a></li>
+                <li><a href="<?= base_url('/Contacto') ?>">Contacto</a></li>
                 <li><a href="<?= base_url('/Comercializacion') ?>">Comercializacion</a></li>
                 <li><a href="<?= base_url('/TerminosYUsos') ?>">Términos y Condiciones</a></li>
-                <li><a href="<?= base_url('/Contacto') ?>">Consultas</a></li>
               </ul>
             </li>
           </ul>

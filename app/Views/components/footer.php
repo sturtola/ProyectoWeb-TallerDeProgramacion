@@ -1,10 +1,10 @@
 <footer>
   <section class="footer">
     <div class="row social-container">
-      <a href="https://wa.me/5493704770647"><img class="social-iconos" src="../assets/img/wpp1.png"></img></a>
-      <a href="#"><img class="social-iconos" src="../assets/img/instagram1.png"></img></a>
-      <a href="#"><img class="social-iconos" src="../assets/img/facebook1.webp"></img></a>
-      <a href="#"><img class="social-iconos" src="../assets/img/tiktok1.webp"></img></a>
+      <a href="https://wa.me/5493704770647"><img class="social-iconos" src="./assets/img/wpp1.png"></img></a>
+      <a href="#"><img class="social-iconos" src="./assets/img/instagram1.png"></img></a>
+      <a href="#"><img class="social-iconos" src="./assets/img/facebook1.webp"></img></a>
+      <a href="#"><img class="social-iconos" src="./assets/img/tiktok1.webp"></img></a>
     </div>
 
     <div class="row">

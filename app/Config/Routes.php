@@ -12,7 +12,7 @@ $routes->get('/TerminosYUsos', 'Pages::terms');
 $routes->get('/Comercializacion', 'Pages::comercialization');
 
 // Rutas para contacto
-$routes->get('/Contacto', 'Contact::index');
+$routes->get('Contacto/', 'Contact::index');
 $routes->post('/Contacto/send', 'Contact::send');
 
 // Establecer controlador por defecto

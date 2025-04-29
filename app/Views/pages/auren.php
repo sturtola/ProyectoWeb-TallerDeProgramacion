@@ -27,13 +27,13 @@
 
   <section class="seccion-marcas">
     <div class="marcas-container">
-      <img src="../assets/img/logoadidas.png" style="height: 70px;">
-      <img src="../assets/img/wilsonlogo.png" style="height: 35px;">
-      <img src="../assets/img/siuxlogo.png" style="height: 30px;">
-      <img src="../assets/img/headlogo.jpeg" style="height: 40px;">
-      <img src="../assets/img/logonike.png" style="height: 65px;">
-      <img src="../assets/img/noxlogo.png" style="height: 30px;">
-      <img src="../assets/img/bullpadellogo.jpeg" style="height: 40px;">
+      <img src="./assets/img/logoadidas.png" style="height: 70px;">
+      <img src="./assets/img/wilsonlogo.png" style="height: 35px;">
+      <img src="./assets/img/siuxlogo.png" style="height: 30px;">
+      <img src="./assets/img/headlogo.jpeg" style="height: 40px;">
+      <img src="./assets/img/logonike.png" style="height: 65px;">
+      <img src="./assets/img/noxlogo.png" style="height: 30px;">
+      <img src="./assets/img/bullpadellogo.jpeg" style="height: 40px;">
     </div>
 
   </section>
@@ -55,8 +55,8 @@
     <div class="tarjeta-con-titulo">
       <div class="titulo-categoria">MUJER</div>
       <div class="tarjeta">
-        <img src="../assets/img/arisanchez.jpg" alt="paula" class="imagen-front">
-        <img src="../assets/img/speed.jpg" alt="Paleta 1" class="imagen-hover">
+        <img src="./assets/img/arisanchez.jpg" alt="paula" class="imagen-front">
+        <img src="./assets/img/speed.jpg" alt="Paleta 1" class="imagen-hover">
         <div class="info">
           <h3>Speed Motion</h3>
           <p>Versátil, ligera y potente. Ideal para jugadores avanzados. </p>
@@ -68,8 +68,8 @@
     <div class="tarjeta-con-titulo">
       <div class="titulo-categoria">HOMBRE</div>
       <div class="tarjeta">
-        <img src="../assets/img/Lamperti.jpg" alt="lampe" class="imagen-front">
-        <img src="../assets/img/ml.jpg" alt="Paleta 2" class="imagen-hover">
+        <img src="./assets/img/Lamperti.jpg" alt="lampe" class="imagen-front">
+        <img src="./assets/img/ml.jpg" alt="Paleta 2" class="imagen-hover">
         <div class="info">
           <h3>Nox ML10 Pro Cup</h3>
           <p>Cómoda, sólida y duradera. Para todo tipo de jugador. </p>
@@ -81,8 +81,8 @@
     <div class="tarjeta-con-titulo">
       <div class="titulo-categoria">ACCESORIOS</div>
       <div class="tarjeta">
-        <img src="../assets/img/grip1.jpg" alt="Jugador 3" class="imagen-front">
-        <img src="../assets/img/gripblanco.jpg" alt="Paleta 3" class="imagen-hover">
+        <img src="./assets/img/grip1.jpg" alt="Jugador 3" class="imagen-front">
+        <img src="./assets/img/gripblanco.jpg" alt="Paleta 3" class="imagen-hover">
         <div class="info">
           <h3>Overgrips Adidas</h3>
           <p>Grip blanco, cómodo y adherente. Para todos los deportes.</p>

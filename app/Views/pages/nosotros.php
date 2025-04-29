@@ -1,5 +1,5 @@
 
-    <section class="titulos-nosotros" style="justify-content: center; padding-top: 120px;">
+    <section class="container-nostros titulos-nosotros" style="justify-content: center; padding-top: 120px;">
         <div class="led-marco-nosotros">
             <div class="container-marcoled-nosotros">
                 <h3 class="titulos-cm">Nosotros</h3>
@@ -39,7 +39,7 @@
 
 
     </section>
-    <section class="titulos-nosotros" style="justify-content: center;">
+    <section class="container-nostros titulos-nosotros" style="justify-content: center;">
         <div class="led-marco-nosotros" style="width: 130px;">
             <div class="container-marcoled-nosotros">
                 <h3 class="titulos-cm">Staff</h3>
@@ -49,7 +49,7 @@
     <section class="container-staff">
         <div class="tarjeta-con-titulo-staff">
             <div class="tarjeta-staff">
-                <img src="../assets/img/staff1.heic">
+                <img src="assets/img/staff1.heic">
                 <div class="info-staff">
                     <h3>Sabrina Turtola</h3>
                 </div>
@@ -64,7 +64,7 @@
         </div>
         <div class="tarjeta-con-titulo-staff">
             <div class="tarjeta-staff">
-                <img src="../assets/img/lautaro.jpg">
+                <img src="assets/img/lautaro.jpg">
                 <div class="info-staff">
                     <h3>Lautaro Riveros</h3>
                 </div>
@@ -78,7 +78,7 @@
             </ul>
         </div>
     </section>
-    <section class="titulos-nosotros" style="justify-content: center;">
+    <section class="container-nostros titulos-nosotros" style="justify-content: center;">
         <div class="led-marco-frase">
             <div class="container-marcoled-nosotros">
                 <h3 class="titulos-cm">Juntos, impulsamos Auren hacia un futuro cada vez más innovador y conectado.</h3>
