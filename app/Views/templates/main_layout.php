@@ -11,7 +11,7 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
   <title>Auren</title>
 </head>
-<body>
+<body class = "comercializacion" >
     <header>
         <!-- Menú de navegación -->
         <?= view('components/navbar') ?>

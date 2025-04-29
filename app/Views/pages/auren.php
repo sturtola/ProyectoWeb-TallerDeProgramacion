@@ -12,7 +12,7 @@
         construye día a día junto a nuestros clientes.</p>
     </div>
     <div class="about-carousel">
-    <a href="<?= base_url('/Mantenimiento') ?>" target="" rel="">
+   
       <div class="carousel-track">
         <img src="assets/img/paletafrente.png" class="carousel-img">
         <img src="assets/img/paletacostado1.png" class="carousel-img">
@@ -23,21 +23,14 @@
         <img src="assets/img/paletaatras.png" class="carousel-img">
         <img src="assets/img/paletacostado2.png" class="carousel-img">
       </div>
+
     </div>
   </section>
 
-  <section class="seccion-marcas">
-    <div class="marcas-container">
-      <img src="./assets/img/logoadidas.png" style="height: 70px;">
-      <img src="./assets/img/wilsonlogo.png" style="height: 35px;">
-      <img src="./assets/img/siuxlogo.png" style="height: 30px;">
-      <img src="./assets/img/headlogo.jpeg" style="height: 40px;">
-      <img src="./assets/img/logonike.png" style="height: 65px;">
-      <img src="./assets/img/noxlogo.png" style="height: 30px;">
-      <img src="./assets/img/bullpadellogo.jpeg" style="height: 40px;">
-    </div>
-
-  </section>
+  <div class="container text-center my-5">
+    <h2 class="mb-4 text-white">Nuestras marcas</h2>
+    <img src="assets/img/marcas.jpg" alt="Marcas destacadas" class="img-fluid imagen-marcas">
+  </div>
 
   <section class="seccion-destacados">
     <div class="led-marco" style="width: 400px;">
