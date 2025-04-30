@@ -1046,3 +1046,111 @@
     display: none;
   }
 }
+
+@media (max-width: 992px) {
+  .contenedor-informacion {
+    padding: 20px 50px 0 50px;
+  }
+
+  .contenedor-contacto {
+    padding: 20px 50px 50px 50px;
+  }
+
+  .contenedor-titulos {
+    padding-left: 50px;
+  }
+
+  .led-marco-entrega {
+    width: 220px;
+  }
+}
+
+@media (max-width: 768px) {
+  .contenedor-informacion {
+    padding: 20px 30px 0 30px;
+  }
+
+  .contenedor-contacto {
+    flex-direction: column;
+    padding: 20px 30px 50px 30px;
+    align-items: center;
+  }
+
+  .contenedor-titulos {
+    padding-left: 20px;
+    padding-top: 10px;
+  }
+
+  .led-marco-entrega {
+    width: 200px;
+  }
+
+  .titulos-cm {
+    font-size: 16px;
+  }
+
+  .contenedor-informacion ul p {
+    font-size: 14px;
+  }
+
+  .contenedor-informacion li {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .contenedor-informacion {
+    padding: 10px 15px 0 15px;
+  }
+
+  .contenedor-contacto {
+    padding: 15px;
+  }
+
+  .led-marco-entrega {
+    width: 180px;
+  }
+
+  .titulos-cm {
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 768px) {
+  .contenedor-condiciones {
+    padding: 15px 20px;
+    font-size: 14px;
+  }
+
+  .titulos-nosotros {
+    padding-top: 60px !important;
+    padding-bottom: 20px;
+    justify-content: center;
+  }
+
+  .led-marco-nosotros {
+    width: 250px !important;
+    margin-bottom: 15px;
+  }
+
+  .container-marcoled-nosotros {
+    padding: 5px;
+  }
+}
+
+@media (max-width: 480px) {
+  .contenedor-condiciones {
+    padding: 10px 15px;
+    font-size: 13px;
+  }
+
+  .led-marco-nosotros {
+    width: 200px !important;
+  }
+
+  .titulos-nosotros {
+    padding-top: 40px !important;
+    font-size: 14px;
+  }
+}
+
