@@ -13,7 +13,7 @@ $routes->get('/Comercializacion', 'Pages::comercialization');
 $routes->get('/Mantenimiento', 'Pages::mantenimiento');
 
 // Rutas para contacto
-$routes->get('Contacto/', 'Contact::index');
+$routes->get('/Contacto', 'Contact::index');
 $routes->post('/Contacto/send', 'Contact::send');
 
 // Establecer controlador por defecto
