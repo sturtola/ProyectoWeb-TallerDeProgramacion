@@ -16,10 +16,11 @@
           <li class="dropdown">
             <a href="#">Productos</a>
             <ul class="menu-vertical-barra">
-              <li><a href="#">Hombre</a></li>
-              <li><a href="#">Mujer</a></li>
-              <li><a href="#">Accesorios</a></li>
+              <li><a href="<?= base_url('/Mantenimiento') ?>">Hombre</a></li>
+              <li><a href="<?= base_url('/Mantenimiento') ?>">Mujer</a></li>
+              <li><a href="<?= base_url('/Mantenimiento') ?>">Accesorios</a></li>
             </ul>
+            
           </li>
           <li><a href="<?= base_url('/QuienesSomos') ?>">Nosotros</a></li>
           <li class="dropdown">
@@ -43,18 +44,18 @@
             <li><a href="<?= base_url('/') ?>">Inicio</a></li>
 
             <li class="submenu-toggle">
-              <a href="#">Productos</a>
+            <h4 class="text-white">Productos</h4>
               <ul class="submenu-vertical-lateral">
-                <li><a href="#">Hombre</a></li>
-                <li><a href="#">Mujer</a></li>
-                <li><a href="#">Accesorios</a></li>
+                <li><a href="<?= base_url('/Mantenimiento') ?>">Hombre</a></li>
+                <li><a href="<?= base_url('/Mantenimiento') ?>">Mujer</a></li>
+                <li><a href="<?= base_url('/Mantenimiento') ?>">Accesorios</a></li>
               </ul>
             </li>
 
-            <li><a href="<?= base_url('nosotros') ?>">Nosotros</a></li>
+            <li><a href="<?= base_url('/QuienesSomos') ?>">Nosotros</a></li>
 
             <li class="submenu-toggle">
-              <a href="#">Información</a>
+              <h4 class="text-white">Información</h4>
               <ul class="submenu-vertical-lateral">
                 <li><a href="<?= base_url('/Contacto') ?>">Contacto</a></li>
                 <li><a href="<?= base_url('/Comercializacion') ?>">Comercializacion</a></li>

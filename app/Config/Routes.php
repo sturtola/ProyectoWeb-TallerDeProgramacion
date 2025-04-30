@@ -10,6 +10,7 @@ $routes->get('/', 'Pages::index');
 $routes->get('/QuienesSomos', 'Pages::about');
 $routes->get('/TerminosYUsos', 'Pages::terms');
 $routes->get('/Comercializacion', 'Pages::comercialization');
+$routes->get('/Mantenimiento', 'Pages::mantenimiento');
 
 // Rutas para contacto
 $routes->get('Contacto/', 'Contact::index');

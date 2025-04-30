@@ -39,5 +39,14 @@ class Pages extends BaseController
             'content' => view('pages/comercializacion')
         ]);
     }
+
+    public function mantenimiento()
+    {
+        // Cargar la página de "Comercialización"
+        return view('templates/main_layout', [
+            'title' => 'Comercialización - Auren',
+            'content' => view('pages/mantenimiento')
+        ]);
+    }
     
 }

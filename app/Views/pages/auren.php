@@ -12,6 +12,7 @@
         construye día a día junto a nuestros clientes.</p>
     </div>
     <div class="about-carousel">
+    <a href="<?= base_url('/Mantenimiento') ?>" target="" rel="">
       <div class="carousel-track">
         <img src="assets/img/paletafrente.png" class="carousel-img">
         <img src="assets/img/paletacostado1.png" class="carousel-img">
@@ -55,6 +56,7 @@
     <div class="tarjeta-con-titulo">
       <div class="titulo-categoria">MUJER</div>
       <div class="tarjeta">
+      <a href="<?= base_url('/Mantenimiento') ?>" target="" rel="">
         <img src="./assets/img/arisanchez.jpg" alt="paula" class="imagen-front">
         <img src="./assets/img/speed.jpg" alt="Paleta 1" class="imagen-hover">
         <div class="info">
@@ -70,6 +72,7 @@
       <div class="tarjeta">
         <img src="./assets/img/Lamperti.jpg" alt="lampe" class="imagen-front">
         <img src="./assets/img/ml.jpg" alt="Paleta 2" class="imagen-hover">
+        <a href="<?= base_url('/Mantenimiento') ?>" target="" rel="">
         <div class="info">
           <h3>Nox ML10 Pro Cup</h3>
           <p>Cómoda, sólida y duradera. Para todo tipo de jugador. </p>
@@ -83,6 +86,7 @@
       <div class="tarjeta">
         <img src="./assets/img/grip1.jpg" alt="Jugador 3" class="imagen-front">
         <img src="./assets/img/gripblanco.jpg" alt="Paleta 3" class="imagen-hover">
+        <a href="<?= base_url('/Mantenimiento') ?>" target="" rel="">
         <div class="info">
           <h3>Overgrips Adidas</h3>
           <p>Grip blanco, cómodo y adherente. Para todos los deportes.</p>
