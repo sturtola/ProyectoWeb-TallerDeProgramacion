@@ -1,16 +1,15 @@
+<section class="container-nostros titulos-nosotros" style="justify-content: center; padding-top: 120px;" id="inicio-nosotros">
+  <div class="led-marco-nosotros" style="width: 150px;">
+    <div class="container-marcoled-nosotros" >
+      <h3 class="titulos-cm" style="font-size: 18px; font-weight: bold;">Nosotros</h3>
+    </div>
+  </div>
+</section>
 
-    <section class="container-nostros titulos-nosotros" style="justify-content: center; padding-top: 120px;">
-        <div class="led-marco-nosotros">
-            <div class="container-marcoled-nosotros">
-                <h3 class="titulos-cm">Nosotros</h3>
-            </div>
-        </div>
-    </section>
-
-    <section class="container my-5">
+<section class="container my-5">
   <div class="row justify-content-center">
-    <div class="col-12 col-md-10 col-lg-8">
-      <div class="contenido-nosotros">
+    <div class="col-12 col-md-12 col-lg-10">
+      <div class="contenido-nosotros" style="font-size: 20px;">
         <p>
           <strong>Auren</strong> es una empresa nacida de la pasión por el deporte y el compromiso con la
           innovación. Con raíces profundas en Formosa y Corrientes, llevamos más de 45 años impulsando el
@@ -42,14 +41,14 @@
   </div>
 </section>
 
-    <section class="container-nostros titulos-nosotros" style="justify-content: center;">
-        <div class="led-marco-nosotros" style="width: 130px;">
-            <div class="container-marcoled-nosotros">
-                <h3 class="titulos-cm">Staff</h3>
-            </div>
-        </div>
-    </section>
-    <section class="container my-5">
+<section class="container-nostros titulos-nosotros" style="justify-content: center;">
+  <div class="led-marco-nosotros" style="width: 130px;">
+    <div class="container-marcoled-nosotros">
+      <h3 class="titulos-cm" style="font-size: 18px; font-weight: bold;">Staff</h3>
+    </div>
+  </div>
+</section>
+<section class="container my-5">
   <div class="row">
     <div class="col-12 col-lg-6 mb-4">
       <div class="tarjeta-con-titulo-staff">
@@ -87,4 +86,3 @@
     </div>
   </div>
 </section>
-

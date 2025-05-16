@@ -10,9 +10,9 @@
     <div class="row">
       <ul>
         <li><a href="<?= base_url('/') ?>">Inicio</a></li>
-        <li><a href="<?= base_url('/QuienesSomos') ?>">Sobre Nosotros</a></li>
-        <li><a href="<?= base_url('/TerminosYUsos') ?>">Terminos y Condiciones</a></li>
-        <li><a href="<?= base_url('/Contacto') ?>">Contacto</a></li>
+        <li><a href="<?= base_url('/QuienesSomos#inicio-nosotros') ?>">Sobre Nosotros</a></li>
+        <li><a href="<?= base_url('/TerminosYUsos#inicio-condiciones') ?>">Terminos y Condiciones</a></li>
+        <li><a href="<?= base_url('/Contacto#inicio-contacto') ?>">Contacto</a></li>
       </ul>
     </div>
 

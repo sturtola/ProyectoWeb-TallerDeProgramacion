@@ -1,4 +1,4 @@
-<section class="bg-dark text-white py-5">
+<section class="bg-dark text-white py-5" id="inicio-mantenimiento";>
   <div class="container vh-100 d-flex justify-content-center align-items-center">
     <div class="text-center">
 

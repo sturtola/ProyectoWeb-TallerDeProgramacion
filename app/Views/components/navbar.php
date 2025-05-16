@@ -1,68 +1,72 @@
-
 <section class="principal imagen-header">
-    <div class="container-fluid barraNav">
-      <nav class="navbar">
-        <!-- Checkbox y botón menú hamburguesa -->
-        <input type="checkbox" id="menu-toggle" class="menu-toggle">
-        <label for="menu-toggle" class="menu-icon">
-          <span class="bar"></span>
-          <span class="bar"></span>
-          <span class="bar"></span>
-        </label>
+  <div class="container-fluid barraNav">
+    <nav class="navbar">
+      <!-- Checkbox y botón menú hamburguesa -->
+      <input type="checkbox" id="menu-toggle" class="menu-toggle">
+      <label for="menu-toggle" class="menu-icon">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </label>
 
-        <!-- Menú horizontal (pantallas grandes) -->
-        <ul class="nav-list">
-          <li><a href="<?= base_url('/') ?>">Inicio</a></li>
-          <li class="dropdown">
-            <a href="#">Productos</a>
-            <ul class="menu-vertical-barra">
-              <li><a href="<?= base_url('/Mantenimiento') ?>">Hombre</a></li>
-              <li><a href="<?= base_url('/Mantenimiento') ?>">Mujer</a></li>
-              <li><a href="<?= base_url('/Mantenimiento') ?>">Accesorios</a></li>
-            </ul>
-            
+      <!-- Menú horizontal (pantallas grandes) -->
+      <ul class="nav-list">
+        <li><a href="<?= base_url('/') ?>">Inicio</a></li>
+        <li class="dropdown">
+          <a href="<?= base_url('/Mantenimiento#inicio-mantenimiento') ?>">Productos</a>
+          <ul class="menu-vertical-barra">
+            <li><a href="<?= base_url('/Mantenimiento#inicio-mantenimiento') ?>">Hombre</a></li>
+            <li><a href="<?= base_url('/Mantenimiento#inicio-mantenimiento') ?>">Mujer</a></li>
+            <li><a href="<?= base_url('/Mantenimiento#inicio-mantenimiento') ?>">Accesorios</a></li>
+          </ul>
+
+        </li>
+        <li><a href="<?= base_url('/QuienesSomos#inicio-nosotros') ?>">Nosotros</a></li>
+        <li class="dropdown">
+
+          <a href="#">Información</a>
+          <ul class="menu-vertical-barra menu-informacion">
+            <li><a href="<?= base_url('/Contacto#inicio-contacto') ?>">Contacto</a></li>
+            <li><a href="<?= base_url('/Comercializacion#inicio-comercializacion') ?>">Comercializacion</a></li>
+            <li><a href="<?= base_url('/TerminosYUsos#inicio-condiciones') ?>">Términos y Condiciones</a></li>
+          </ul>
+        </li>
+      </ul>
+
+
+      <a class="navbar-brand" href="<?= base_url('/') ?>">
+        <img class="nombreMarca" src="assets/img/nombremarca1.png">
+      </a>
+
+      <div class="sidebar">
+        <ul class="menu-vertical-lateral">
+          <li><a href="<?= base_url('/') ?>">
+              <h5>Inicio<h5>
+            </a></li>
+
+          <li class="submenu-toggle">
+            <a href="<?= base_url('/Mantenimiento#inicio-mantenimiento') ?>">
+              <h5>Productos</h5><a>
+                <ul class="submenu-vertical-lateral">
+                  <li><a href="<?= base_url('/Mantenimiento#inicio-mantenimiento') ?>">Hombre</a></li>
+                  <li><a href="<?= base_url('/Mantenimiento#inicio-mantenimiento') ?>">Mujer</a></li>
+                  <li><a href="<?= base_url('/Mantenimiento#inicio-mantenimiento') ?>">Accesorios</a></li>
+                </ul>
           </li>
-          <li><a href="<?= base_url('/QuienesSomos') ?>">Nosotros</a></li>
-          <li class="dropdown">
-            
-            <a href="#">Información</a>
-            <ul class="menu-vertical-barra menu-informacion">
-              <li><a href="<?= base_url('/Contacto') ?>">Contacto</a></li>
-              <li><a href="<?= base_url('/Comercializacion') ?>">Comercializacion</a></li>
-              <li><a href="<?= base_url('/TerminosYUsos') ?>">Términos y Condiciones</a></li>
+
+          <li><a href="<?= base_url('/QuienesSomos#inicio-nosotros') ?>">
+              <h5>Nosotros<h5>
+            </a></li>
+
+          <li class="submenu-toggle">
+            <a href="#"><h5>Información</h5><a>
+            <ul class="submenu-vertical-lateral">
+              <li><a href="<?= base_url('/Contacto#inicio-contacto') ?>">Contacto</a></li>
+              <li><a href="<?= base_url('/Comercializacion#inicio-comercializacion') ?>">Comercializacion</a></li>
+              <li><a href="<?= base_url('/TerminosYUsos#incio-condiciones') ?>">Términos y Condiciones</a></li>
             </ul>
           </li>
         </ul>
+      </div>
 
-
-        <a class="navbar-brand" href="#">
-          <img class="nombreMarca" src="assets/img/nombremarca1.png">
-        </a>
-
-        <div class="sidebar">
-          <ul class="menu-vertical-lateral">
-            <li><a href="<?= base_url('/') ?>">Inicio</a></li>
-
-            <li class="submenu-toggle">
-            <h4 class="text-white">Productos</h4>
-              <ul class="submenu-vertical-lateral">
-                <li><a href="<?= base_url('/Mantenimiento') ?>">Hombre</a></li>
-                <li><a href="<?= base_url('/Mantenimiento') ?>">Mujer</a></li>
-                <li><a href="<?= base_url('/Mantenimiento') ?>">Accesorios</a></li>
-              </ul>
-            </li>
-
-            <li><a href="<?= base_url('/QuienesSomos') ?>">Nosotros</a></li>
-
-            <li class="submenu-toggle">
-              <h4 class="text-white">Información</h4>
-              <ul class="submenu-vertical-lateral">
-                <li><a href="<?= base_url('/Contacto') ?>">Contacto</a></li>
-                <li><a href="<?= base_url('/Comercializacion') ?>">Comercializacion</a></li>
-                <li><a href="<?= base_url('/TerminosYUsos') ?>">Términos y Condiciones</a></li>
-              </ul>
-            </li>
-          </ul>
-        </div>
-
-  </section>
+</section>

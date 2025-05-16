@@ -1,8 +1,8 @@
-<section class="comercializacion">
+<section class="comercializacion" id="inicio-contacto">
     <section class="contenedor-titulos" style="padding-top: 120px">
         <div class="led-marco-entrega" style="width: 200px">
             <div class="container-marcoled-entrega">
-                <h3 class="titulos-cm">Identidicación</h3>
+                <h3 class="titulos-cm">Identificación</h3>
             </div>
         </div>
     </section>
@@ -132,3 +132,4 @@
     </div>
 </div>
 </section>
+

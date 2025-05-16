@@ -4,18 +4,18 @@
   <div class="row align-items-center">
 
     <!-- Texto -->
-    <div class="col-12 col-md-6 mb-4 mb-md-0 text-white" style="font-family: 'Roboto', sans-serif;">
-      <h2 class="fw-bold display-3 mb-4">Auren</h2>
-      <p class="lead fs-4">Auren es una empresa con raíces profundas en Formosa y Corrientes, y más de 45 años de trayectoria en el mercado.</p>
-      <p class="lead fs-4">Nacimos impulsados por una verdadera pasión por el deporte, y fue justamente esa pasión la que nos llevó a realizar nuestra primera venta: una paleta como la que hoy sigue siendo símbolo de nuestros inicios. En Auren, seguimos apostando al desarrollo, al talento local y a la innovación.</p>
-      <p class="lead fs-4 fst-italic fw-bold mt-4">Más que una marca, somos una historia que se construye día a día junto a nuestros clientes.</p>
+    <div class="col-12 col-md-7 mb-4 mb-md-0 text-white" style="font-family: 'Verdana', sans-serif; text-align: justify;">
+      <h2 class="fw-bold display-5 mb-2" style="font-weight: bold; font-family:'Verdana', sans-serif">Auren</h2>
+      <p class="lead fs-4" style="font-family: 'Verdana', sans-serif;">Auren es una empresa con raíces profundas en Formosa y Corrientes, y más de 45 años de trayectoria en el mercado.</p>
+      <p class="lead fs-4" style="font-family: 'Verdana', sans-serif;">Nacimos impulsados por una verdadera pasión por el deporte, y fue justamente esa pasión la que nos llevó a realizar nuestra primera venta: una paleta como la que hoy sigue siendo símbolo de nuestros inicios. En Auren, seguimos apostando al desarrollo, al talento local y a la innovación.</p>
+      <p class="lead fs-4 fst-italic fw-bold mt-4" style="font-family: 'Verdana', sans-serif;">Más que una marca, somos una historia que se construye día a día junto a nuestros clientes.</p>
     </div>
 
     <!-- Imagen en lugar de carrusel -->
-    <div class="col-12 col-md-6">
+    <div class="col-12 col-md-5">
       <div class="container text-center my-5">
-        <h2 class="mb-4 text-white">Auren Pro Cup</h2>
-        <img src="assets/img/paletacostado1.png" alt="Marcas destacadas" class="img-fluid imagen-marcas">
+        <h2 class="mb-3 text-white" style="font-family: 'Verdana', sans-serif;">Auren Pro Cup</h2>
+        <img src="assets/img/paletacostado1.png" alt="Marcas destacadas" class="img-fluid imagen-marcas" style="width: 80%;">
       </div>
     </div>
 

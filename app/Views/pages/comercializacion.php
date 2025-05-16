@@ -1,6 +1,6 @@
 <link rel="icon" type="image/png" href="assets/img/icon.png">
 
-<div class="container-fluid px-0 comercializacion">
+<div class="container-fluid px-0 comercializacion" id="inicio-comercializacion">
 
     <section class="contenedor-titulos" style="padding-top: 80px">
         <div class="led-marco-entrega">

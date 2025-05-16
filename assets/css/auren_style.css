@@ -12,6 +12,7 @@
   width: 100%;
   overflow: hidden;
   height: 100vh;
+  background-position: center center;
 }
 
 .imagen-header {
@@ -55,7 +56,7 @@
 
 /* LISTA DE NAVEGACIÓN */
 .nav-list {
-  font-family: Verdana, sans-serif;
+  font-family: "Verdana", sans-serif;
   list-style: none;
   display: flex;
   gap: 90px;
@@ -121,7 +122,7 @@
   color: rgb(185, 185, 185);
   text-decoration: none !important;
   display: block;
-  font-size: 14px; /* o el tamaño que uses en general */
+  font-size: 20px; /* o el tamaño que uses en general */
   transition: color 0.3s ease, transform 0.3s ease;
   text-align: center;
 }
@@ -593,7 +594,7 @@
   font-size: 17px;
   font-weight: 400;
   margin-top: 10px;
-  font-family: Verdana, sans-serif;
+  font-family: "Verdana", sans-serif;
   padding: 20px 30px 10px 30px;
 }
 
@@ -615,7 +616,7 @@
   margin-bottom: 10px;
   text-align: center;
   width: 100%;
-  font-family: Verdana, sans-serif;
+  font-family: "Verdana", sans-serif;
 }
 
 .video-review {
@@ -750,7 +751,7 @@
   text-align: center;
   font-size: 18px;
   padding: 7px;
-  font-family: Verdana, sans-serif;
+  font-family: "Verdana", sans-serif;
 }
 
 .contenedor-informacion {
@@ -760,7 +761,7 @@
 
 .contenedor-informacion li {
   font-weight: bold;
-  font-family: Verdana, sans-serif;
+  font-family: "Verdana", sans-serif;
   font-size: 15px;
   color: white;
 }
@@ -768,7 +769,7 @@
 .contenedor-informacion ul p {
   padding-top: 10px;
   padding-bottom: 25px;
-  font-family: Verdana, sans-serif;
+  font-family: "Verdana", sans-serif;
   font-size: 16px;
   color: white;
 }
@@ -785,15 +786,15 @@
 
 .contenido-nosotros {
   text-align: justify;
+  font-size: 30px;
 }
 
 .contenido-nosotros p {
   color: white;
   text-align: justify;
   margin-bottom: 1.5rem;
-  font-size: 15px;
   line-height: 1.6;
-  font-family: Verdana, sans-serif;
+  font-family: "Verdana", sans-serif;
 }
 
 .titulos-nosotros {
@@ -891,7 +892,7 @@
   color: white;
   width: 350px;
   text-align: justify;
-  font-family: Verdana, sans-serif;
+  font-family: "Verdana", sans-serif;
   gap: 20px;
   font-size: 15px;
 }
@@ -916,7 +917,7 @@
   max-width: 900px; /* que no sea infinito de ancho */
   margin: 0 auto; /* centra el bloque en la página */
   background-color: rgba(255, 255, 255, 0.867);
-  font-family: Verdana, sans-serif; /* o la fuente que uses */
+  font-family: "Verdana", sans-serif; /* o la fuente que uses */
   font-size: 15px; /* tamaño de texto cómodo */
   line-height: 1.6; /* mejora la lectura */
   color: #000000a8; /* color de texto amigable */
@@ -942,7 +943,7 @@
   border-left: 2px solid rgba(255, 255, 255, 0.693);
   padding-left: 20px;
   height: 40px;
-  font-family: Verdana, sans-serif;
+  font-family: "Verdana", sans-serif;
 }
 
 @media (max-width: 768px) {
@@ -981,7 +982,7 @@
 
 /* LISTA DE NAVEGACIÓN */
 .lista-nav {
-  font-family: Verdana, sans-serif;
+  font-family: "Verdana", sans-serif;
   list-style: none;
   display: flex;
   gap: 60px; /* antes 90px para que esté más compacto */
@@ -1086,7 +1087,8 @@
   }
 
   .titulos-cm {
-    font-size: 16px;
+    font-size: 18px;
+    font-weight: bold;
   }
 
   .contenedor-informacion ul p {
@@ -1153,4 +1155,5 @@
     font-size: 14px;
   }
 }
+
 
