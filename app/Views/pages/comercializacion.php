@@ -10,7 +10,7 @@
         </div>
     </section>
 
-    <section class="contenedor-informacion">
+    <section>
         <div class="contenedor-contacto">
             <ul>
                 <li><strong>LUNES A VIERNES:</strong></li>
@@ -22,8 +22,8 @@
             </ul>
             <ul>
                 <li><strong>FERIADOS:</strong></li>
-                <li>Nacionales: CERRADO.</li>
-                <li>Provinciales: ATENCIÓN NORMAL.</li>
+                <li><strong>Nacionales:</strong> CERRADO.</li>
+                <li><strong>Provinciales:</strong> ATENCIÓN NORMAL.</li>
             </ul>
         </div>
     </section>

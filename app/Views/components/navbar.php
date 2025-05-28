@@ -11,7 +11,12 @@
 
       <!-- Menú horizontal (pantallas grandes) -->
       <ul class="nav-list">
-        <li><a href="<?= base_url('/') ?>">Inicio</a></li>
+        <li class="dropdown">
+          <a href="<?= base_url('/#inicio-inicio') ?>">Inicio</a>
+          <ul class="menu-vertical-barra">
+            <li><a href="<?= base_url('/IniciarSesion#inicio-sesion') ?>">Iniciar Sesión</a></li>
+          </ul>
+        </li>
         <li class="dropdown">
           <a href="<?= base_url('/Mantenimiento#inicio-mantenimiento') ?>">Productos</a>
           <ul class="menu-vertical-barra">
@@ -19,7 +24,6 @@
             <li><a href="<?= base_url('/Mantenimiento#inicio-mantenimiento') ?>">Mujer</a></li>
             <li><a href="<?= base_url('/Mantenimiento#inicio-mantenimiento') ?>">Accesorios</a></li>
           </ul>
-
         </li>
         <li><a href="<?= base_url('/QuienesSomos#inicio-nosotros') ?>">Nosotros</a></li>
         <li class="dropdown">

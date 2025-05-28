@@ -11,6 +11,7 @@ $routes->get('/QuienesSomos', 'Pages::about');
 $routes->get('/TerminosYUsos', 'Pages::terms');
 $routes->get('/Comercializacion', 'Pages::comercialization');
 $routes->get('/Mantenimiento', 'Pages::mantenimiento');
+$routes->get('/IniciarSesion', 'Pages::login');
 
 // Rutas para contacto
 $routes->get('/Contacto', 'Contact::index');

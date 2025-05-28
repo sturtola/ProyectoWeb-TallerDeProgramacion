@@ -44,9 +44,17 @@ class Pages extends BaseController
     {
         // Cargar la página de "Comercialización"
         return view('templates/main_layout', [
-            'title' => 'Comercialización - Auren',
+            'title' => 'Mantenimiento - Auren',
             'content' => view('pages/mantenimiento')
         ]);
     }
     
+    public function login()
+    {
+        // Cargar la página de "Inicio de Sesion"
+        return view('templates/main_layout', [
+            'title' => 'Iniciar Sesión - Auren',
+            'content' => view('pages/inicioSesion')
+        ]);
+    }
 }

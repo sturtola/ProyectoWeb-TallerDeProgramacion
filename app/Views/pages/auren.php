@@ -1,6 +1,6 @@
 
 
-<section class="container my-5">
+<section class="container my-5" id="inicio-inicio">
   <div class="row align-items-center">
 
     <!-- Texto -->
@@ -24,14 +24,17 @@
 
 
   <div class="container text-center my-5">
-    <h2 class="mb-4 text-white">Nuestras marcas</h2>
-    <img src="assets/img/marcas.jpg" alt="Marcas destacadas" class="img-fluid imagen-marcas">
+  <div class="separador-con-texto">
+    <span class="texto-separador" style="font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;">Nuestras marcas</span>
   </div>
+  <img src="assets/img/marcas.jpg" alt="Marcas destacadas" class="img-fluid imagen-marcas">
+</div>
+
 
   <section class="seccion-destacados">
     <div class="led-marco" style="width: 400px;">
       <div class="container-marcoled">
-        <p class="subtitulo" style="text-align: center; font-weight: bold; font-size: 20px">Elegí calidad, elegí AUREN.
+        <p class="subtitulo" style="text-align: center; font-weight: bold; font-size: 20px; ">Elegí calidad, elegí AUREN.
         </p>
       </div>
     </div>
@@ -42,7 +45,7 @@
   <div class="row justify-content-center">
     <!-- Texto responsivo -->
     <div class="col-12">
-      <p class="subtitulo text-white fs-4 text-center">
+      <p class="subtitulo text-white fs-4 text-center" style="font-size: 18px;">
         Explorá nuestras tres categorías principales y encontrá el producto perfecto para tu juego.
         Desde paletas de alta competencia hasta accesorios esenciales, cada opción está seleccionada para ofrecerte lo mejor en rendimiento, tecnología y confort.
       </p>

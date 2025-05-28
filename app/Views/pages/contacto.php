@@ -82,8 +82,8 @@
     SECCIÓN: FORMULARIO DE CONTACTO
 =============================== -->
 <div class="container">
-    <div class="card shadow">
-        <div class="card-body">
+    <div class="card shadow border-0">
+        <div class="card-body" style="background-color: rgba(22, 22, 22, 0.867); color: white;">
              <h2 class="card-title mb-4 text-center fw-light display-6">Envianos tu consulta</h2>
 
             <?php if (session()->getFlashdata('message')): ?>
@@ -103,29 +103,29 @@
             <form action="<?= base_url('/Contacto/send') ?>" method="post">
             <div class="mb-3">
                 <label for="name" class="form-label">Nombre:</label>
-                <input type="text" class="form-control" id="name" name="name" 
+                <input type="text" class="form-control border-0" id="name" name="name" style="background-color: rgba(9, 9, 9, 0.87);" 
                     value="<?= old('name') ?>" required placeholder="Ej: Juan Pérez">
             </div>
 
             <div class="mb-3">
                 <label for="email" class="form-label">Email:</label>
-                <input type="email" class="form-control" id="email" name="email" 
+                <input type="email" class="form-control border-0" id="email" name="email" style="background-color: rgba(9, 9, 9, 0.87);"
                     value="<?= old('email') ?>" required placeholder="Ej: juanperez@email.com">
             </div>
 
             <div class="mb-3">
                 <label for="phone" class="form-label">Teléfono:</label>
-                <input type="text" class="form-control" id="phone" name="phone" 
+                <input type="text" class="form-control border-0" id="phone" name="phone" style="background-color: rgba(9, 9, 9, 0.87);"
                     value="<?= old('phone') ?>" required placeholder="Ej: (3774)-504134">
             </div>
 
             <div class="mb-3">
-                <label for="message" class="form-label">Mensaje:</label>
-                <textarea class="form-control" id="message" name="message" rows="5" required placeholder="Escribe tu consulta aquí..."><?= old('message') ?></textarea>
+                <label for="message" class="form-label">Mensaje:</label> 
+                <textarea class="form-control border-0" id="message" style="background-color: rgba(9, 9, 9, 0.87);" name="message" rows="5" required placeholder="Escribe tu consulta aquí..."><?= old('message') ?></textarea>
             </div>
 
             <div class="d-grid">
-                <button type="submit" class="btn btn-dark btn-lg">Enviar</button>
+                <button type="submit" class="btn btn-dark btn-lg" style="background-color: rgba(9, 9, 9, 0.87);">Enviar</button>
             </div>
         </form>
         </div>

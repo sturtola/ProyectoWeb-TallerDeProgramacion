@@ -3,7 +3,7 @@
     <section class="titulos-nosotros" style="justify-content: center; padding-top: 120px" id="inicio-condiciones">
         <div class="led-marco-nosotros" style="width: 350px;">
             <div class="container-marcoled-entrega">
-                <h3 class="titulos-cm">Términos y Condiciones</h3>
+                <h3 class="titulos-cm" style="font-weight: bold;">Términos y Condiciones</h3>
             </div>
         </div>
     </section>
