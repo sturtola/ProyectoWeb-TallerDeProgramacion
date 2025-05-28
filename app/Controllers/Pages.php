@@ -57,4 +57,13 @@ class Pages extends BaseController
             'content' => view('pages/inicioSesion')
         ]);
     }
+
+    public function register()
+    {
+        // Cargar la página de "Registrarse"
+        return view('templates/main_layout', [
+            'title' => 'Registrarse - Auren',
+            'content' => view('pages/registro')
+        ]);
+    }
 }

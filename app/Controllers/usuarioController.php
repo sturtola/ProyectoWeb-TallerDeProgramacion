@@ -25,7 +25,7 @@ class UsuarioController extends Controller
             'nombre' => $this->request->getPost('nombre'),
             'apellido' => $this->request->getPost('apellido'),
             'email' => $this->request->getPost('email'),
-            'telefono' => $this->request->getPost('telefono'),
+            'telefono' => 'no',
             'contraseña' => $this->request->getPost('contraseña'),
             'rol' => 'no'
         ]);
