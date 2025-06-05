@@ -4,13 +4,11 @@
       <h2 class="card-title mb-4 text-center fw-light display-6">Iniciar Sesión</h2>
 
       <?php if (session()->getFlashdata('error')): ?>
-        <div class="alert alert-danger">
-          <?= session()->getFlashdata('error') ?>
-        </div>
+        <p style="color:red"><?= session()->getFlashdata('error') ?></p>
       <?php endif; ?>
 
 
-      <form>
+      <form action="<?= site_url('auth/login') ?>" method="post">
         <div class="mb-3">
           <label for="email" class="form-label">Email:</label>
           <input type="email" class="form-control border-0" id="email" name="email" style="background-color: rgba(9, 9, 9, 0.87);"

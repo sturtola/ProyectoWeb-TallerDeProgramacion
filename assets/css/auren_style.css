@@ -113,6 +113,8 @@
 /* Submenú oculto por defecto */
 .submenu-vertical-lateral {
   list-style: none;
+  text-align: center;
+  padding-left: 0px;
 }
 
 /* Links del submenú */
@@ -134,6 +136,7 @@
 .submenu-toggle {
   justify-content: center;
   align-items: center;
+  text-align: center;
 }
 
 /* Ocultar checkbox */
@@ -189,12 +192,14 @@
 .menu-vertical-lateral li {
   margin: 40px 0;
   margin-bottom: 15px;
+  text-align: center;
 }
 
 .menu-vertical-lateral a {
   color: rgb(255, 255, 255);
   text-decoration: none !important;
   font-size: 20px;
+  text-align: center;
 }
 
 .menu-vertical-lateral a:hover {
@@ -232,36 +237,44 @@
   display: none;
   position: absolute;
   top: 100%;
-  /* sale abajo de Productos */
   left: 0;
-  background-color: black;
-  /* mismo color de fondo que tu nav */
-  list-style: none;
-  padding-top: 10px;
-  margin: 0;
-  width: 180px;
-  text-align: center;
-  border-radius: 10px;
+  width: 200px;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+  overflow: hidden;
+  z-index: 100;
+  list-style: circle;
 }
 
-/* Estilo de cada link del submenú */
+
+/* Ítems del submenú */
 .menu-vertical-barra li a {
   display: block;
-  padding: 20px 20px 20px 0px;
+  padding: 20px 0px;
   color: white;
   text-decoration: none;
-  border-radius: 10px;
   font-size: 20px;
-  padding-top: 20px;
-
+  text-align: left;
+  list-style: none;
+  transition: none !important;
+  transform: none !important;
 }
 
-/* Hover en los ítems del submenú */
-.menu-vertical-barra li a:hover {
-  background-color: #333;
+.menu-vertical-barra a:hover {
+  color:#e1ff00;
 }
 
-/* Al pasar el mouse por Productos, mostrar el submenú */
+.menu-vertical-barra li:hover {
+  color:#e1ff00;
+}
+
+.menu-vertical-barra li {
+  color: white;
+}
+
+/* Mostrar el submenú al hacer hover */
 .dropdown:hover .menu-vertical-barra {
   display: block;
 }
@@ -366,38 +379,6 @@
   text-align: justify;
 }
 
-.about-carousel {
-  width: 300px;
-  /* ancho fijo del carrusel */
-  overflow: hidden;
-  position: relative;
-  display: flex;
-}
-
-.carousel-track {
-  display: flex;
-  width: 1200px;
-  /* 4 imágenes x 400px */
-  animation: scrollCarousel 16s infinite ease-in-out;
-}
-
-.carousel-img {
-  width: 300px;
-  /* cada imagen ocupa el ancho completo del carrusel */
-  object-fit: contain;
-}
-
-@keyframes scrollCarousel {
-  0% {
-    transform: translateX(0);
-  }
-
-  100% {
-    transform: translateX(-1200px);
-    /* se desplaza 4 imágenes (4 x 400px) */
-  }
-}
-
 /* Responsive para móviles */
 @media (max-width: 768px) {
   .informacion {
@@ -411,99 +392,9 @@
     width: 100%;
   }
 
-  .carousel-track {
-    width: 200px;
-    height: 200px;
-  }
+  
 }
 
-.seccion-carrusel {
-  overflow: hidden;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: black;
-  padding: 100px 0px 70px 0px;
-}
-
-.carrusel {
-  width: 1344px;
-  height: 538px;
-}
-
-.carrusel-contenedor {
-  display: flex;
-  width: 300%;
-  height: 100%;
-  animation: deslizar 12s infinite ease-in-out;
-}
-
-.slide {
-  flex: 0 0 100%;
-  /* cada slide ocupa 100% del .carrusel */
-  height: 100%;
-}
-
-.slide img {
-  display: block;
-  width: 1344px;
-  height: 538px;
-  object-fit: cover;
-}
-
-@keyframes deslizar {
-  0% {
-    transform: translateX(0%);
-  }
-
-  25% {
-    transform: translateX(0%);
-  }
-
-  35% {
-    transform: translateX(-100%);
-  }
-
-  60% {
-    transform: translateX(-100%);
-  }
-
-  70% {
-    transform: translateX(-200%);
-  }
-
-  100% {
-    transform: translateX(-200%);
-  }
-}
-
-@media (max-width: 1344px) {
-  .slide img {
-    width: 50% !important;
-    height: auto !important;
-    object-fit: cover;
-    aspect-ratio: 1344 / 538;
-  }
-
-  .carrusel {
-    width: 50% !important;
-    height: auto !important;
-    aspect-ratio: 1344 / 538;
-    padding-right: 200px;
-  }
-}
-
-@media (max-width: 768px) {
-  .seccion-carrusel {
-    padding: 60px 0 50px 0;
-  }
-}
-
-@media (max-width: 480px) {
-  .seccion-carrusel {
-    padding: 40px 0 40px 0;
-  }
-}
 
 .tarjetas-container {
   display: flex;

@@ -20,7 +20,7 @@
         <li class="dropdown">
           <a href="<?= base_url('/Productos#inicio-productos') ?>">Productos</a>
           <ul class="menu-vertical-barra">
-            <li><a href="<?= base_url('/Mantenimiento#inicio-mantenimiento') ?>">Hombre</a></li>
+            <li style="transition: none; transform: none;"><a href="<?= base_url('/Mantenimiento#inicio-mantenimiento') ?>">Hombre</a></li>
             <li><a href="<?= base_url('/Mantenimiento#inicio-mantenimiento') ?>">Mujer</a></li>
             <li><a href="<?= base_url('/Mantenimiento#inicio-mantenimiento') ?>">Accesorios</a></li>
           </ul>
@@ -31,7 +31,7 @@
           <a href="#">Información</a>
           <ul class="menu-vertical-barra menu-informacion">
             <li><a href="<?= base_url('/Contacto#inicio-contacto') ?>">Contacto</a></li>
-            <li><a href="<?= base_url('/Comercializacion#inicio-comercializacion') ?>">Comercializacion</a></li>
+            <li><a href="<?= base_url('/Comercializacion#inicio-comercializacion') ?>">Comercialización</a></li>
             <li><a href="<?= base_url('/TerminosYUsos#inicio-condiciones') ?>">Términos y Condiciones</a></li>
           </ul>
         </li>
@@ -66,12 +66,13 @@
             <a href="#"><h5>Información</h5><a>
             <ul class="submenu-vertical-lateral">
               <li><a href="<?= base_url('/Contacto#inicio-contacto') ?>">Contacto</a></li>
-              <li><a href="<?= base_url('/Comercializacion#inicio-comercializacion') ?>">Comercializacion</a></li>
+              <li><a href="<?= base_url('/Comercializacion#inicio-comercializacion') ?>">Comercialización</a></li>
               <li><a href="<?= base_url('/TerminosYUsos#incio-condiciones') ?>">Términos y Condiciones</a></li>
             </ul>
           </li>
         </ul>
       </div>
-
+    </nav>
+  </div>
 </section>
 

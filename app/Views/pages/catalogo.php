@@ -17,19 +17,27 @@
                         </h2>
                         <div id="marca" class="accordion-collapse collapse show">
                             <div class="accordion-body">
-                                <div class="form-check mb-3"><input class="form-check-input" type="checkbox"
-                                        id="nox"><label class="form-check-label" for="nox">Nox</label></div>
-                                <div class="form-check mb-3"><input class="form-check-input" type="checkbox"
-                                        id="bullpadel"><label class="form-check-label" for="bullpadel">Bullpadel</label>
+                                <div class="form-check mb-3"><input class="form-check-input" type="checkbox" id="nox">
+                                    <label class="form-check-label" for="nox">Nox</label>
                                 </div>
-                                <div class="form-check mb-3"><input class="form-check-input" type="checkbox"
-                                        id="puma"><label class="form-check-label" for="puma">Puma</label></div>
-                                <div class="form-check mb-3"><input class="form-check-input" type="checkbox"
-                                        id="head"><label class="form-check-label" for="head">Head</label></div>
-                                <div class="form-check mb-3"><input class="form-check-input" type="checkbox"
-                                        id="adidas"><label class="form-check-label" for="adidas">Adidas</label></div>
-                                <div class="form-check mb-3"><input class="form-check-input" type="checkbox"
-                                        id="siux"><label class="form-check-label" for="siux">Siux</label></div>
+                                <div class="form-check mb-3"><input class="form-check-input" type="checkbox" id="bullpadel">
+                                    <label class="form-check-label" for="bullpadel">Bullpadel</label>
+                                </div>
+                                <div class="form-check mb-3"><input class="form-check-input" type="checkbox" id="puma">
+                                    <label class="form-check-label" for="puma">Puma</label>
+                                </div>
+                                <div class="form-check mb-3"><input class="form-check-input" type="checkbox" id="head">
+                                    <label class="form-check-label" for="head">Head</label>
+                                </div>
+                                <div class="form-check mb-3"><input class="form-check-input" type="checkbox" id="adidas">
+                                    <label class="form-check-label" for="adidas">Adidas</label>
+                                </div>
+                                <div class="form-check mb-3"><input class="form-check-input" type="checkbox" id="siux">
+                                    <label class="form-check-label" for="siux">Siux</label>
+                                </div>
+                                <div class="form-check mb-3"><input class="form-check-input" type="checkbox" id="babolat">
+                                    <label class="form-check-label" for="siux">Babolat</label>
+                                </div>
                             </div>
                         </div>
                     </div>
