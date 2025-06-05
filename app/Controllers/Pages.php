@@ -66,4 +66,13 @@ class Pages extends BaseController
             'content' => view('pages/registro')
         ]);
     }
+
+    public function catalogo()
+    {
+        // Cargar la página de "Catalogo"
+        return view('templates/main_layout', [
+            'title' => 'Productos - Auren',
+            'content' => view('pages/catalogo')
+        ]);
+    }
 }

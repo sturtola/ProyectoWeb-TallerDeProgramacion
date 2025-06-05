@@ -54,7 +54,7 @@
 
 /* LISTA DE NAVEGACIÓN */
 .nav-list {
-  font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   list-style: none;
   display: flex;
   gap: 90px;
@@ -247,20 +247,18 @@
 /* Estilo de cada link del submenú */
 .menu-vertical-barra li a {
   display: block;
-  padding: 0px 20px 20px;
+  padding: 20px 20px 20px 0px;
   color: white;
   text-decoration: none;
-  transition: background-color 0.3s;
   border-radius: 10px;
   font-size: 20px;
   padding-top: 20px;
+
 }
 
 /* Hover en los ítems del submenú */
 .menu-vertical-barra li a:hover {
   background-color: #333;
-  border-radius: 10px;
-  align-items: center;
 }
 
 /* Al pasar el mouse por Productos, mostrar el submenú */
@@ -294,7 +292,7 @@
 
 .footer {
   background: #000;
-  padding: 10px 0px;
+  padding: 60px 0px;
   font-family: "Play", sans-serif;
   text-align: center;
 }
@@ -343,9 +341,13 @@
 }
 
 .social-container {
-  padding-bottom: 20px;
-  gap: 50px;
+  padding-bottom: 40px;
   transition: 0.5s;
+}
+
+.social-container a {
+  padding-left: 20px;
+  padding-right: 20px;
 }
 
 .about-content {
@@ -1227,3 +1229,42 @@
 
 }
 
+.catalogo{
+  padding-top: 10vh;
+  margin-left: 30vh;
+}
+
+.accordion-dark .accordion-item {
+    background-color: #121212;
+    color: white;
+    border: 1px solid #333;
+  }
+
+  .accordion-dark .accordion-button {
+    background-color: #1f1f1f;
+    color: white;
+  }
+
+  .accordion-dark .accordion-button:not(.collapsed) {
+    background-color: #2a2a2a;
+    color: white;
+  }
+
+  .accordion-dark .accordion-body {
+    background-color: #1a1a1a;
+    color: white;
+  }
+
+  .accordion-dark .form-check-label {
+    color: white;
+  }
+
+  .accordion-dark input {
+    background-color: #2c2c2c;
+    border: 1px solid #555;
+    color: white;
+  }
+
+  .form-check {
+    gap: 10px;
+  }

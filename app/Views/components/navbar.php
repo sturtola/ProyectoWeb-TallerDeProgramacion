@@ -18,7 +18,7 @@
           </ul>
         </li>
         <li class="dropdown">
-          <a href="<?= base_url('/Mantenimiento#inicio-mantenimiento') ?>">Productos</a>
+          <a href="<?= base_url('/Productos') ?>">Productos</a>
           <ul class="menu-vertical-barra">
             <li><a href="<?= base_url('/Mantenimiento#inicio-mantenimiento') ?>">Hombre</a></li>
             <li><a href="<?= base_url('/Mantenimiento#inicio-mantenimiento') ?>">Mujer</a></li>
@@ -74,3 +74,4 @@
       </div>
 
 </section>
+

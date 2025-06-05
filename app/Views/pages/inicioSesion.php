@@ -3,6 +3,13 @@
     <div class="card-body" style="background-color: rgba(22, 22, 22, 0.867); color: white;">
       <h2 class="card-title mb-4 text-center fw-light display-6">Iniciar Sesión</h2>
 
+      <?php if (session()->getFlashdata('error')): ?>
+        <div class="alert alert-danger">
+          <?= session()->getFlashdata('error') ?>
+        </div>
+      <?php endif; ?>
+
+
       <form>
         <div class="mb-3">
           <label for="email" class="form-label">Email:</label>
@@ -13,8 +20,8 @@
         <div class="mb-3">
           <label for="password" class="form-label">Contraseña:</label>
           <input type="password" class="form-control border-0" id="password" style="background-color: rgba(9, 9, 9, 0.87);"
-            name="password" rows="3" value="<?= old('password') ?>" required placeholder="Contraseña...">
-        </div>        
+            name="contaseña" rows="3" value="<?= old('contraseña') ?>" required placeholder="Contraseña...">
+        </div>
         <button type="submit" class="btn btn-success w-100">Ingresar</button>
         <div class="mb-3">
           <p class="text-center mt-3">
@@ -23,8 +30,7 @@
           </p>
         </div>
       </form>
-      
+
     </div>
   </div>
 </div>
-

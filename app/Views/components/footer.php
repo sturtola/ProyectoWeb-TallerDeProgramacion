@@ -1,6 +1,6 @@
 <footer>
   <section class="footer">
-    <div class="row social-container">
+    <div class="social-container">
       <a href="https://wa.me/5493704770647"><img class="social-iconos" src="./assets/img/wpp1.png"></img></a>
       <a href="https://www.instagram.com/"><img class="social-iconos" src="./assets/img/instagram1.png"></img></a>
       <a href="https://es-la.facebook.com/"><img class="social-iconos" src="./assets/img/facebook1.webp"></img></a>
