@@ -127,7 +127,7 @@
                         <!-- Tarjetas de producto -->
                         <div class="col-12 col-md-6 col-lg-4 mb-4">
                             <div class="tarjeta-producto" data-nombre="Elite"
-                                data-descripcion="Paleta de excelente control para jugadoras técnicas."
+                                data-descripcion="Diseñada para jugadoras de alto nivel, la Elite ofrece gran control, precisión y una excelente salida de bola, ideal para un juego técnico y estratégico."
                                 data-marca="Bullpadel" data-material="Carbono y Goma EVA" data-genero="Mujer"
                                 data-imagen="./assets/img/Mujer/bullpadelEliteWoman.png">
                                 <div class="tarjeta-imagen">
@@ -135,7 +135,7 @@
                                 </div>
                                 <div class="tarjeta-info">
                                     <h5 class="producto-nombre">Elite</h5>
-                                    <p class="producto-precio">$280.000</p>
+                                    <p class="producto-precio">$470.000</p>
                                     <button class="btn-comprar">Ver más</button>
                                 </div>
                             </div>
@@ -143,7 +143,7 @@
 
                         <div class="col-12 col-md-6 col-lg-4 mb-4">
                             <div class="tarjeta-producto" data-nombre="Equation Light Advanced"
-                                data-descripcion="Paleta ligera y balanceada ideal para jugadoras intermedias."
+                                data-descripcion="Combinación perfecta de control, ligereza y confort. Ideal para jugadoras intermedias que buscan precisión sin esfuerzo y mayor comodidad en cada golpe."
                                 data-marca="Nox" data-material="Fibra de vidrio y Goma EVA" data-genero="Mujer"
                                 data-imagen="./assets/img/Mujer/noxEquationLightAdvanced.png">
                                 <div class="tarjeta-imagen">
@@ -151,7 +151,7 @@
                                 </div>
                                 <div class="tarjeta-info">
                                     <h5 class="producto-nombre">Equation Light Advanced</h5>
-                                    <p class="producto-precio">$280.000</p>
+                                    <p class="producto-precio">$313.600 </p>
                                     <button class="btn-comprar">Ver más</button>
                                 </div>
                             </div>
@@ -159,7 +159,7 @@
 
                         <div class="col-12 col-md-6 col-lg-4 mb-4">
                             <div class="tarjeta-producto" data-nombre="Metalbone Carbon Control"
-                                data-descripcion="Control total y gran manejabilidad." data-marca="Adidas"
+                                data-descripcion="Precisión extrema y tacto excepcional. Ideal para jugadoras que priorizan el control en cada golpe, con una estructura ligera y firme para máximo rendimiento defensivo." data-marca="Adidas"
                                 data-material="Carbono" data-genero="Mujer"
                                 data-imagen="./assets/img/Mujer/adidasMetalboneCarbonControl.png">
                                 <div class="tarjeta-imagen">
@@ -167,7 +167,7 @@
                                 </div>
                                 <div class="tarjeta-info">
                                     <h5 class="producto-nombre">Metalbone Carbon Control</h5>
-                                    <p class="producto-precio">$280.000</p>
+                                    <p class="producto-precio">$451.999</p>
                                     <button class="btn-comprar">Ver más</button>
                                 </div>
                             </div>
@@ -175,7 +175,7 @@
 
                         <div class="col-12 col-md-6 col-lg-4 mb-4">
                             <div class="tarjeta-producto" data-nombre="Flow"
-                                data-descripcion="Diseñada para jugadoras profesionales que buscan potencia."
+                                data-descripcion="Ligera, potente y versátil, la Flow es la elección de Alejandra Salazar: pensada para jugadoras que buscan agresividad en el juego sin renunciar al control y la manejabilidad."
                                 data-marca="Bullpadel" data-material="Carbono y Goma EVA" data-genero="Mujer"
                                 data-imagen="./assets/img/Mujer/bullpadelFlow.png">
                                 <div class="tarjeta-imagen">
@@ -183,7 +183,7 @@
                                 </div>
                                 <div class="tarjeta-info">
                                     <h5 class="producto-nombre">Flow</h5>
-                                    <p class="producto-precio">$280.000</p>
+                                    <p class="producto-precio">$550.000</p>
                                     <button class="btn-comprar">Ver más</button>
                                 </div>
                             </div>
@@ -191,7 +191,7 @@
 
                         <div class="col-12 col-md-6 col-lg-4 mb-4">
                             <div class="tarjeta-producto" data-nombre="Vertex"
-                                data-descripcion="Paleta de alto rendimiento para jugadoras exigentes."
+                                data-descripcion="Paleta de forma diamante con excelente potencia y balance alto, ideal para jugadoras ofensivas que buscan un rendimiento profesional sin perder control."
                                 data-marca="Bullpadel" data-material="Carbono y Goma EVA" data-genero="Mujer"
                                 data-imagen="./assets/img/Mujer/bullpadelVertex.png">
                                 <div class="tarjeta-imagen">
@@ -199,7 +199,199 @@
                                 </div>
                                 <div class="tarjeta-info">
                                     <h5 class="producto-nombre">Vertex</h5>
-                                    <p class="producto-precio">$280.000</p>
+                                    <p class="producto-precio">$342.000</p>
+                                    <button class="btn-comprar">Ver más</button>
+                                </div>
+                            </div>
+                        </div>
+          <!-- Sección Hombres -->
+                        <div class="col-12 col-md-6 col-lg-4 mb-4">
+                            <div class="tarjeta-producto" data-nombre="AT10"
+                                data-descripcion="Diseñada junto a Agustín Tapia, la AT10 combina control y salida de bola con una gran manejabilidad. Ideal para jugadores técnicos que no quieren perder potencia."
+                                data-marca="Nox" data-material="Carbono y Goma EVA" data-genero="Hombre"
+                                data-imagen="./assets/img/men/at10.png">
+                                <div class="tarjeta-imagen">
+                                    <img src="./assets/img/men/at10.png" alt="Paleta Nox">
+                                </div>
+                                <div class="tarjeta-info">
+                                    <h5 class="producto-nombre">AT10</h5>
+                                    <p class="producto-precio">$450.000</p>
+                                    <button class="btn-comprar">Ver más</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-12 col-md-6 col-lg-4 mb-4">
+                            <div class="tarjeta-producto" data-nombre="Fenix"
+                                data-descripcion="Potente y equilibrada, la Fenix 12K está pensada para jugadores ofensivos que buscan pegada sin perder control. Ideal para nivel avanzado o profesional."
+                                data-marca="Siux" data-material="Carbono y Goma EVA" data-genero="Hombre"
+                                data-imagen="./assets/img/men/fenix.png">
+                                <div class="tarjeta-imagen">
+                                    <img src="./assets/img/men/fenix.png" alt="Paleta Siux">
+                                </div>
+                                <div class="tarjeta-info">
+                                    <h5 class="producto-nombre">Fenix</h5>
+                                    <p class="producto-precio">$548.000</p>
+                                    <button class="btn-comprar">Ver más</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-12 col-md-6 col-lg-4 mb-4">
+                            <div class="tarjeta-producto" data-nombre="Gravity"
+                                data-descripcion="Control y precisión en una pala con amplio punto dulce. Ideal para jugadores que buscan comodidad y maniobrabilidad sin perder potencia."
+                                data-marca="Head" data-material="Carbono y Goma EVA" data-genero="Hombre"
+                                data-imagen="./assets/img/men/gravity.png">
+                                <div class="tarjeta-imagen">
+                                    <img src="./assets/img/men/gravity.png" alt="Paleta Head">
+                                </div>
+                                <div class="tarjeta-info">
+                                    <h5 class="producto-nombre">Gravity</h5>
+                                    <p class="producto-precio">$548.000</p>
+                                    <button class="btn-comprar">Ver más</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-12 col-md-6 col-lg-4 mb-4">
+                            <div class="tarjeta-producto" data-nombre="Speed"
+                                data-descripcion="Potencia y control equilibrados para jugadores intermedios que buscan un golpeo rápido y preciso con gran comodidad."
+                                data-marca="OdPro" data-material="Carbono y Goma EVA" data-genero="Hombre"
+                                data-imagen="./assets/img/men/odpro.png">
+                                <div class="tarjeta-imagen">
+                                    <img src="./assets/img/men/odpro.png" alt="Paleta OdPro">
+                                </div>
+                                <div class="tarjeta-info">
+                                    <h5 class="producto-nombre">Speed</h5>
+                                    <p class="producto-precio">$319.000</p>
+                                    <button class="btn-comprar">Ver más</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-12 col-md-6 col-lg-4 mb-4">
+                            <div class="tarjeta-producto" data-nombre="Radical"
+                                data-descripcion="Versátil y equilibrada, la Radical Head ofrece potencia y control para jugadores avanzados que buscan precisión y comodidad en cada golpe."
+                                data-marca="Head" data-material="Carbono y Goma EVA" data-genero="Hombre"
+                                data-imagen="./assets/img/men/radical.png">
+                                <div class="tarjeta-imagen">
+                                    <img src="./assets/img/men/radical.png" alt="Paleta Head">
+                                </div>
+                                <div class="tarjeta-info">
+                                    <h5 class="producto-nombre">Radical</h5>
+                                    <p class="producto-precio">$305.000</p>
+                                    <button class="btn-comprar">Ver más</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-12 col-md-6 col-lg-4 mb-4">
+                            <div class="tarjeta-producto" data-nombre="Technical"
+                                data-descripcion="En la paleta del Lobo encontrás potencia explosiva y control avanzado para jugadores ofensivos que buscan precisión en cada golpe."
+                                data-marca="Babolat" data-material="Carbono y Goma EVA" data-genero="Hombre"
+                                data-imagen="./assets/img/men/technical.png">
+                                <div class="tarjeta-imagen">
+                                    <img src="./assets/img/men/technical.png" alt="Paleta Babolat">
+                                </div>
+                                <div class="tarjeta-info">
+                                    <h5 class="producto-nombre">Technical</h5>
+                                    <p class="producto-precio">$450.000</p>
+                                    <button class="btn-comprar">Ver más</button>
+                                </div>
+                            </div>
+                        </div>
+<!-- Accesorios -->
+                        <div class="col-12 col-md-6 col-lg-4 mb-4">
+                            <div class="tarjeta-producto" data-nombre="Canasto"
+                                data-descripcion="Canasto clásico para pádel, ideal para transportar y almacenar pelotas con facilidad. Resistente y práctico para tus entrenamientos y partidos."
+                                data-marca="Head" data-material="Tela" data-genero="Unisex"
+                                data-imagen="./assets/img/accesorios/canasto.png">
+                                <div class="tarjeta-imagen">
+                                    <img src="./assets/img/accesorios/canasto.png" alt="Canasto Head">
+                                </div>
+                                <div class="tarjeta-info">
+                                    <h5 class="producto-nombre">Canasto Head</h5>
+                                    <p class="producto-precio">$200.000</p>
+                                    <button class="btn-comprar">Ver más</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-12 col-md-6 col-lg-4 mb-4">
+                            <div class="tarjeta-producto" data-nombre="Pelotas Dunlop"
+                                data-descripcion="Pelotas duraderas con rebote constante, ideales para entrenamientos y partidos."
+                                data-marca="Dunlop" data-material="Fieltro" data-genero="Unisex"
+                                data-imagen="./assets/img/accesorios/dunlop.png">
+                                <div class="tarjeta-imagen">
+                                    <img src="./assets/img/accesorios/dunlop.png" alt="Pelotas Dunlop">
+                                </div>
+                                <div class="tarjeta-info">
+                                    <h5 class="producto-nombre">Pelotas Dunlop</h5>
+                                    <p class="producto-precio">$12.900</p>
+                                    <button class="btn-comprar">Ver más</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-12 col-md-6 col-lg-4 mb-4">
+                            <div class="tarjeta-producto" data-nombre="Cubre Grip Adidas"
+                                data-descripcion="Protección cómoda y antideslizante para el mango de tu pala, que mejora el agarre y prolonga la vida útil del grip original."
+                                data-marca="Adidas" data-material="Poliuretano" data-genero="Unisex"
+                                data-imagen="./assets/img/accesorios/gripadidas.png">
+                                <div class="tarjeta-imagen">
+                                    <img src="./assets/img/accesorios/gripadidas.png" alt="Cubre Grip Adidas">
+                                </div>
+                                <div class="tarjeta-info">
+                                    <h5 class="producto-nombre">Cubre Grip Adidas</h5>
+                                    <p class="producto-precio">$15.000</p>
+                                    <button class="btn-comprar">Ver más</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-12 col-md-6 col-lg-4 mb-4">
+                            <div class="tarjeta-producto" data-nombre="Hesacore"
+                                data-descripcion="Empuñadura ergonómica que mejora el agarre, reduce vibraciones y disminuye la fatiga en el brazo, ideal para mayor confort y control."
+                                data-marca="BullPadel" data-material="Termoplástica (TPR)" data-genero="Unisex"
+                                data-imagen="./assets/img/accesorios/hesacore.png">
+                                <div class="tarjeta-imagen">
+                                    <img src="./assets/img/accesorios/hesacore.png" alt="Hesacore BullPadel">
+                                </div>
+                                <div class="tarjeta-info">
+                                    <h5 class="producto-nombre">Hesacore BullPadel</h5>
+                                    <p class="producto-precio">$13.000</p>
+                                    <button class="btn-comprar">Ver más</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-12 col-md-6 col-lg-4 mb-4">
+                            <div class="tarjeta-producto" data-nombre="Protector"
+                                data-descripcion="Cinta adhesiva resistente que protege la parte superior de la pala contra golpes y raspones, sin afectar el equilibrio ni el rendimiento."
+                                data-marca="Palbea" data-material="Poliuretano" data-genero="Unisex"
+                                data-imagen="./assets/img/accesorios/protector.png">
+                                <div class="tarjeta-imagen">
+                                    <img src="./assets/img/accesorios/protector.png" alt="Protector">
+                                </div>
+                                <div class="tarjeta-info">
+                                    <h5 class="producto-nombre">Protector</h5>
+                                    <p class="producto-precio">$6.000</p>
+                                    <button class="btn-comprar">Ver más</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-12 col-md-6 col-lg-4 mb-4">
+                            <div class="tarjeta-producto" data-nombre="Resina"
+                                data-descripcion="Resina líquida que mejora el grip al máximo, ideal para mantener las manos secas y asegurar un agarre firme durante todo el partido."
+                                data-marca="2 Win Padel" data-material="Resina" data-genero="Unisex"
+                                data-imagen="./assets/img/accesorios/resina.png">
+                                <div class="tarjeta-imagen">
+                                    <img src="./assets/img/accesorios/resina.png" alt="Resina">
+                                </div>
+                                <div class="tarjeta-info">
+                                    <h5 class="producto-nombre">Resina</h5>
+                                    <p class="producto-precio">$10.000</p>
                                     <button class="btn-comprar">Ver más</button>
                                 </div>
                             </div>
