@@ -11,18 +11,13 @@ class consultaModel extends Model
 
     protected $allowedFields = ['nombre', 'email', 'telefono', 'mensaje', 'fecha_envio'];
 
-    public function agregarConsulta($data)
-    {
-        return $this->insert($data);
-    }
+    protected $useTimestamps = false;
 
+    /**
+     * Obtiene todas las consultas ordenadas por fecha de envío descendente.
+     */
     public function obtenerConsultas()
     {
         return $this->orderBy('fecha_envio', 'DESC')->findAll();
-    }
-
-    public function eliminarConsulta($id)
-    {
-        return $this->delete($id);
     }
 }

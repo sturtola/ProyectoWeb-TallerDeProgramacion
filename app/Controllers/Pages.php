@@ -75,4 +75,13 @@ class Pages extends BaseController
             'content' => view('pages/catalogo')
         ]);
     }
+
+    public function contacto()
+    {
+        // Cargar la página de "Contacto"
+        return view('templates/main_layout', [
+            'title' => 'Contacto - Auren',
+            'content' => view('pages/contacto')
+        ]);
+    }
 }

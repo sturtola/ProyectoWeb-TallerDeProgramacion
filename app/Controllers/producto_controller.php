@@ -75,4 +75,12 @@ class producto_controller extends Controller
         $this->productoModel->eliminarProducto($id);
         return redirect()->to('/producto_controller');
     }
+
+    public function catalogo (){
+
+        $model = new productoModel();
+        $data ['productos'] = $model->findAll();
+
+        return view('pages/catalogo', $data);
+    }
 }

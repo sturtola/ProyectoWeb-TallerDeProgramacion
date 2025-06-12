@@ -124,6 +124,31 @@
                 <div class="container py-5">
                     <div class="row g-4">
 
+                    <!-- Tarjetas de producto -->
+            <?php foreach ($productos as $producto): ?>
+                <div class="col-12 col-md-6 col-lg-4 mb-4">
+                    <div class="tarjeta-producto"
+                        data-nombre="<?= esc($producto['nombre']) ?>"
+                        data-descripcion="<?= esc($producto['descripcion']) ?>"
+                        data-marca="<?= esc($producto['marca']) ?>"
+                        data-material="<?= esc($producto['material']) ?>"
+                        data-genero="<?= esc($producto['categoria']) ?>"
+                        data-imagen="<?= base_url('uploads/' . ($producto['imagen_url'] ?? 'default.jpg')) ?>">
+                       
+                        <div class="tarjeta-imagen">
+                            <img src="<?= base_url('uploads/' . ($producto['imagen_url'] ?? 'default.jpg')) ?>"
+                                 alt="Paleta <?= esc($producto['nombre']) ?>">
+                        </div>
+
+                        <div class="tarjeta-info">
+                            <h5 class="producto-nombre"><?= esc($producto['nombre']) ?></h5>
+                            <p class="producto-precio">$<?= number_format($producto['precio'], 0, ',', '.') ?></p>
+                            <button class="btn-comprar">Ver más</button>
+                        </div>
+                    </div>
+                </div>
+            <?php endforeach; ?>
+            
                         <!-- Tarjetas de producto -->
                         <div class="col-12 col-md-6 col-lg-4 mb-4">
                             <div class="tarjeta-producto" data-nombre="Elite"
