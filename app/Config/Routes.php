@@ -33,15 +33,20 @@ $routes->set404Override(function() {
     ]);
 });
 
-$routes->get('usuario', 'Usuario::index');
-$routes->get('usuario/crear', 'Usuario::crear');
-$routes->post('usuario/guardar', 'Usuario::guardar');
-$routes->get('usuario/editar/(:num)', 'Usuario::editar/$1');
-$routes->post('usuario/actualizar/(:num)', 'Usuario::actualizar/$1');
-$routes->post('usuario/eliminar/(:num)', 'Usuario::eliminar/$1');
-$routes->post('auth/registrar', 'Auth::registrar');
-$routes->post('auth/login', 'Auth::login');
-$routes->get('logout', 'Auth::logout');
+$routes->get('usuario_controller', 'usuario_controller::index');
+$routes->get('usuario_controller/agregar', 'usuario_controller::agregar');
+$routes->post('usuario_controller/guardar', 'usuario_controller::guardar');
+$routes->get('usuario_controller/editar/(:num)', 'usuario_controller::editar/$1');
+$routes->post('usuario_controller/actualizar/(:num)', 'usuario_controller::actualizar/$1');
+$routes->get('usuario_controller/eliminar/(:num)', 'usuario_controller::eliminar/$1');
 
+$routes->get('producto_controller', 'producto_controller::index');
+$routes->get('producto_controller/agregar', 'producto_controller::agregar');
+$routes->post('producto_controller/guardar', 'producto_controller::guardar');
+$routes->get('producto_controller/editar/(:num)', 'producto_controller::editar/$1');
+$routes->post('producto_controller/actualizar/(:num)', 'producto_controller::actualizar/$1');
+$routes->get('producto_controller/eliminar/(:num)', 'producto_controller::eliminar/$1');
 
-
+$routes->get('consulta_controller', 'consulta_controller::index');
+$routes->post('consulta_controller/guardar', 'consulta_controller::guardar');
+$routes->get('consulta_controller/eliminar/(:num)', 'consulta_controller::eliminar/$1');

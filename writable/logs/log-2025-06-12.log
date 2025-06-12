@@ -1,0 +1,100 @@
+CRITICAL - 2025-06-12 01:36:01 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "back/consultas/listaconsultas_view.php"
+[Method: GET, Route: consulta_controller]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(212): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('back/consultas/listaconsultas_view.php')
+ 2 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('back/consultas/listaconsultas_view', [], true)
+ 3 APPPATH\Controllers\consulta_controller.php(22): view('back/consultas/listaconsultas_view', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\consulta_controller->index()
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\consulta_controller))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-06-12 01:36:27 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "back/consultas/listaconsultas_view.php"
+[Method: GET, Route: consulta_controller]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(212): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('back/consultas/listaconsultas_view.php')
+ 2 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('back/consultas/listaconsultas_view', [], true)
+ 3 APPPATH\Controllers\consulta_controller.php(22): view('back/consultas/listaconsultas_view', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\consulta_controller->index()
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\consulta_controller))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-06-12 01:38:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-12 01:40:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-12 01:44:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-12 01:45:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-06-12 01:45:30 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "back/consultas/listaconsultas_view.php"
+[Method: GET, Route: consulta_controller]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(212): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('back/consultas/listaconsultas_view.php')
+ 2 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('back/consultas/listaconsultas_view', [], true)
+ 3 APPPATH\Controllers\consulta_controller.php(22): view('back/consultas/listaconsultas_view', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\consulta_controller->index()
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\consulta_controller))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-06-12 01:49:06 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "back/consultas/listarconsultas_view.php"
+[Method: GET, Route: consulta_controller]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(212): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('back/consultas/listarconsultas_view.php')
+ 2 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('back/consultas/listarconsultas_view', [], true)
+ 3 APPPATH\Controllers\consulta_controller.php(22): view('back/consultas/listarconsultas_view', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\consulta_controller->index()
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\consulta_controller))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-06-12 01:49:42 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "back/consultas/listarconsultas_view.php"
+[Method: GET, Route: consulta_controller]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(212): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('back/consultas/listarconsultas_view.php')
+ 2 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('back/consultas/listarconsultas_view', [], true)
+ 3 APPPATH\Controllers\consulta_controller.php(22): view('back/consultas/listarconsultas_view', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\consulta_controller->index()
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\consulta_controller))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-06-12 01:52:40 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "back/consultas/listarconsultas_view.php"
+[Method: GET, Route: consulta_controller]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(212): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('back/consultas/listarconsultas_view.php')
+ 2 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('back/consultas/listarconsultas_view', [], true)
+ 3 APPPATH\Controllers\consulta_controller.php(22): view('back/consultas/listarconsultas_view', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\consulta_controller->index()
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\consulta_controller))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-06-12 01:56:03 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "back/consultas/listarconsultas_view.php"
+[Method: GET, Route: consulta_controller]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(212): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('back/consultas/listarconsultas_view.php')
+ 2 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('back/consultas/listarconsultas_view', [], true)
+ 3 APPPATH\Controllers\consulta_controller.php(22): view('back/consultas/listarconsultas_view', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\consulta_controller->index()
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\consulta_controller))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-06-12 01:58:10 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "back/consultas/listarconsultas_view.php"
+[Method: GET, Route: consulta_controller]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(212): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('back/consultas/listarconsultas_view.php')
+ 2 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('back/consultas/listarconsultas_view', [], true)
+ 3 APPPATH\Controllers\consulta_controller.php(22): view('back/consultas/listarconsultas_view', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\consulta_controller->index()
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\consulta_controller))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))

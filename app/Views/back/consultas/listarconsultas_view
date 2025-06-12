@@ -1,0 +1,44 @@
+<div class="container mt-5">
+    <h2 class="mb-4 text-center">Consultas Recibidas</h2>
+
+    <?php if (session()->getFlashdata('mensaje')): ?>
+        <div class="alert alert-success"><?= session()->getFlashdata('mensaje') ?></div>
+    <?php endif; ?>
+
+    <?php if (!empty($consultas)): ?>
+        <table class="table table-bordered table-hover">
+            <thead class="table-dark">
+                <tr>
+                    <th>ID</th>
+                    <th>Nombre</th>
+                    <th>Email</th>
+                    <th>Teléfono</th>
+                    <th>Mensaje</th>
+                    <th>Fecha de Envío</th>
+                    <th>Acciones</th>
+                </tr>
+            </thead>
+            <tbody>
+                <?php foreach ($consultas as $consulta): ?>
+                    <tr>
+                        <td><?= esc($consulta['id_consulta']) ?></td>
+                        <td><?= esc($consulta['nombre']) ?></td>
+                        <td><?= esc($consulta['email']) ?></td>
+                        <td><?= esc($consulta['telefono']) ?? '-' ?></td>
+                        <td><?= esc($consulta['mensaje']) ?></td>
+                        <td><?= esc($consulta['fecha_envio']) ?></td>
+                        <td>
+                            <a href="<?= base_url('consulta_controller/eliminar/' . $consulta['id_consulta']) ?>"
+                                class="btn btn-sm btn-danger"
+                                onclick="return confirm('¿Estás seguro de eliminar esta consulta?');">
+                                Eliminar
+                            </a>
+                        </td>
+                    </tr>
+                <?php endforeach; ?>
+            </tbody>
+        </table>
+    <?php else: ?>
+        <div class="alert alert-info text-center">No se encontraron consultas.</div>
+    <?php endif; ?>
+</div>

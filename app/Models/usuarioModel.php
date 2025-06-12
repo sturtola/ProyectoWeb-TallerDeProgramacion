@@ -4,21 +4,30 @@ namespace App\Models;
 
 use CodeIgniter\Model;
 
-class UsuarioModel extends Model
+class usuarioModel extends Model
 {
-    protected $table      = 'usuario';           // nombre exacto de tu tabla
-    protected $primaryKey = 'id_usuario';        // clave primaria correcta
+    protected $table      = 'usuario';
+    protected $primaryKey = 'id_usuario';
 
-    protected $allowedFields = [
-        'nombre',
-        'apellido',
-        'email',
-        'telefono',
-        'contraseña',
-        'rol'
-    ];
+    protected $allowedFields = ['nombre', 'apellido', 'email', 'telefono', 'contraseña', 'rol'];
 
-    protected $returnType = 'array';
-    protected $useTimestamps = false;
+    public function agregarUsuario($data)
+    {
+        return $this->insert($data);
+    }
+
+    public function obtenerUsuario($id)
+    {
+        return $this->find($id);
+    }
+
+    public function actualizarUsuario($id, $data)
+    {
+        return $this->update($id, $data);
+    }
+
+    public function eliminarUsuario($id)
+    {
+        return $this->delete($id);
+    }
 }
-
