@@ -27,24 +27,32 @@ class producto_controller extends Controller
     }
 
     public function guardar()
-    {
-        $data = [
-            'nombre'      => $this->request->getPost('nombre'),
-            'descripcion' => $this->request->getPost('descripcion'),
-            'precio'      => $this->request->getPost('precio'),
-            'stock'       => $this->request->getPost('stock'),
-            'imagen_url'  => $this->request->getPost('imagen_url'),
-            'categoria'   => $this->request->getPost('categoria'),
-            'marca'       => $this->request->getPost('marca'),
-            'material'    => $this->request->getPost('material'),
-            'modelo'      => $this->request->getPost('modelo'),
-            'descuento'   => $this->request->getPost('descuento'),
-        ];
+{
+    $imagen = $this->request->getFile('imagen');
+    $imagenUrl = null;
 
-        $this->productoModel->agregarProducto($data);
-        return redirect()->to('/producto_controller');
+    if ($imagen && $imagen->isValid() && !$imagen->hasMoved()) {
+        $nombreImagen = $imagen->getRandomName(); // nombre aleatorio único
+        $imagen->move('uploads', $nombreImagen); // guarda en public/uploads
+        $imagenUrl = base_url('uploads/' . $nombreImagen); // genera la URL para la DB
     }
 
+    $data = [
+        'nombre'      => $this->request->getPost('nombre'),
+        'descripcion' => $this->request->getPost('descripcion'),
+        'precio'      => $this->request->getPost('precio'),
+        'stock'       => $this->request->getPost('stock'),
+        'imagen_url'  => $imagenUrl,
+        'categoria'   => $this->request->getPost('categoria'),
+        'marca'       => $this->request->getPost('marca'),
+        'material'    => $this->request->getPost('material'),
+        'modelo'      => $this->request->getPost('modelo'),
+        'descuento'   => $this->request->getPost('descuento'),
+    ];
+
+    $this->productoModel->agregarProducto($data);
+    return redirect()->to('/producto_controller');
+}
     public function editar($id)
     {
         $data['producto'] = $this->productoModel->obtenerProducto($id);
