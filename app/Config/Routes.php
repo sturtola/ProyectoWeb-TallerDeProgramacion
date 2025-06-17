@@ -46,4 +46,4 @@ $routes->post('consulta_controller/guardar', 'consulta_controller::guardar'); //
 $routes->get('consulta_controller', 'consulta_controller::index');             // Para listar consultas (admin)
 $routes->get('consulta_controller/eliminar/(:num)', 'consulta_controller::eliminar/$1'); // Para eliminar consulta
 
-$routes->get('/catalogo', 'catalogo_controller::index');
+$routes->get('/catalogo', 'Catalogo::index');

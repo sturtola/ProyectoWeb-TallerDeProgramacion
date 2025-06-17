@@ -5,8 +5,8 @@
     <meta charset="utf-8">
     <title><?= $title ?? 'Auren' ?></title>
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <link rel="icon" type="image/png" href="assets/img/icon.png">
-  <link rel="stylesheet" href="assets/css/auren_style.css">
+  <link rel="icon" type="image/png" href="<?= base_url('assets/img/icon.png') ?>">
+  <link rel="stylesheet" href="<?= base_url('assets/css/auren_style.css') ?>">
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
@@ -28,10 +28,6 @@
         <?= view('components/footer') ?>
     </footer>
     
-      <!-- Solo el JS de Bootstrap (funcionalidad de carrusel) -->
-    <script src="assets/js/bootstrap.bundle.min.js" integrity="" crossorigin=""></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
+   
 </body>
 </html>

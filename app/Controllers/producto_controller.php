@@ -28,21 +28,14 @@ class producto_controller extends Controller
 
     public function guardar()
 {
-    $imagen = $this->request->getFile('imagen');
-    $imagenUrl = null;
-
-    if ($imagen && $imagen->isValid() && !$imagen->hasMoved()) {
-        $nombreImagen = $imagen->getRandomName(); // nombre aleatorio único
-        $imagen->move('uploads', $nombreImagen); // guarda en public/uploads
-        $imagenUrl = base_url('uploads/' . $nombreImagen); // genera la URL para la DB
-    }
+    $imagen_url = $this->request->getPost('imagen_url');
 
     $data = [
         'nombre'      => $this->request->getPost('nombre'),
         'descripcion' => $this->request->getPost('descripcion'),
         'precio'      => $this->request->getPost('precio'),
         'stock'       => $this->request->getPost('stock'),
-        'imagen_url'  => $imagenUrl,
+        'imagen_url'  => $imagen_url,
         'categoria'   => $this->request->getPost('categoria'),
         'marca'       => $this->request->getPost('marca'),
         'material'    => $this->request->getPost('material'),

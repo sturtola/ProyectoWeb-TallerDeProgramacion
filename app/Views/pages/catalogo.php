@@ -1,4 +1,3 @@
-</section>
 <div class="container-fluid catalogo" id="inicio-productos">
     <div class="row">
         <div class="col-12 col-md-4 seccion-izquierda d-flex flex-column justify-content-start">
@@ -158,7 +157,7 @@
                                     <p class="descripcion"></p>
                                     <p><strong>Marca:</strong> <span class="marca"></span></p>
                                     <p><strong>Material:</strong> <span class="material"></span></p>
-                                    <p><strong>Género:</strong> <span class="genero"></span></p>
+                                    <p><strong>Categoría:</strong> <span class="genero"></span></p>
                                     <div class="cantidad-container">
                                         <label for="cantidad">Cantidad:</label>
                                         <input type="number" id="cantidad" name="cantidad" min="1" value="1">
@@ -214,10 +213,9 @@
     });
 </script>
 
-
-
 <!-- Solo el JS de Bootstrap (funcionalidad de carrusel) -->
 <script src="assets/js/bootstrap.bundle.min.js" integrity="" crossorigin=""></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
+
