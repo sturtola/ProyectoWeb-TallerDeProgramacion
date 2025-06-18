@@ -44,7 +44,7 @@ class Auth extends BaseController
                 'id_usuario' => $usuario['id_usuario'],
                 'nombre'     => $usuario['nombre'],
                 'rol'        => $usuario['rol'],
-                'isLoggedIn' => true
+                'logueado' => true
             ]);
 
             // Redirigir según rol

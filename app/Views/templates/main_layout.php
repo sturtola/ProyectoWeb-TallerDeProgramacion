@@ -29,46 +29,51 @@
         <?= view('components/footer') ?>
     </footer>
 
-    <?php if (session()->get('logueado')): ?>
+    <?php if (session()->get('logueado') && session()->get('rol') === 'cliente'): ?>
         <!-- Botón flotante -->
         <button type="button" class="btn btn-success rounded-circle shadow carrito-float" data-bs-toggle="modal"
             data-bs-target="#carritoModal">
             <i class="fas fa-shopping-cart fa-lg"></i>
         </button>
-    <?php endif; ?>
 
-    <!-- Modal -->
-    <div class="modal fade" id="carritoModal" tabindex="-1" aria-labelledby="carritoModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-lg modal-dialog-scrollable">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="carritoModalLabel">Tu carrito</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
-                </div>
-                <div class="modal-body">
-                    <?php
-                    $carrito = session()->get('carrito');
-                    if (!$carrito || count($carrito) === 0): ?>
-                        <p class="text-center">Tu carrito está vacío.</p>
-                    <?php else: ?>
-                        <ul class="list-group">
-                            <?php foreach ($carrito as $item): ?>
-                                <li class="list-group-item d-flex justify-content-between align-items-center">
-                                    <?= esc($item['nombre']) ?> - <?= esc($item['cantidad']) ?> x $<?= esc($item['precio']) ?>
-                                    <span
-                                        class="badge bg-primary rounded-pill">$<?= esc($item['cantidad'] * $item['precio']) ?></span>
-                                </li>
-                            <?php endforeach; ?>
-                        </ul>
-                    <?php endif; ?>
-                </div>
-                <div class="modal-footer">
-                    <a href="<?= base_url('carrito') ?>" class="btn btn-primary">Ir al carrito completo</a>
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+        <!-- Modal -->
+        <div class="modal fade" id="carritoModal" tabindex="-1" aria-labelledby="carritoModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-lg modal-dialog-scrollable">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="carritoModalLabel">Tu carrito</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+                    </div>
+                    <div class="modal-body">
+                        <?php
+                        $carrito = session()->get('carrito');
+                        if (!$carrito || count($carrito) === 0): ?>
+                            <p class="text-center">Tu carrito está vacío.</p>
+                        <?php else: ?>
+                            <ul class="list-group">
+                                <?php foreach ($carrito as $item): ?>
+                                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                                        <?= esc($item['nombre']) ?> - <?= esc($item['cantidad']) ?> x $<?= esc($item['precio']) ?>
+                                        <span
+                                            class="badge bg-primary rounded-pill">$<?= esc($item['cantidad'] * $item['precio']) ?></span>
+                                    </li>
+                                <?php endforeach; ?>
+                            </ul>
+                        <?php endif; ?>
+                    </div>
+                    <div class="modal-footer">
+                        <a href="<?= base_url('carrito') ?>" class="btn btn-primary">Ir al carrito completo</a>
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
+
+    <?php endif; ?>
+
+
+
+
 
 
 
