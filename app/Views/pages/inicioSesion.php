@@ -18,7 +18,7 @@
         <div class="mb-3">
           <label for="password" class="form-label">Contraseña:</label>
           <input type="password" class="form-control border-0" id="password" style="background-color: rgba(9, 9, 9, 0.87);"
-            name="contaseña" rows="3" value="<?= old('contraseña') ?>" required placeholder="Contraseña...">
+            name="password" rows="3" value="<?= old('contraseña') ?>" required placeholder="Contraseña...">
         </div>
         <button type="submit" class="btn btn-success w-100">Ingresar</button>
         <div class="mb-3">

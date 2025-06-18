@@ -49,9 +49,9 @@ class Auth extends BaseController
 
             // Redirigir según rol
             if ($usuario['rol'] === 'admin') {
-                return redirect()->to('/usuario'); // panel admin
+                return redirect()->to('/administracion'); // panel admin
             } else {
-                return redirect()->to('/'); // página principal para estudiantes
+                return redirect()->to('/catalogo'); // página de catalogo (habilita el carrito)
             }
         } else {
             return redirect()->back()->with('error', 'Email o contraseña incorrectos');
