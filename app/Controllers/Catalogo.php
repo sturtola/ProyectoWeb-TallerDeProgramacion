@@ -20,7 +20,7 @@ class Catalogo extends Controller {
             'categoria'
         );
 
-        $materiales = array_column(
+        $materialesDisponibles = array_column(
             $model->select('material')->distinct()->findAll(),
             'material'
         );
@@ -68,7 +68,7 @@ class Catalogo extends Controller {
                 'productos' => $productos,
                 'marcasDisponibles' => $marcasDisponibles,
                 'categoriasDisponibles' => $categoriasDisponibles,
-                'materiales' => $materiales
+                'materialesDisponibles' => $materialesDisponibles
                 ])
         ]);
     }
