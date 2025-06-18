@@ -28,6 +28,10 @@ $routes->set404Override(function() {
     ]);
 });
 
+$routes->post('auth/registrar', 'Auth::registrar');
+$routes->post('auth/login', 'Auth::login');
+$routes->get('logout', 'Auth::logout');
+
 $routes->get('usuario_controller', 'usuario_controller::index');
 $routes->get('usuario_controller/agregar', 'usuario_controller::agregar');
 $routes->post('usuario_controller/guardar', 'usuario_controller::guardar');

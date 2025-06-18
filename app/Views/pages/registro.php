@@ -3,21 +3,21 @@
     <div class="card-body" style="background-color: rgba(22, 22, 22, 0.867); color: white;">
       <h2 class="card-title mb-4 text-center fw-light display-6">Registrarse</h2>
 
-      <form action="<?= site_url('auth/registrar') ?>" method="post">
+      <form action="<?= base_url('auth/registrar') ?>" method="post">
         <div class="mb-3">
           <label for="nombre" class="form-label">Nombre</label>
-          <input type="text" name="nombre" class="form-control border-0" id="nombre" placeholder="Ej: Juan" required style="background-color: rgba(9, 9, 9, 0.87);">
+          <input type="text" name="nombre" class="form-control border-0" id="nombre" placeholder="Ej: Juan" style="background-color: rgba(9, 9, 9, 0.87);" required >
         </div>
         <div class="mb-3">
           <label for="apellido" class="form-label">Apellido</label>
           <input type="text" name="apellido" class="form-control border-0" id="apellido" placeholder="Ej: Perez" required style="background-color: rgba(9, 9, 9, 0.87);">
         </div>
         <div class="mb-3">
-          <label for="registroEmail" class="form-label">Email</label>
+          <label for="email" class="form-label">Email</label>
           <input type="email" name="email" class="form-control border-0" id="email" placeholder="Ej: juanpperez@email.com" required style="background-color: rgba(9, 9, 9, 0.87);">
         </div>
         <div class="mb-3">
-          <label for="registroPassword" class="form-label">Contraseña</label>
+          <label for="contraseña" class="form-label">Contraseña</label>
           <input type="password" name="contraseña" class="form-control border-0" id="contraseña" placeholder="Contraseña..." required style="background-color: rgba(9, 9, 9, 0.87);">
         </div>
         <div class="mb-3">

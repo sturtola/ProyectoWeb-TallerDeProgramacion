@@ -71,7 +71,18 @@
 
     <?php endif; ?>
 
-
+<script>
+    document,addEventListener("DOMContentLoaded", function(){
+        if(window.location.hash === "#inicio-sesion") {
+            const target = document.querySelector(window.location.hash);
+            if (target){
+                setTimeout(() => {
+                    target.scrollIntoView({ behavior: "smooth", block: "start"});
+                }, 100);
+            }
+        }
+    });
+</script>
 
 
 

@@ -6,7 +6,13 @@
       <?php if (session()->getFlashdata('error')): ?>
         <p style="color:red"><?= session()->getFlashdata('error') ?></p>
       <?php endif; ?>
-
+      
+      <?php if (session()->getFlashdata('success')): ?>
+      <div class="alert alert-success alert-dismissible fade show" role="alert">
+        <?= session('success') ?>
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="close"></button>
+      </div>
+      <?php endif; ?>
 
       <form action="<?= site_url('auth/login') ?>" method="post">
         <div class="mb-3">

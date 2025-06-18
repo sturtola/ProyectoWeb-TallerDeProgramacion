@@ -6,7 +6,7 @@
                 <form id="form-filtros" method="GET" action="<?= base_url('catalogo') ?>">
                     <div class="buscador-wrapper mt-md-5 mb-4 px-3">
                         <input type="text" class="form-control" id="buscador" name="busqueda"
-                            placeholder="Buscar producto..." value="<?= esc($_GET['busqueda'] ?? '') ?>">
+                            placeholder="Buscar producto..." value="<?= esc($_GET['busqueda'] ?? '') ?>">>
                     </div>
                     <!-- Marca -->
                     <div class="accordion-item">
@@ -246,34 +246,6 @@
             });
         }
     }
-</script>
-
-
-Sabrina Turtola <turtolasabrina@gmail.com>
-23:08 (hace 0 minutos)
-para mí
-
-<script>
-document.addEventListener('DOMContentLoaded', function () {
-    const loginButtons = document.querySelectorAll('[data-bs-target="#loginModal"]');
-
-    loginButtons.forEach(button => {
-        button.addEventListener('click', function () {
-            // Cierra cualquier modal abierto antes de mostrar el login
-            const openModal = document.querySelector('.modal.show');
-            if (openModal) {
-                const modalInstance = bootstrap.Modal.getInstance(openModal);
-                modalInstance.hide();
-
-                // Esperar un poco antes de abrir el nuevo modal
-                setTimeout(() => {
-                    const loginModal = new bootstrap.Modal(document.getElementById('loginModal'));
-                    loginModal.show();
-                }, 300);
-            }
-        });
-    });
-});
 </script>
 
 

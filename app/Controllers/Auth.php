@@ -26,7 +26,7 @@ class Auth extends BaseController
             'rol'         => 'cliente'
         ]);
 
-        return redirect()->to('/login')->with('success', 'Registro exitoso. Iniciá sesión.');
+        return redirect()->to('/IniciarSesion#inicio-sesion')->with('success', 'Registro exitoso. Iniciá sesión.');
     }
 
     public function login()
@@ -51,7 +51,7 @@ class Auth extends BaseController
             if ($usuario['rol'] === 'admin') {
                 return redirect()->to('/administracion'); // panel admin
             } else {
-                return redirect()->to('/catalogo'); // página de catalogo (habilita el carrito)
+                return redirect()->to('/catalogo#inicio-productos'); // página de catalogo (habilita el carrito)
             }
         } else {
             return redirect()->back()->with('error', 'Email o contraseña incorrectos');
