@@ -4,283 +4,111 @@
   box-sizing: border-box;
 }
 
-/* FONDO */
-.principal {
+/* Fondo principal con imagen */
+.principal-header {
   background-image: url("../img/canchapadel3.jpeg");
   background-size: cover;
   background-repeat: no-repeat;
-  width: 100%;
-  overflow: hidden;
   height: 100vh;
   background-position: center center;
-}
-
-.imagen-header {
   position: relative;
+  overflow: hidden;
+  margin-top: 100px;
 }
 
-.imagen-header::after {
+.dropdown-menu{
+  background-color: rgba(0, 0, 0, 0.425);
+
+}
+
+.principal-header::after {
   content: "";
   position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  height: 150px;
-  /* Un poco más alto */
-  background: linear-gradient(to bottom,
-      rgb(1, 1, 1, 0) 0%,
-      rgba(1, 1, 1, 0.449) 50%,
-      rgb(1, 1, 1) 100%);
-  pointer-events: none;
+  inset: 0;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0,0,0,0.6) 60%, black 100%);
+}
+
+
+.principal-header .container {
+  position: relative;
   z-index: 1;
 }
 
-/* NAVBAR GENERAL */
-.navbar {
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-  gap: 10px;
+.logo-navbar {
+  height: 60px;
+  width: auto;
+  transition: transform 0.3s ease;
 }
 
-/* LOGO DE LA MARCA */
-.navbar-brand img.nombreMarca {
-  width: 250px;
+.navbar-nav .nav-link {
+  font-size: 18px;
+  transition: color 0.3s ease;
+}
+
+.navbar {
+  backdrop-filter: blur(10px);
+  background-color: rgba(0, 0, 0, 0.4) !important;
+  z-index: 1050;
+  height: 20vh;
+}
+
+/* Asegura que el contenido no quede oculto detrás de la navbar */
+main, section, .principal {
+  padding-top: 80px;
+}
+
+
+.logo-navbar {
+  width: 200px;
   height: auto;
   transition: width 0.3s ease;
-  margin-right: -40px;
 }
 
-/* LISTA DE NAVEGACIÓN */
-.nav-list {
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-  list-style: none;
-  display: flex;
-  gap: 90px;
-  margin-left: 50px;
-}
-
-/* ÍTEMS DEL MENÚ */
-.nav-list li {
-  text-align: center;
-}
-
-.nav-list a {
-  color: white;
-  text-decoration: none !important;
-  font-size: 25px;
-  transition: color 0.3s ease, transform 0.3s ease;
-  display: inline-block;
-}
-
-.nav-list a:hover {
-  color: white;
-  transform: scale(1.3);
-}
-
-/* RESPONSIVE */
-@media (max-width: 992px) {
-  .navbar {
-    padding: 10px 20px;
-  }
-
-  .navbar-brand img.nombreMarca {
-    width: 180px;
-  }
-
-  .nav-list {
-    flex-direction: column;
-    gap: 20px;
-    margin-top: 20px;
-  }
-
-  .nav-list a {
-    font-size: 18px;
+@media (max-width: 768px) {
+  .logo-navbar {
+    width: 150px;
   }
 }
 
-@media (max-width: 576px) {
-  .navbar-brand img.nombreMarca {
-    width: 140px;
-  }
 
-  .nav-list a {
-    font-size: 16px;
-  }
-}
-
-/* Submenú oculto por defecto */
-.submenu-vertical-lateral {
-  list-style: none;
-  text-align: center;
-  padding-left: 0px;
-}
-
-/* Links del submenú */
-.submenu-vertical-lateral li a {
-  color: rgb(185, 185, 185);
-  text-decoration: none !important;
-  display: block;
-  font-size: 20px;
-  /* o el tamaño que uses en general */
-  transition: color 0.3s ease, transform 0.3s ease;
-  text-align: center;
-}
-
-/* Hover sobre los links del submenú */
-.submenu-vertical-lateral li a:hover {
-  color: #e1ff00;
-}
-
-.submenu-toggle {
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-}
-
-/* Ocultar checkbox */
-.menu-toggle {
-  display: none;
-}
-
-/* Ícono hamburguesa */
-.menu-icon {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  width: 30px;
-  height: 24px;
-  cursor: pointer;
-  z-index: 20;
-  position: relative;
-}
-
-.menu-icon .bar {
-  height: 4px;
-  width: 100%;
-  background-color: white;
-  border-radius: 2px;
-}
-
-/* Sidebar */
-.sidebar {
-  position: fixed;
-  top: 20px;
-  left: -250px;
-  width: 250px;
-  height: 100vh;
-  background-color: rgba(0, 0, 0, 0.9);
-  transition: left 0.3s ease;
-  padding-top: 150px;
-  z-index: 15;
-  padding: 20px;
-}
-
-.menu-toggle:checked~.sidebar {
-  left: 0;
-}
-
-/* Lista vertical */
-.menu-vertical-lateral {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  text-align: center;
-}
-
-.menu-vertical-lateral li {
-  margin: 40px 0;
-  margin-bottom: 15px;
-  text-align: center;
-}
-
-.menu-vertical-lateral a {
-  color: rgb(255, 255, 255);
-  text-decoration: none !important;
-  font-size: 20px;
-  text-align: center;
-}
-
-.menu-vertical-lateral a:hover {
-  color: #e1ff00;
-}
-
-/* Ocultar ícono menú y sidebar en pantallas grandes */
-.menu-icon,
-.sidebar {
-  display: none;
-}
-
-/* --- SOLO cuando la pantalla es pequeña --- */
-@media (max-width: 1099px) {
-  .nav-list {
-    display: none;
-  }
-
-  .menu-icon {
-    display: flex;
-  }
-
-  .sidebar {
-    display: block;
-  }
-}
-
-/* Ítems normales */
-.nav-list li {
-  position: relative;
-}
-
-/* Submenú oculto */
-.menu-vertical-barra {
-  display: none;
+.navbar-overlay::after {
+  content: "";
   position: absolute;
-  top: 100%;
-  left: 0;
+  bottom: 0;
+  left: 0; right: 0;
+  height: 150px;
+  background: linear-gradient(to bottom, rgba(1,1,1,0) 0%, rgba(1,1,1,0.5) 50%, black 100%);
+  z-index: 1;
+}
+
+.logo-navbar {
   width: 200px;
-  background: rgba(255, 255, 255, 0.1);
-  backdrop-filter: blur(10px);
-  border-radius: 12px;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
-  overflow: hidden;
-  z-index: 100;
-  list-style: circle;
+  height: auto;
+  transition: all 0.3s ease;
 }
 
-
-/* Ítems del submenú */
-.menu-vertical-barra li a {
-  display: block;
-  padding: 20px 0px;
-  color: white;
-  text-decoration: none;
-  font-size: 20px;
-  text-align: left;
-  list-style: none;
-  transition: none !important;
-  transform: none !important;
+/* Mejora responsiva */
+@media (max-width: 768px) {
+  .logo-navbar {
+    width: 150px;
+  }
 }
 
-.menu-vertical-barra a:hover {
-  color:#e1ff00;
-}
+@media (max-width: 991.98px) {
+  .navbar-collapse {
+    backdrop-filter: blur(12px);
+    background-color: rgba(0, 0, 0, 0.425);
+    padding: 20px;
+    border-radius: 0 0 12px 12px;
+  }
 
-.menu-vertical-barra li:hover {
-  color:#e1ff00;
-}
+  .navbar-nav .nav-link {
+    color: rgb(151, 151, 151) !important;
+  }
 
-.menu-vertical-barra li {
-  color: white;
-}
-
-/* Mostrar el submenú al hacer hover */
-.dropdown:hover .menu-vertical-barra {
-  display: block;
-}
-
-.menu-informacion {
-  width: 220px;
+  .navbar-nav .nav-link:hover {
+    color: #ffffff !important;
+  }
 }
 
 .presentacion {
