@@ -26,7 +26,7 @@
           <input type="password" class="form-control border-0" id="password" style="background-color: rgba(9, 9, 9, 0.87);"
             name="contraseña" rows="3" value="<?= old('contraseña') ?>" required placeholder="Contraseña...">
         </div>
-        <button type="submit" class="btn btn-dark btn-lg w-100" style="background-color: rgba(9, 9, 9, 0.87); font-size: medium;">Ingresar</button>
+        <button type="submit" class="btn btn-dark btn-lg w-100" style="background-color:  #00ff846a; font-size: medium;">Ingresar</button>
         <div class="mb-3">
           <p class="text-center mt-3">
             ¿No tenés una cuenta?

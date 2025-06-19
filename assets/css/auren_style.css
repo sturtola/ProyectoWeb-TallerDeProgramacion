@@ -1045,6 +1045,7 @@ main, section, .principal {
     border: 1px solid #333;
 }
 
+
 .accordion-dark .accordion-button {
     background-color: #1f1f1f;
     color: white;
@@ -1059,6 +1060,7 @@ main, section, .principal {
     background-color: #1a1a1a;
     color: white;
 }
+
 
 .accordion-dark .form-check-label {
     color: white;

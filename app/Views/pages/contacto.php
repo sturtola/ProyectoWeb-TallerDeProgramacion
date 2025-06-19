@@ -130,8 +130,7 @@
                     </div>
 
                     <div class="d-grid">
-                        <button type="submit" class="btn btn-dark btn-lg"
-                            style="background-color: rgba(9, 9, 9, 0.87);">Enviar</button>
+                        <button type="submit" class="btn btn-dark btn-lg" style="background-color:  #00ff846a">Enviar</button>
                     </div>
                 </form>
             </div>

@@ -24,7 +24,7 @@
           <label for="telefono" class="form-label">Teléfono (opcional)</label>
           <input type="tel" name="telefono" class="form-control border-0" id="telefono" placeholder="Ej: (3774)-504134" style="background-color: rgba(9, 9, 9, 0.87);">
         </div>
-        <button type="submit" class="btn btn-dark btn-lg w-100" style="background-color: rgba(9, 9, 9, 0.87); font-size: medium;">Registrarse</button>
+        <button type="submit" class="btn btn-dark btn-lg w-100" style="background-color: #00ff846a; font-size: medium;">Registrarse</button>
         <p class="text-center mt-3">
           ¿Ya tenés una cuenta?
           <a href="<?= base_url('/IniciarSesion#inicio-sesion') ?>">Iniciar Sesión</a>
