@@ -11,13 +11,13 @@
     </button>
 
     <div class="collapse navbar-collapse justify-content-end" id="navbarContenido">
-      <ul class="navbar-nav align-items-center gap-3">
+      <ul class="navbar-nav align-items-center gap-5">
         <li class="nav-item">
           <a class="nav-link" href="<?= base_url('/#inicio-inicio') ?>">Inicio</a>
         </li>
 
         <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Productos</a>
+          <a class="nav-link dropdown-toggle" href="<?= base_url('/catalogo#inicio-productos') ?>" role="button" data-bs-toggle="dropdown">Productos</a>
           <ul class="dropdown-menu dropdown-menu-dark">
             <li><a class="dropdown-item" href="<?= base_url('/catalogo#inicio-productos') ?>">Todos</a></li>
             <li><a class="dropdown-item" href="<?= base_url('/catalogo#inicio-productos') ?>">Hombre</a></li>
@@ -47,7 +47,7 @@
           </li>
         <?php else: ?>
           <li class="nav-item">
-            <a class="nav-link text-info" href="<?= base_url('/IniciarSesion') ?>">
+            <a class="nav-link text-info" href="<?= base_url('/IniciarSesion#inicio-sesion') ?>" >
               <i class="bi bi-person-circle"></i> Iniciar sesión
             </a>
           </li>

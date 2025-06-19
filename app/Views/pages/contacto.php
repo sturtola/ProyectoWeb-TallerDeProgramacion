@@ -82,7 +82,7 @@
     SECCIÓN: FORMULARIO DE CONTACTO
 =============================== -->
     <div class="container" id="formulario">
-        <div class="card shadow border-0">
+        <div class="card shadow border-0" style="border-radius: 10px;">
             <div class="card-body" style="background-color: rgba(22, 22, 22, 0.867); color: white;">
                 <h2 class="card-title mb-4 text-center fw-light display-6">Envianos tu consulta</h2>
 

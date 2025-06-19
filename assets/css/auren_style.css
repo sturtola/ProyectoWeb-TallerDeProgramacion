@@ -16,9 +16,29 @@
   margin-top: 100px;
 }
 
-.dropdown-menu{
-  background-color: rgba(0, 0, 0, 0.425);
+/* Estilo para el fondo del dropdown y separación de items */
+.dropdown-menu {
+  background-color: rgba(0, 0, 0, 0.85) !important; /* negro translúcido */
+  border: none !important;
+  padding: 15px 0 !important; /* espacio arriba y abajo */
+  backdrop-filter: blur(5px) !important;
+  border-radius: 10px !important;
+}
 
+/* Estilo general de los ítems */
+.dropdown-item {
+  color: #b0b0b0 !important; /* gris claro */
+  padding: 12px 20px !important; /* más espacio interior */
+  transition: all 0.3s ease !important;
+  font-size: 18px !important;
+}
+
+/* Hover: agranda y pone blanco */
+.dropdown-item:hover {
+  color: #ffffff !important;
+  font-size: 20px !important;
+  background-color: transparent !important; /* sin fondo al pasar */
+  transform: scale(1.05) !important;
 }
 
 .principal-header::after {
@@ -41,9 +61,10 @@
 }
 
 .navbar-nav .nav-link {
-  font-size: 18px;
+  font-size: 20px;
   transition: color 0.3s ease;
 }
+
 
 .navbar {
   backdrop-filter: blur(10px);
@@ -87,6 +108,7 @@ main, section, .principal {
   transition: all 0.3s ease;
 }
 
+
 /* Mejora responsiva */
 @media (max-width: 768px) {
   .logo-navbar {
@@ -97,7 +119,7 @@ main, section, .principal {
 @media (max-width: 991.98px) {
   .navbar-collapse {
     backdrop-filter: blur(12px);
-    background-color: rgba(0, 0, 0, 0.425);
+    background-color: rgba(0, 0, 0, 0.527);
     padding: 20px;
     border-radius: 0 0 12px 12px;
   }
@@ -110,6 +132,8 @@ main, section, .principal {
     color: #ffffff !important;
   }
 }
+
+
 
 .presentacion {
   background-color: black;
@@ -528,7 +552,7 @@ main, section, .principal {
 .container-nosotros {
   max-width: 800px;
   margin: 3rem auto;
-  padding: 30px 150px 0px 150px;
+  padding: 0px 150px 0px 150px;
   text-align: center;
   color: white;
 }

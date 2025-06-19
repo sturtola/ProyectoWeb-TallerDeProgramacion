@@ -6,7 +6,7 @@
   </div>
 </section>
 
-<section class="container my-5">
+<section class="container my-5" style="padding-top: 0px;">
   <div class="row justify-content-center">
     <div class="col-12 col-md-12 col-lg-10">
       <div class="contenido-nosotros" style="font-size: 20px;">
@@ -48,7 +48,7 @@
     </div>
   </div>
 </section>
-<section class="container my-5">
+<section class="container my-5" style="padding-top: 0px;">
   <div class="row">
     <div class="col-12 col-lg-6 mb-4">
       <div class="tarjeta-con-titulo-staff">
