@@ -1,7 +1,7 @@
-<div class="container d-flex justify-content-center" style="padding-top: 20vh; padding-bottom: 10vh;" id="inicio-sesion">
-  <div class="card shadow border-0" style="width: 70vh; border-radius: 10px;">
-    <div class="card-body" style="background-color: rgba(22, 22, 22, 0.867); color: white;">
-      <h2 class="card-title mb-4 text-center fw-light display-6">Iniciar Sesión</h2>
+<div class="container d-flex justify-content-center" style="padding-top: 10vh; padding-bottom: 10vh;" id="inicio-sesion">
+  <div class="card shadow" style="width: 70vh; border-radius: 12px; border-color: rgb(22, 22, 22);">
+    <div class="card-body" style="background-color: rgb(22, 22, 22); color: white;">
+      <h3 class="card-title mb-4 text-center fw-light display-6">Iniciar Sesión</h3>
 
       <?php if (session()->getFlashdata('error')): ?>
         <p style="color:red"><?= session()->getFlashdata('error') ?></p>
@@ -26,7 +26,7 @@
           <input type="password" class="form-control border-0" id="password" style="background-color: rgba(9, 9, 9, 0.87);"
             name="contraseña" rows="3" value="<?= old('contraseña') ?>" required placeholder="Contraseña...">
         </div>
-        <button type="submit" class="btn btn-dark btn-lg w-100" style="background-color:  #00ff846a; font-size: medium;">Ingresar</button>
+        <button type="submit" class="btn btn-dark btn-lg w-100" style="background-color:  rgba(238, 178, 0, 0.69); font-size: medium;">Ingresar</button>
         <div class="mb-3">
           <p class="text-center mt-3">
             ¿No tenés una cuenta?

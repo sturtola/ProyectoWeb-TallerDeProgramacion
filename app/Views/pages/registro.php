@@ -1,7 +1,7 @@
-<div class="container d-flex justify-content-center" style="padding-top: 20vh; padding-bottom: 10vh;" id="inicio-registro">
-  <div class="card shadow border-0" style="width: 70vh; border-radius: 10px;">
-    <div class="card-body" style="background-color: rgba(22, 22, 22, 0.867); color: white;">
-      <h2 class="card-title mb-4 text-center fw-light display-6">Registrarse</h2>
+<div class="container d-flex justify-content-center" style="padding-top: 10vh; padding-bottom: 10vh;" id="inicio-registro">
+  <div class="card shadow" style="width: 70vh; border-radius: 10px; border-color: rgb(22, 22, 22);">
+    <div class="card-body" style="background-color: rgb(22, 22, 22); color: white;">
+      <h3 class="card-title mb-4 text-center fw-light display-6">Registrarse</h3>
 
       <form action="<?= base_url('auth/registrar') ?>" method="post">
         <div class="mb-3">
@@ -24,7 +24,7 @@
           <label for="telefono" class="form-label">Teléfono (opcional)</label>
           <input type="tel" name="telefono" class="form-control border-0" id="telefono" placeholder="Ej: (3774)-504134" style="background-color: rgba(9, 9, 9, 0.87);">
         </div>
-        <button type="submit" class="btn btn-dark btn-lg w-100" style="background-color: #00ff846a; font-size: medium;">Registrarse</button>
+        <button type="submit" class="btn btn-dark btn-lg w-100" style="background-color:rgba(238, 178, 0, 0.69); font-size: medium;">Registrarse</button>
         <p class="text-center mt-3">
           ¿Ya tenés una cuenta?
           <a href="<?= base_url('/IniciarSesion#inicio-sesion') ?>">Iniciar Sesión</a>

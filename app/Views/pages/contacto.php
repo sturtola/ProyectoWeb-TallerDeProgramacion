@@ -81,10 +81,10 @@
     <!-- ============================
     SECCIÓN: FORMULARIO DE CONTACTO
 =============================== -->
-    <div class="container" id="formulario">
-        <div class="card shadow border-0" style="border-radius: 10px;">
-            <div class="card-body" style="background-color: rgba(22, 22, 22, 0.867); color: white;">
-                <h2 class="card-title mb-4 text-center fw-light display-6">Envianos tu consulta</h2>
+    <div class="container" id="formulario" style="width: 100vh; border-radius: 12px;">
+        <div class="card shadow" style="border-radius: 12px; border-color: rgb(22, 22, 22);">
+            <div class="card-body" style="background-color: rgb(22, 22, 22); color: white;">
+                <h3 class="card-title mb-4 text-center fw-light display-6">Envianos tu consulta</h3>
 
                 <?php if (session()->getFlashdata('message')): ?>
                     <div class="alert alert-success alert-dismissible fade show" role="alert">
@@ -130,7 +130,7 @@
                     </div>
 
                     <div class="d-grid">
-                        <button type="submit" class="btn btn-dark btn-lg" style="background-color:  #00ff846a">Enviar</button>
+                        <button type="submit" class="btn btn-dark btn-lg" style="background-color:  rgba(238, 178, 0, 0.69)">Enviar</button>
                     </div>
                 </form>
             </div>

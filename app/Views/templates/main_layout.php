@@ -31,15 +31,15 @@
 
     <?php if (session()->get('logueado') && session()->get('rol') === 'cliente'): ?>
         <!-- Botón flotante -->
-        <button type="button" class="btn btn-success rounded-circle shadow carrito-float" data-bs-toggle="modal"
+        <button type="button" class="btn btn-dark rounded-circle redondoCarrito carrito-float" style="background-color: #1e1e1e; border-color: rgba(238, 178, 0, 0.69);" data-bs-toggle="modal"
             data-bs-target="#carritoModal">
-            <i class="fas fa-shopping-cart fa-lg"></i>
+            <i class="fas bi bi-cart iconoCarrito fs-1" style="color: rgba(238, 178, 0, 0.69);"></i>
         </button>
 
         <!-- Modal -->
         <div class="modal fade" id="carritoModal" tabindex="-1" aria-labelledby="carritoModalLabel" aria-hidden="true">
             <div class="modal-dialog modal-lg modal-dialog-scrollable">
-                <div class="modal-content">
+                <div class="modal-content modalCarrito">
                     <div class="modal-header">
                         <h5 class="modal-title" id="carritoModalLabel">Tu carrito</h5>
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>

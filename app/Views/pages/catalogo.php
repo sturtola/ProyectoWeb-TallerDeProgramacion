@@ -96,10 +96,10 @@
                     </div>
 
                     <div class="px-3 mt-4">
-                        <button type="submit" class="btn btn-dark w-100 aplicar" style="background-color: #00ff846a;">Aplicar filtros</button>
+                        <button type="submit" class="btn w-100 aplicar" style="background-color:rgba(238, 178, 0, 0.69); color: white;">Aplicar filtros</button>
                     </div>
                     <div class="px-3 mt-2">
-                        <a href="<?= base_url('/catalogo#inicio-productos') ?>" class="btn btn-secondary w-100">Borrar filtros</a>
+                        <a href="<?= base_url('/catalogo#inicio-productos') ?>" class="btn w-100" style="background-color:rgb(54, 54, 54); color: white;">Borrar filtros</a>
                     </div>
                 </form>
             </div>
@@ -129,8 +129,8 @@
                                     </div>
                                     <div class="tarjeta-info">
                                         <h5 class="producto-nombre"><?= esc($producto['nombre']) ?></h5>
-                                        <p class="producto-precio">$<?= number_format($producto['precio'], 2, ',', '.') ?></p>
-                                        <button class="btn-comprar">Ver más</button>
+                                        <p class="producto-precio" style="color: rgba(238, 178, 0, 0.69);">$<?= number_format($producto['precio'], 2, ',', '.') ?></p>
+                                        <button class="btn-comprar" style="background-color: rgba(238, 178, 0, 0.69);">Ver más</button>
                                     </div>
                                 </div>
                             </div>
@@ -140,7 +140,7 @@
                     <!-- Modal reutilizable -->
                     <div id="modal-producto" class="modal-producto">
                         <div class="modal-contenido">
-                            <span class="cerrar-modal">&times;</span>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal-producto" aria-label="Cerrar"></button>
                             <div class="modal-body">
                                 <div class="modal-imagen">
                                     <img src="" alt="Imagen producto">
@@ -159,11 +159,11 @@
                                         <input type="hidden" name="id_producto" id="modal-id-producto">
                                         <?php if (session()->get('logueado')): ?>
                                             <div id="boton-con-stock" style="padding-top: 10px;">
-                                                <button type="submit" class="btn w-100" style="background-color: #198754; color: white; border-color: #198754;">Añadir al carrito</button>
+                                                <button type="submit" class="btn w-100" style="background-color: rgba(238, 178, 0, 0.69); color: white; border-color: rgba(238, 178, 0, 0.69);">Añadir al carrito</button>
                                             </div>
                                         <?php else: ?>
                                             <div id="boton-no-login" style="padding-top: 10px;">
-                                                <button type="button" class="btn btn-no-login w-100" style="background-color: #198754; color: white; border-color: #198754;">
+                                                <button type="button" class="btn btn-no-login w-100" style="background-color:rgba(238, 178, 0, 0.69); color: white; border-color: rgba(238, 178, 0, 0.69);">
                                                     Añadir al carrito
                                                 </button>
                                                 <div class="mensaje-login alert alert-danger mt-3 d-none" role="alert">

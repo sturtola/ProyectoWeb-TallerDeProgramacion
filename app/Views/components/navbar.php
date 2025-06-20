@@ -41,12 +41,12 @@
 
         <?php if (session('id_usuario')): ?>
           <li class="nav-item">
-            <a class="nav-link text-warning" href="<?= base_url('/logout') ?>">
+            <a class="nav-link text-warning" href="<?= base_url('/logout') ?>" >
               <i class="bi bi-box-arrow-right"></i> Cerrar sesión
             </a>
           </li>
         <?php else: ?>
-          <li class="nav-item">
+          <li class="nav-item" >
             <a class="nav-link text-info" href="<?= base_url('/IniciarSesion#inicio-sesion') ?>" >
               <i class="bi bi-person-circle"></i> Iniciar sesión
             </a>
