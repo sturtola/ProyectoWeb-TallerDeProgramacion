@@ -15,6 +15,14 @@ $routes->get('/IniciarSesion', 'Pages::login');
 $routes->get('/Registrarse', 'Pages::register');
 $routes->get('/Productos', 'Pages::catalogo');
 $routes->get('/Contacto', 'Pages::contacto');
+//Cambios lauta para vista previa
+$routes->get('admin', 'Admin::index');
+$routes->get('listadoproductos', 'Listadoproductos::index');
+$routes->get('agregar', 'Agregar::index');
+$routes->get('clientes', 'Clientes::index');
+$routes->get('consultas', 'Consultas::index');
+$routes->get('usuario', 'Usuario::index');
+$routes->get('modificarusuario', 'Modificarusuario::index');
 
 // Establecer controlador por defecto
 $routes->setDefaultController('Pages');
