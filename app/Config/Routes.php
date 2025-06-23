@@ -59,3 +59,9 @@ $routes->get('consulta_controller', 'consulta_controller::index');             /
 $routes->get('consulta_controller/eliminar/(:num)', 'consulta_controller::eliminar/$1'); // Para eliminar consulta
 
 $routes->get('/catalogo', 'Catalogo::index');
+
+$routes->post('carrito/agregar', 'Carrito_controller::agregar');
+
+$routes->post('carrito-producto/actualizar-cantidad', 'CarritoProducto_controller::actualizarCantidad');
+$routes->post('carrito-producto/eliminar', 'CarritoProducto_controller::eliminar');
+$routes->get('carrito/vaciar', 'Carrito_controller::vaciar');

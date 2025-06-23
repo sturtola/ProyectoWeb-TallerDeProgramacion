@@ -151,12 +151,13 @@
                                     <p><strong>Marca:</strong> <span class="marca"></span></p>
                                     <p><strong>Material:</strong> <span class="material"></span></p>
                                     <p><strong>Categoría:</strong> <span class="genero"></span></p>
-                                    <div class="cantidad-container">
-                                        <label for="cantidad">Cantidad:</label>
-                                        <input type="number" id="cantidad" name="cantidad" min="1" value="1">
-                                    </div>
-                                    <form method="post" action="/carrito/agregar" id="form-agregar-carrito">
+                                    <form method="post" action="<?= site_url('carrito/agregar')?>" id="form-agregar-carrito">
                                         <input type="hidden" name="id_producto" id="modal-id-producto">
+                                        <div class="cantidad-container">
+                                            <label for="cantidad">Cantidad:</label>
+                                            <input type="number" class="input-cantidad" id="cantidad" name="cantidad" min="1" value="1">
+                                            <div id="mensaje-stock" class="form-text text-danger d-none" style="font-size: 0.9rem;"></div>
+                                        </div>
                                         <?php if (session()->get('logueado')): ?>
                                             <div id="boton-con-stock" style="padding-top: 10px;">
                                                 <button type="submit" class="btn w-100" style="background-color: rgba(238, 178, 0, 0.69); color: white; border-color: rgba(238, 178, 0, 0.69);">Añadir al carrito</button>
@@ -216,6 +217,7 @@
             modal.querySelector(".genero").textContent = genero;
             modal.querySelector("#cantidad").value = 1;
             modal.querySelector("#modal-id-producto").value = id;
+            modal.querySelector("#cantidad").max = stock;
 
             // Actualizar el ID del producto oculto
             const inputId = modal.querySelector("#modal-id-producto");
@@ -238,6 +240,11 @@
 
             // Mostrar el modal
             modal.style.display = "flex";
+
+            // Eliminar mensaje de stock al abrir nuevamente el modal
+
+            modal.querySelector("#mensaje-stock").classList.add("d-none");
+            modal.querySelector("#mensaje-stock").textContent = '';
         });
     });
 
@@ -250,8 +257,37 @@
             modal.style.display = "none";
         }
     });
+</script>
 
-   
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const inputCantidad = document.getElementById('cantidad');
+        const mensajeStock = document.getElementById('mensaje-stock');
+
+        inputCantidad.addEventListener('input', function() {
+            const max = parseInt(inputCantidad.max);
+            const val = parseInt(inputCantidad.value);
+
+            if (val > max) {
+                inputCantidad.value = max;
+
+                // Mostrar mensaje con ícono y estilo
+                mensajeStock.innerHTML = `<strong> ⚠️ Solo hay ${max} producto${max === 1 ? '' : 's'} en stock. </strong>`;
+                mensajeStock.classList.remove('d-none');
+            } else {
+                // Ocultar mensaje
+                mensajeStock.classList.add('d-none');
+                mensajeStock.textContent = '';
+            }
+
+            if (val < 1) {
+                inputCantidad.value = 1;
+            }
+        });
+    });
+</script>
+
+<script>
     document.addEventListener("DOMContentLoaded", () => {
         modal.addEventListener("click", function(e) {
             if (e.target && e.target.classList.contains("btn-no-login")) {

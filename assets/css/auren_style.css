@@ -1249,6 +1249,16 @@ input[type="number"]:focus {
     border: 1px solid #444 !important;
 }
 
+.input-cantidad::-webkit-outer-spin-button,
+.input-cantidad::-webkit-inner-spin-button{
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.input-cantidad{
+  -moz-appearance: textfield;
+}
+
 
 .carrito-float {
     position: fixed;
@@ -1261,24 +1271,140 @@ input[type="number"]:focus {
 
 .redondoCarrito{
   transition: transform 0.3s ease !important;
+  
 }
 .redondoCarrito:hover{
   transform: scale(1.2) !important;
 }
 
-.modalCarrito{
-  background-color: rgb(22, 22, 22) !important;
+
+.modal-carrito{
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1055;
+  justify-content: center !important;
+  background-color: #000000c7 !important;
+  padding: 1rem;
+  width: 100vw;
+}
+
+.modal-carrito .modal-content{
+  background-color: #1e1e1e !important;
+  color: white;
+  border-radius: 12px;
+  overflow-y: auto;
+  width: 100%;
+  max-width: 1000px;
+  
+}
+
+.modal-carrito.show{
+  display: flex !important;
+}
+
+.btn-agregarp{
+  margin-top: 30px;
+  background-color: rgba(238, 178, 0, 0.69) !important;
+  border-radius: 10px !important;
+  border-color: rgba(238, 178, 0, 0.69) !important;
   color: white !important;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif !important;
+  font-size: 18px !important;
+}
+
+.btn-agregarp:hover{
+  background-color: rgba(202, 152, 2, 0.69) !important;
+  border-color: rgba(202, 152, 2, 0.69) !important;
+}
+
+.separador{
+  border-top: 1px solid rgba(255, 255, 255, 0.37);
+  margin: 1.5rem 0;
+}
+
+/* Estilos personalizados para la tabla del carrito */
+.carrito-tabla {
+  background-color: #1e1e1e; /* fondo oscuro */
+  color: #f1f1f1;            /* texto claro */
+  width: 100%;
+  font-size: 18px;
 
 }
 
-.btn-close{
-  text-decoration-color: white !important;
+.carrito-tabla thead {
+  background-color: #2c2c2c; /* encabezado un poco más claro */
 }
 
+.carrito-tabla th, .carrito-tabla td {
+  border: 1px solid #333;    /* bordes sutiles */
+  padding: 12px;
+  vertical-align: middle;
+}
 
+.carrito-tabla tbody tr:hover {
+  background-color: #333; /* color al pasar el mouse */
+}
 
+.carrito-tabla .btn-outline-light {
+  border-color: rgba(238, 178, 0, 0.6);
+  color: rgba(238, 178, 0, 0.69);
+}
+
+.carrito-tabla .btn-outline-light:hover {
+  background-color: rgba(238, 178, 0, 0.2);
+  color: white;
+}
+
+.carrito-tabla tfoot{
+  color: rgba(238, 178, 0, 0.69);
+  font-weight: bold;
+}
+
+.tipo-entrega,
+.metodo-pago {
+  display: flex;
+  gap: 50px;
+  padding-top: 10px;
+  padding-left: 20px;
+}
+
+/* Scroll vertical para el contenido general del modal */
+.modal-scroll {
+  max-height: 90vh;
+  overflow-y: auto;
+  padding-right: 12px;
+}
+
+/* Scroll horizontal para la tabla */
+.table-responsive {
+  overflow-x: auto;
+}
+
+/* Estilo oscuro unificado para TODAS las scrollbars */
+.modal-scroll::-webkit-scrollbar,
+.table-responsive::-webkit-scrollbar {
+  height: 8px;
+  width: 8px;
+}
+
+.modal-scroll::-webkit-scrollbar-track,
+.table-responsive::-webkit-scrollbar-track {
+  background: #1a1a1a;
+}
+
+.modal-scroll::-webkit-scrollbar-thumb,
+.table-responsive::-webkit-scrollbar-thumb {
+  background-color: rgba(83, 83, 83, 0.6);
+  border-radius: 4px;
+}
+
+.modal-scroll::-webkit-scrollbar-thumb:hover,
+.table-responsive::-webkit-scrollbar-thumb:hover {
+  background-color: rgba(122, 122, 122, 0.8);
+}
 
 
 
