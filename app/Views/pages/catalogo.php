@@ -1,4 +1,8 @@
-<div class="container-fluid catalogo" id="inicio-productos">
+<div class="text-center text-white">
+    <h2>Catálogo</h2>
+</div>
+
+<div class="container-fluid catalogo" id="inicio-productos" style="padding-top: 0px;">
     <div class="row">
         <div class="col-12 col-md-4 seccion-izquierda d-flex flex-column justify-content-start">
 

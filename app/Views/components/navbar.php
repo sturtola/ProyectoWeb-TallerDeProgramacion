@@ -24,13 +24,16 @@
           <a class="nav-link" href="<?= base_url('/QuienesSomos#inicio-nosotros') ?>">Nosotros</a>
         </li>
 
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Información</a>
-          <ul class="dropdown-menu dropdown-menu-dark">
-            <li><a class="dropdown-item" href="<?= base_url('/Contacto#inicio-contacto') ?>">Contacto</a></li>
-            <li><a class="dropdown-item" href="<?= base_url('/Comercializacion#inicio-comercializacion') ?>">Comercialización</a></li>
-            <li><a class="dropdown-item" href="<?= base_url('/TerminosYUsos#inicio-condiciones') ?>">Términos y Usos</a></li>
-          </ul>
+        <li class="nav-item">
+          <a class="nav-link" href="<?= base_url('/Contacto#inicio-contacto') ?>">Contacto</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="<?= base_url('/Comercializacion#inicio-comercializacion') ?>">Comercialización</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="<?= base_url('/TerminosYUsos#inicio-conciciones') ?>">Condiciones</a>
         </li>
 
         <?php if (session('id_usuario')): ?>

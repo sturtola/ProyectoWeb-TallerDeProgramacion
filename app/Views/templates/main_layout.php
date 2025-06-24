@@ -140,7 +140,7 @@
                                         </div>
                                         <div class="mb-2">
                                             <label class="form-label" for="descripcion">Descripción adicional</label>
-                                            <textarea class="form-control" id="descripcion" name="descripcion"></textarea>
+                                            <textarea class="form-control" id="descripcion" name="descripcion" style="background-color: #1e1e1e; border-color:rgba(112, 112, 112, 0.51);"></textarea>
                                         </div>
                                     </div>
                                 </div>
