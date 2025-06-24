@@ -55,7 +55,7 @@ class Auth extends BaseController
         if($usuario['rol'] === 'admin'){
             return redirect()->to('/admin/index');
         } else {
-            return redirect()->to('/catalogo#inicio-catalogo');
+            return redirect()->to('/catalogo#inicio-productos');
         }
     }
 

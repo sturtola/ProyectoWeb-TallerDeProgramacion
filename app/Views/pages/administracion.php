@@ -187,12 +187,12 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item">
-                        <a class="nav-link" href="#dashboard">
+                        <a class="nav-link" href="<?= base_url('/admin/index') ?>">
                             <i class="bi bi-house-door"></i> Inicio Admin
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#salir">
+                        <a class="nav-link" href="<?= base_url('/logout') ?>">
                             <i class="bi bi-box-arrow-right"></i> Salir
                         </a>
                     </li>

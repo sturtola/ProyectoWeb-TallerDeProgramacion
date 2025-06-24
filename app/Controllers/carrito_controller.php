@@ -111,35 +111,42 @@ class Carrito_controller extends BaseController
         }
 
         $entrega = $this->request->getPost('tipo_entrega'); // 'envio' o 'retiro'
-        $metodo_pago = $this->request->getPost('metodo_pago'); // método de pago elegido
+        $metodo_pago = $this->request->getPost('metodo_pago');
 
         $id_domicilio = null;
 
         if ($entrega === 'envio') {
-            // Obtener datos del formulario
-            $calle = $this->request->getPost('calle');
-            $numero = $this->request->getPost('numero');
-            $provincia = $this->request->getPost('provincia');
-            $descripcion = $this->request->getPost('descripcion');
+            // Validar campos obligatorios del domicilio
+            $calle = trim($this->request->getPost('calle'));
+            $numero = trim($this->request->getPost('numero'));
+            $provincia = trim($this->request->getPost('provincia'));
+            $descripcion = trim($this->request->getPost('descripcion')); // opcional
 
-            // Guardar domicilio en la base de datos
+            if (empty($calle) || empty($numero) || empty($provincia)) {
+                return redirect()->back()->with('error', 'Debe completar todos los campos obligatorios del domicilio.');
+            }
+
             $domicilioModel = new \App\Models\domicilioModel();
+
+            // Insert domicilio, revisar si falla
             $id_domicilio = $domicilioModel->insert([
-                'id_usuario'   => $id_usuario,
-                'calle'        => $calle,
-                'numero'       => $numero,
-                'provincia'    => $provincia,
-                'descripcion'  => $descripcion
+                'id_usuario' => $id_usuario,
+                'calle' => $calle,
+                'numero' => $numero,
+                'provincia' => $provincia,
+                'descripcion' => $descripcion
             ]);
+
+            if (!$id_domicilio) {
+                return redirect()->back()->with('error', 'Error al guardar el domicilio.');
+            }
         }
 
-        // Modelos necesarios
         $carritoModel = new \App\Models\carritoModel();
         $carritoProductoModel = new \App\Models\carritoProductoModel();
         $pedidoModel = new \App\Models\pedidoModel();
         $pedidoProductoModel = new \App\Models\pedidoProductoModel();
 
-        // Obtener el carrito activo
         $carrito = $carritoModel->where('id_usuario', $id_usuario)
             ->where('estado', 'activo')
             ->first();
@@ -154,33 +161,30 @@ class Carrito_controller extends BaseController
             return redirect()->back()->with('error', 'El carrito está vacío.');
         }
 
-        // Crear el pedido
         $id_pedido = $pedidoModel->insert([
-            'id_usuario'        => $id_usuario,
-            'tipo_entrega'      => $entrega,
-            'domicilio_entrega' => $id_domicilio, // ID del domicilio recién guardado
-            'metodo_pago'       => $metodo_pago,
-            'subtotal'          => $carrito['subtotal'],
-            'total'             => $carrito['total'],
-            'estado'            => 'pendiente'
+            'id_usuario' => $id_usuario,
+            'tipo_entrega' => $entrega,
+            'domicilio_entrega' => $id_domicilio,
+            'metodo_pago' => $metodo_pago,
+            'subtotal' => $carrito['subtotal'],
+            'total' => $carrito['total'],
+            'estado' => 'pendiente'
         ]);
 
-        // Pasar productos del carrito al pedido
         foreach ($productos as $prod) {
             $pedidoProductoModel->insert([
-                'id_pedido'      => $id_pedido,
-                'id_producto'    => $prod['id_producto'],
-                'cantidad'       => $prod['cantidad'],
+                'id_pedido' => $id_pedido,
+                'id_producto' => $prod['id_producto'],
+                'cantidad' => $prod['cantidad'],
                 'precio_unitario' => $prod['subtotal'] / $prod['cantidad'],
-                'subtotal'       => $prod['subtotal']
+                'subtotal' => $prod['subtotal']
             ]);
         }
 
-        // Vaciar el carrito
+        // Vaciar carrito
         $carritoProductoModel->where('id_carrito', $carrito['id_carrito'])->delete();
         $carritoModel->update($carrito['id_carrito'], ['subtotal' => 0, 'total' => 0]);
 
-        // Redirigir a la factura
         return redirect()->to('/pedido/factura/' . $id_pedido);
     }
 }

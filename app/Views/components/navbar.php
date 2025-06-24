@@ -17,13 +17,7 @@
         </li>
 
         <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Productos</a>
-          <ul class="dropdown-menu dropdown-menu-dark">
-            <li><a class="dropdown-item" href="<?= base_url('/catalogo#inicio-productos') ?>">Todos</a></li>
-            <li><a class="dropdown-item" href="<?= base_url('/catalogo?categoria[]=Hombre#inicio-productos') ?>">Hombre</a></li>
-            <li><a class="dropdown-item" href="<?= base_url('/catalogo?categoria[]=Mujer#inicio-productos') ?>">Mujer</a></li>
-            <li><a class="dropdown-item" href="<?= base_url('/catalogo?categoria[]=Accesorio#inicio-productos') ?>">Accesorios</a></li>
-          </ul>
+          <a class="nav-link" href="<?= base_url('/catalogo#inicio-productos') ?>">Productos</a>
         </li>
 
         <li class="nav-item">

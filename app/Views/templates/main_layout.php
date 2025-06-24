@@ -9,14 +9,11 @@
     <link rel="stylesheet" href="<?= base_url('assets/css/auren_style.css') ?>">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
-    <title>Auren</title>
 </head>
 
 <body class="comercializacion">
     <header>
-        <!-- Menú de navegación -->
         <?= view('components/navbar') ?>
     </header>
 
@@ -25,11 +22,8 @@
     </main>
 
     <footer>
-        <!-- Pie de página -->
         <?= view('components/footer') ?>
     </footer>
-
-
 
     <?php if (session()->get('logueado') && session()->get('rol') === 'cliente'): ?>
         <!-- Botón flotante -->
@@ -61,8 +55,7 @@
 
                         <!-- Carrito lleno -->
                         <div id="carrito-contenido" class="<?= empty($carrito) ? 'd-none' : '' ?>">
-                            <form id="form-finalizar-compra" method="POST" action="<?= base_url('/pedido/finalizar') ?>">
-                                <!-- tabla -->
+                            <form id="form-finalizar-compra" method="POST" action="<?= base_url('/pedidos/finalizar') ?>">
                                 <div class="table-responsive">
                                     <table class="carrito-tabla align-middle text-center">
                                         <thead>
@@ -112,7 +105,6 @@
                                             </div>
                                         <?php endforeach; ?>
                                     </div>
-
                                 </div>
 
                                 <!-- Tipo de entrega -->
@@ -128,7 +120,6 @@
                                             <label class="form-check-label" for="entrega-retiro">Retiro en sucursal</label>
                                         </div>
                                     </div>
-
                                 </div>
 
                                 <!-- Formulario domicilio -->
@@ -136,23 +127,22 @@
                                     <h5>Datos de envío</h5>
                                     <div>
                                         <div class="mb-2">
-                                            <label class="form-label">Provincia</label>
-                                            <input type="text" class="form-control" id="provincia_input" name="provincia">
+                                            <label class="form-label" for="provincia">Provincia</label>
+                                            <input type="text" class="form-control" id="provincia" name="provincia">
                                         </div>
                                         <div class="mb-2">
-                                            <label class="form-label">Calle</label>
-                                            <input type="text" class="form-control" id="calle_input" name="calle">
+                                            <label class="form-label" for="calle">Calle</label>
+                                            <input type="text" class="form-control" id="calle" name="calle">
                                         </div>
                                         <div class="mb-2">
-                                            <label class="form-label">Número</label>
-                                            <input type="number" class="form-control" id="numero_input" name="numero">
+                                            <label class="form-label" for="numero">Número</label>
+                                            <input type="number" class="form-control" id="numero" name="numero">
                                         </div>
                                         <div class="mb-2">
-                                            <label class="form-label">Descripción adicional</label>
-                                            <textarea class="form-control" id="descripcion" name="descripcion_input"></textarea>
+                                            <label class="form-label" for="descripcion">Descripción adicional</label>
+                                            <textarea class="form-control" id="descripcion" name="descripcion"></textarea>
                                         </div>
                                     </div>
-
                                 </div>
 
                                 <!-- Totales -->
@@ -165,12 +155,6 @@
                                     <strong>Total a pagar:</strong>
                                     <strong id="total-carrito">$<?= number_format(array_sum(array_map(fn($item) => $item['precio'] * $item['cantidad'], $carrito ?? [])), 2, ',', '.') ?></strong>
                                 </div>
-
-                                <!-- Inputs ocultos de domicilio -->
-                                <input type="hidden" name="provincia" id="provincia_input">
-                                <input type="hidden" name="calle" id="calle_input">
-                                <input type="hidden" name="numero" id="numero_input">
-                                <input type="hidden" name="descripcion" id="descripcion_input">
 
                                 <button type="submit" class="btn text-white w-100" style="background-color: rgba(238, 178, 0, 0.69); border-color: rgba(238, 178, 0, 0.69);">Finalizar compra</button>
                             </form>
@@ -185,42 +169,76 @@
     <script>
         document.addEventListener('DOMContentLoaded', function() {
             const form = document.getElementById('form-finalizar-compra');
-
-            const calle = document.getElementById('calle');
-            const numero = document.getElementById('numero');
-            const provincia = document.getElementById('provincia');
-            const descripcion = document.getElementById('descripcion');
-
-            const calle_input = document.getElementById('calle_input');
-            const numero_input = document.getElementById('numero_input');
-            const provincia_input = document.getElementById('provincia_input');
-            const descripcion_input = document.getElementById('descripcion_input');
-
             const entregaEnvio = document.getElementById('entrega-envio');
+            const entregaRetiro = document.getElementById('entrega-retiro');
             const formDomicilio = document.getElementById('form-domicilio');
 
-            // Mostrar u ocultar el formulario de domicilio
-            entregaEnvio.addEventListener('change', function() {
-                formDomicilio.classList.remove('d-none');
+            function toggleDomicilio() {
+                if (entregaEnvio.checked) {
+                    formDomicilio.classList.remove('d-none');
+                } else {
+                    formDomicilio.classList.add('d-none');
+                }
+                recalcularTotales();
+            }
+
+            entregaEnvio.addEventListener('change', toggleDomicilio);
+            entregaRetiro.addEventListener('change', toggleDomicilio);
+
+            toggleDomicilio();
+
+            // Función para recalcular totales incluyendo costo de envío
+            function recalcularTotales() {
+                let subtotal = 0;
+                document.querySelectorAll("#carrito-items tr").forEach(row => {
+                    const precio = parseFloat(row.querySelector(".precio").textContent.replace(/\./g, '').replace(',', '.').replace('$', ''));
+                    const cantidad = parseInt(row.querySelector(".cantidad").textContent);
+                    subtotal += precio * cantidad;
+                });
+
+                document.getElementById("subtotal-carrito").textContent = "$" + subtotal.toLocaleString('es-AR', {
+                    minimumFractionDigits: 2
+                });
+
+                const envio = entregaEnvio.checked ? 7200 : 0;
+                document.getElementById("monto-envio").textContent = "$" + envio.toLocaleString('es-AR', {
+                    minimumFractionDigits: 2
+                });
+
+                document.getElementById("total-carrito").textContent = "$" + (subtotal + envio).toLocaleString('es-AR', {
+                    minimumFractionDigits: 2
+                });
+            }
+
+            // Eventos botones cantidad y eliminar (deberías tener tus funciones ya implementadas)
+            document.querySelectorAll("#carrito-items tr").forEach(row => {
+                const id = row.dataset.id;
+                row.querySelector(".btn-mas")?.addEventListener("click", () => actualizarCantidad(row, id, 1));
+                row.querySelector(".btn-menos")?.addEventListener("click", () => actualizarCantidad(row, id, -1));
+                row.querySelector(".btn-eliminar")?.addEventListener("click", () => eliminarItem(row, id));
             });
 
-            document.getElementById('entrega-retiro').addEventListener('change', function() {
-                formDomicilio.classList.add('d-none');
+            // Botón vaciar carrito
+            document.querySelector(".btn-vaciar")?.addEventListener("click", async () => {
+                if (confirm("¿Vaciar el carrito?")) {
+                    const res = await fetch("<?= base_url('carrito/vaciar') ?>");
+                    const data = await res.json();
+                    if (data.success) location.reload();
+                }
             });
 
-            // Antes de enviar el formulario, copiar datos de inputs visibles a ocultos
-            form.addEventListener('submit', function() {
-                provincia_input.value = provincia.value;
-                calle_input.value = calle.value;
-                numero_input.value = numero.value;
-                descripcion_input.value = descripcion.value;
-            });
+            // Funciones actualizarCantidad y eliminarItem deben estar definidas en tu script
         });
+
+        function abrirModalCarrito() {
+            document.getElementById('modal-carrito').classList.add('show');
+        }
+
+        function cerrarModalCarrito() {
+            document.getElementById('modal-carrito').classList.remove('show');
+        }
     </script>
 
-
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YOUR_HASH" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
     <?php if (session()->getFlashdata('abrir_carrito')): ?>
@@ -230,173 +248,6 @@
             });
         </script>
     <?php endif; ?>
-
-    <script>
-        document.addEventListener("DOMContentLoaded", () => {
-            const entregaEnvio = document.getElementById("entrega-envio");
-            const entregaRetiro = document.getElementById("entrega-retiro");
-            const formDomicilio = document.getElementById("form-domicilio");
-
-            entregaEnvio?.addEventListener("change", () => {
-                formDomicilio.classList.remove("d-none");
-                recalcularTotales();
-            });
-
-            entregaRetiro?.addEventListener("change", () => {
-                formDomicilio.classList.add("d-none");
-                recalcularTotales();
-            });
-
-            document.getElementById("form-finalizar-compra")?.addEventListener("submit", () => {
-                document.getElementById("provincia_input").value = document.getElementById("provincia").value;
-                document.getElementById("calle_input").value = document.getElementById("calle").value;
-                document.getElementById("numero_input").value = document.getElementById("numero").value;
-                document.getElementById("descripcion_input").value = document.getElementById("descripcion").value;
-            });
-        });
-    </script>
-
-    <script>
-        function abrirModalCarrito() {
-            document.getElementById('modal-carrito').classList.add('show');
-        }
-
-        function cerrarModalCarrito() {
-            document.getElementById('modal-carrito').classList.remove('show');
-        }
-
-        document.addEventListener("DOMContentLoaded", () => {
-            // Mostrar u ocultar datos de envío
-            const entregaEnvio = document.getElementById('entrega-envio');
-            const entregaRetiro = document.getElementById('entrega-retiro');
-            const formDomicilio = document.getElementById('form-domicilio');
-
-            function toggleDomicilio() {
-                formDomicilio.classList.toggle('d-none', !entregaEnvio.checked);
-                recalcularTotales();
-            }
-
-            if (entregaEnvio && entregaRetiro && formDomicilio) {
-                entregaEnvio.addEventListener('change', toggleDomicilio);
-                entregaRetiro.addEventListener('change', toggleDomicilio);
-                toggleDomicilio();
-            }
-
-            // Eventos de botones de cantidad y eliminación
-            document.querySelectorAll("#carrito-items tr").forEach(row => {
-                const id = row.dataset.id;
-                row.querySelector(".btn-mas")?.addEventListener("click", () => {
-                    actualizarCantidad(row, id, 1);
-                });
-                row.querySelector(".btn-menos")?.addEventListener("click", () => {
-                    actualizarCantidad(row, id, -1);
-                });
-                row.querySelector(".btn-eliminar")?.addEventListener("click", () => {
-                    eliminarItem(row, id);
-                });
-            });
-
-            // Botón de vaciar carrito
-            document.querySelector(".btn-vaciar")?.addEventListener("click", async () => {
-                if (confirm("¿Vaciar el carrito?")) {
-                    const res = await fetch("<?= base_url('carrito/vaciar') ?>");
-                    const data = await res.json();
-                    if (data.success) location.reload();
-                }
-            });
-        });
-
-        async function actualizarCantidad(row, id, cambio) {
-            const cantidadCell = row.querySelector(".cantidad");
-            let cantidad = parseInt(cantidadCell.textContent);
-            cantidad += cambio;
-            if (cantidad < 1) return;
-
-            const formData = new FormData();
-            formData.append("id_carrito_producto", id);
-            formData.append("cantidad", cantidad);
-
-            const res = await fetch("<?= base_url('carrito-producto/actualizar-cantidad') ?>", {
-                method: "POST",
-                body: formData
-            });
-
-            const data = await res.json();
-            if (data.success) {
-                cantidadCell.textContent = cantidad;
-                row.querySelector(".subtotal").textContent = "$" + data.subtotal.toLocaleString('es-AR', {
-                    minimumFractionDigits: 2
-                });
-                recalcularTotales();
-            } else {
-                alert(data.message || "Error al actualizar cantidad");
-            }
-        }
-
-        async function eliminarItem(row, id) {
-            if (!confirm("¿Eliminar este producto del carrito?")) return;
-
-            const formData = new FormData();
-            formData.append("id_carrito_producto", id);
-
-            const res = await fetch("<?= base_url('carrito-producto/eliminar') ?>", {
-                method: "POST",
-                body: formData
-            });
-
-            const data = await res.json();
-            if (data.success) {
-                row.remove();
-                recalcularTotales();
-
-                // Si ya no hay filas, mostrar mensaje de carrito vacío
-                if (document.querySelectorAll("#carrito-items tr").length === 0) {
-                    document.getElementById("carrito-contenido").classList.add("d-none");
-                    document.getElementById("carrito-vacio").classList.remove("d-none");
-                }
-            } else {
-                alert(data.message || "Error al eliminar producto");
-            }
-        }
-
-        function recalcularTotales() {
-            let subtotal = 0;
-            document.querySelectorAll("#carrito-items tr").forEach(row => {
-                const precio = parseFloat(row.querySelector(".precio").textContent.replace(/\./g, '').replace(',', '.').replace('$', ''));
-                const cantidad = parseInt(row.querySelector(".cantidad").textContent);
-                subtotal += precio * cantidad;
-            });
-
-            document.getElementById("subtotal-carrito").textContent = "$" + subtotal.toLocaleString('es-AR', {
-                minimumFractionDigits: 2
-            });
-
-            const envio = document.getElementById("entrega-envio")?.checked ? 7200 : 0;
-            document.getElementById("monto-envio").textContent = "$" + envio.toLocaleString('es-AR', {
-                minimumFractionDigits: 2
-            });
-
-            document.getElementById("total-carrito").textContent = "$" + (subtotal + envio).toLocaleString('es-AR', {
-                minimumFractionDigits: 2
-            });
-        }
-    </script>
-
-    <script>
-        document, addEventListener("DOMContentLoaded", function() {
-            if (window.location.hash === "#inicio-sesion") {
-                const target = document.querySelector(window.location.hash);
-                if (target) {
-                    setTimeout(() => {
-                        target.scrollIntoView({
-                            behavior: "smooth",
-                            block: "start"
-                        });
-                    }, 100);
-                }
-            }
-        });
-    </script>
 
 </body>
 
