@@ -29,7 +29,7 @@ $routes->setDefaultController('Pages');
 $routes->setDefaultMethod('index');
 
 // Manejo de 404 personalizado
-$routes->set404Override(function() {
+$routes->set404Override(function () {
     return view('templates/main_layout', [
         'title' => 'Página no encontrada - Mi Tienda',
         'content' => view('errors/custom_404')
@@ -65,3 +65,10 @@ $routes->post('carrito/agregar', 'Carrito_controller::agregar');
 $routes->post('carrito-producto/actualizar-cantidad', 'CarritoProducto_controller::actualizarCantidad');
 $routes->post('carrito-producto/eliminar', 'CarritoProducto_controller::eliminar');
 $routes->get('carrito/vaciar', 'Carrito_controller::vaciar');
+
+$routes->post('/pedido/finalizar', 'pedido_controller::finalizar');
+$routes->get('/factura/(:num)', 'factura_controller::ver/$1');
+
+$routes->get('pedidos', 'adminPedido_controller::index');
+$routes->get('pedidos/ver/(:num)', 'adminPedido_controller::ver/$1');
+$routes->post('pedidos/cambiarEstado', 'adminPedido_controller::cambiarEstado');

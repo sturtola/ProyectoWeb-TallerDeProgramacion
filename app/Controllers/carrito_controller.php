@@ -75,6 +75,7 @@ class Carrito_controller extends BaseController
             'total' => $nuevoSubtotal
         ]);
 
+        session()->setFlashdata('abrir_carrito', true);
         return redirect()->back()->with('success', 'Producto añadido al carrito.');
     }
 
@@ -96,6 +97,70 @@ class Carrito_controller extends BaseController
                 ->delete();
         }
 
+        session()->setFlashdata('abrir_carrito', true);
         return $this->response->setJSON(['success' => true]);
+    }
+
+    public function finalizarCompra()
+    {
+        $session = session();
+        $id_usuario = $session->get('id_usuario');
+
+        if (!$id_usuario) {
+            return redirect()->to('/IniciarSesion');
+        }
+
+        $carritoModel = new \App\Models\carritoModel();
+        $carritoProductoModel = new \App\Models\carritoProductoModel();
+        $pedidoModel = new \App\Models\pedidoModel();
+        $pedidoProductoModel = new \App\Models\pedidoProductoModel();
+        $usuarioModel = new \App\Models\usuarioModel();
+
+        $carrito = $carritoModel->where('id_usuario', $id_usuario)
+            ->where('estado', 'activo')
+            ->first();
+
+        if (!$carrito) {
+            return redirect()->back()->with('error', 'Carrito no encontrado.');
+        }
+
+        $productos = $carritoProductoModel->where('id_carrito', $carrito['id_carrito'])->findAll();
+        if (empty($productos)) {
+            return redirect()->back()->with('error', 'El carrito está vacío.');
+        }
+
+        // Datos de entrega y pago enviados por formulario
+        $tipo_entrega = $this->request->getPost('tipo_entrega'); // 'envio' o 'retiro'
+        $domicilio = $tipo_entrega === 'envio' ? $this->request->getPost('domicilio') : null;
+        $metodo_pago = $this->request->getPost('metodo_pago');
+
+        // Crear el pedido
+        $id_pedido = $pedidoModel->insert([
+            'id_usuario' => $id_usuario,
+            'tipo_entrega' => $tipo_entrega,
+            'domicilio_entrega' => $domicilio,
+            'metodo_pago' => $metodo_pago,
+            'subtotal' => $carrito['subtotal'],
+            'total' => $carrito['total'],
+            'estado' => 'pendiente'
+        ]);
+
+        // Pasar productos del carrito a pedido_producto
+        foreach ($productos as $prod) {
+            $pedidoProductoModel->insert([
+                'id_pedido' => $id_pedido,
+                'id_producto' => $prod['id_producto'],
+                'cantidad' => $prod['cantidad'],
+                'precio_unitario' => $prod['subtotal'] / $prod['cantidad'],
+                'subtotal' => $prod['subtotal']
+            ]);
+        }
+
+        // Vaciar carrito
+        $carritoProductoModel->where('id_carrito', $carrito['id_carrito'])->delete();
+        $carritoModel->update($carrito['id_carrito'], ['subtotal' => 0, 'total' => 0]);
+
+        // Redirigir a factura
+        return redirect()->to('/pedido/factura/' . $id_pedido);
     }
 }

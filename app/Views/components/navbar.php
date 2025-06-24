@@ -17,12 +17,12 @@
         </li>
 
         <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="<?= base_url('/catalogo#inicio-productos') ?>" role="button" data-bs-toggle="dropdown">Productos</a>
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Productos</a>
           <ul class="dropdown-menu dropdown-menu-dark">
             <li><a class="dropdown-item" href="<?= base_url('/catalogo#inicio-productos') ?>">Todos</a></li>
-            <li><a class="dropdown-item" href="<?= base_url('/catalogo#inicio-productos') ?>">Hombre</a></li>
-            <li><a class="dropdown-item" href="<?= base_url('/catalogo#inicio-productos') ?>">Mujer</a></li>
-            <li><a class="dropdown-item" href="<?= base_url('/catalogo#inicio-productos') ?>">Accesorios</a></li>
+            <li><a class="dropdown-item" href="<?= base_url('/catalogo?categoria[]=Hombre#inicio-productos') ?>">Hombre</a></li>
+            <li><a class="dropdown-item" href="<?= base_url('/catalogo?categoria[]=Mujer#inicio-productos') ?>">Mujer</a></li>
+            <li><a class="dropdown-item" href="<?= base_url('/catalogo?categoria[]=Accesorio#inicio-productos') ?>">Accesorios</a></li>
           </ul>
         </li>
 
@@ -47,7 +47,7 @@
           </li>
         <?php else: ?>
           <li class="nav-item" >
-            <a class="nav-link text-info" href="<?= base_url('/IniciarSesion#inicio-sesion') ?>" >
+            <a class="nav-link" href="<?= base_url('/IniciarSesion#inicio-sesion') ?>" style="color: rgba(238, 178, 0, 0.69)" >
               <i class="bi bi-person-circle"></i> Iniciar sesión
             </a>
           </li>
@@ -57,3 +57,16 @@
   </div>
 </nav>
 </section>
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const dropdownToggles = document.querySelectorAll('.dropdown-toggle');
+    dropdownToggles.forEach(toggle => {
+      toggle.addEventListener('click', function (e) {
+        e.preventDefault();
+        const dropdown = new bootstrap.Dropdown(this);
+        dropdown.toggle();
+      });
+    });
+  });
+</script>
