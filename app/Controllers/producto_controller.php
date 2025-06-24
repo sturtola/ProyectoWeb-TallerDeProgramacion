@@ -27,25 +27,26 @@ class producto_controller extends Controller
     }
 
     public function guardar()
-{
-    $imagen_url = $this->request->getPost('imagen_url');
+    {
+        $imagen_url = $this->request->getPost('imagen_url');
 
-    $data = [
-        'nombre'      => $this->request->getPost('nombre'),
-        'descripcion' => $this->request->getPost('descripcion'),
-        'precio'      => $this->request->getPost('precio'),
-        'stock'       => $this->request->getPost('stock'),
-        'imagen_url'  => $imagen_url,
-        'categoria'   => $this->request->getPost('categoria'),
-        'marca'       => $this->request->getPost('marca'),
-        'material'    => $this->request->getPost('material'),
-        'modelo'      => $this->request->getPost('modelo'),
-        'descuento'   => $this->request->getPost('descuento'),
-    ];
+        $data = [
+            'nombre'      => $this->request->getPost('nombre'),
+            'descripcion' => $this->request->getPost('descripcion'),
+            'precio'      => $this->request->getPost('precio'),
+            'stock'       => $this->request->getPost('stock'),
+            'imagen_url'  => $imagen_url,
+            'categoria'   => $this->request->getPost('categoria'),
+            'marca'       => $this->request->getPost('marca'),
+            'material'    => $this->request->getPost('material'),
+            'modelo'      => $this->request->getPost('modelo'),
+            'descuento'   => $this->request->getPost('descuento'),
+        ];
 
-    $this->productoModel->agregarProducto($data);
-    return redirect()->to('/producto_controller');
-}
+        $this->productoModel->agregarProducto($data);
+        return redirect()->to('/admin/productos');
+    }
+
     public function editar($id)
     {
         $data['producto'] = $this->productoModel->obtenerProducto($id);
@@ -68,13 +69,12 @@ class producto_controller extends Controller
         ];
 
         $this->productoModel->actualizarProducto($id, $data);
-        return redirect()->to('/producto_controller');
+        return redirect()->to('/admin/productos');
     }
 
     public function eliminar($id)
     {
         $this->productoModel->eliminarProducto($id);
-        return redirect()->to('/producto_controller');
+        return redirect()->to('/admin/productos');
     }
-
 }

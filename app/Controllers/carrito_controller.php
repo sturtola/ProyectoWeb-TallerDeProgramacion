@@ -110,12 +110,36 @@ class Carrito_controller extends BaseController
             return redirect()->to('/IniciarSesion');
         }
 
+        $entrega = $this->request->getPost('tipo_entrega'); // 'envio' o 'retiro'
+        $metodo_pago = $this->request->getPost('metodo_pago'); // método de pago elegido
+
+        $id_domicilio = null;
+
+        if ($entrega === 'envio') {
+            // Obtener datos del formulario
+            $calle = $this->request->getPost('calle');
+            $numero = $this->request->getPost('numero');
+            $provincia = $this->request->getPost('provincia');
+            $descripcion = $this->request->getPost('descripcion');
+
+            // Guardar domicilio en la base de datos
+            $domicilioModel = new \App\Models\domicilioModel();
+            $id_domicilio = $domicilioModel->insert([
+                'id_usuario'   => $id_usuario,
+                'calle'        => $calle,
+                'numero'       => $numero,
+                'provincia'    => $provincia,
+                'descripcion'  => $descripcion
+            ]);
+        }
+
+        // Modelos necesarios
         $carritoModel = new \App\Models\carritoModel();
         $carritoProductoModel = new \App\Models\carritoProductoModel();
         $pedidoModel = new \App\Models\pedidoModel();
         $pedidoProductoModel = new \App\Models\pedidoProductoModel();
-        $usuarioModel = new \App\Models\usuarioModel();
 
+        // Obtener el carrito activo
         $carrito = $carritoModel->where('id_usuario', $id_usuario)
             ->where('estado', 'activo')
             ->first();
@@ -125,42 +149,38 @@ class Carrito_controller extends BaseController
         }
 
         $productos = $carritoProductoModel->where('id_carrito', $carrito['id_carrito'])->findAll();
+
         if (empty($productos)) {
             return redirect()->back()->with('error', 'El carrito está vacío.');
         }
 
-        // Datos de entrega y pago enviados por formulario
-        $tipo_entrega = $this->request->getPost('tipo_entrega'); // 'envio' o 'retiro'
-        $domicilio = $tipo_entrega === 'envio' ? $this->request->getPost('domicilio') : null;
-        $metodo_pago = $this->request->getPost('metodo_pago');
-
         // Crear el pedido
         $id_pedido = $pedidoModel->insert([
-            'id_usuario' => $id_usuario,
-            'tipo_entrega' => $tipo_entrega,
-            'domicilio_entrega' => $domicilio,
-            'metodo_pago' => $metodo_pago,
-            'subtotal' => $carrito['subtotal'],
-            'total' => $carrito['total'],
-            'estado' => 'pendiente'
+            'id_usuario'        => $id_usuario,
+            'tipo_entrega'      => $entrega,
+            'domicilio_entrega' => $id_domicilio, // ID del domicilio recién guardado
+            'metodo_pago'       => $metodo_pago,
+            'subtotal'          => $carrito['subtotal'],
+            'total'             => $carrito['total'],
+            'estado'            => 'pendiente'
         ]);
 
-        // Pasar productos del carrito a pedido_producto
+        // Pasar productos del carrito al pedido
         foreach ($productos as $prod) {
             $pedidoProductoModel->insert([
-                'id_pedido' => $id_pedido,
-                'id_producto' => $prod['id_producto'],
-                'cantidad' => $prod['cantidad'],
+                'id_pedido'      => $id_pedido,
+                'id_producto'    => $prod['id_producto'],
+                'cantidad'       => $prod['cantidad'],
                 'precio_unitario' => $prod['subtotal'] / $prod['cantidad'],
-                'subtotal' => $prod['subtotal']
+                'subtotal'       => $prod['subtotal']
             ]);
         }
 
-        // Vaciar carrito
+        // Vaciar el carrito
         $carritoProductoModel->where('id_carrito', $carrito['id_carrito'])->delete();
         $carritoModel->update($carrito['id_carrito'], ['subtotal' => 0, 'total' => 0]);
 
-        // Redirigir a factura
+        // Redirigir a la factura
         return redirect()->to('/pedido/factura/' . $id_pedido);
     }
 }

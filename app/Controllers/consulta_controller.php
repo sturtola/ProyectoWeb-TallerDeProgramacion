@@ -15,7 +15,7 @@ class consulta_controller extends BaseController
         $model = new consultaModel();
         $data['consultas'] = $model->obtenerConsultas();
 
-        return view('back/consultas/consultas_listar', $data);
+        return view('back/consultas/listarConsulta_view', $data);
     }
 
     /**

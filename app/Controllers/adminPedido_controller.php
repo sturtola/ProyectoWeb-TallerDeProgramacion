@@ -8,7 +8,7 @@ use App\Models\pedidoProductoModel;
 use App\Models\usuarioModel;
 use App\Models\domicilioModel;
 
-class adminPedidoController extends BaseController
+class adminPedido_controller extends BaseController
 {
     protected $pedidoModel;
     protected $pedidoProductoModel;
@@ -32,9 +32,10 @@ class adminPedidoController extends BaseController
         foreach ($pedidos as &$pedido) {
             $pedido['usuario'] = $this->usuarioModel->find($pedido['id_usuario']);
             $pedido['domicilio'] = $pedido['id_domicilio'] ? $this->domicilioModel->find($pedido['id_domicilio']) : null;
+            $pedido['productos'] = $this->pedidoProductoModel->where('id_pedido', $pedido['id_pedido'])->findAll();
         }
 
-        return view('admin/pedidos/listado', ['pedidos' => $pedidos]);
+        return view('back/pedidos/listarPedidos_view', ['pedidos' => $pedidos]);
     }
 
     // Ver detalle de un pedido
@@ -50,11 +51,11 @@ class adminPedidoController extends BaseController
         $domicilio = $pedido['id_domicilio'] ? $this->domicilioModel->find($pedido['id_domicilio']) : null;
         $productos = $this->pedidoProductoModel->where('id_pedido', $id_pedido)->findAll();
 
-        return view('admin/pedidos/ver', [
+        return view('back/pedidos/verPedidos_view', [
             'pedido' => $pedido,
             'usuario' => $usuario,
             'domicilio' => $domicilio,
-            'productos' => $productos,
+            'productos' => $productos
         ]);
     }
 
@@ -72,6 +73,7 @@ class adminPedidoController extends BaseController
 
         $this->pedidoModel->update($id_pedido, ['estado' => $nuevoEstado]);
 
-        return $this->response->setJSON(['success' => true]);
+        $this->response->setJSON(['success' => true]);
+        return redirect()->to('admin/pedidos');
     }
 }

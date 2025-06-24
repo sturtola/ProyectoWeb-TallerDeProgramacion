@@ -436,7 +436,14 @@ main, section, .principal {
   border-radius: 50px;
   padding: 5px;
   box-shadow: 0 0 15px rgba(255, 215, 0, 0.6);
-  background: linear-gradient(90deg, #ffd700, #ff00ff, #00ffff, #ffd700);
+  background: linear-gradient(
+    45deg,
+    rgba(255, 217, 0, 0.1),
+    rgba(255, 217, 0, 0.4),
+    rgba(255, 217, 0, 0.69),
+    rgba(255, 217, 0, 0.4),
+    rgba(255, 217, 0, 0.1)
+  );
   animation: brillar 8s linear infinite !important;
   width: 500px;
   height: auto;
@@ -1117,7 +1124,7 @@ main, section, .principal {
 }
 
 .aplicar:hover {
-    background-color: #00ff84b6 !important;
+    background-color: rgba(238, 179, 3, 0.774) !important;
 }
 
 .modal-producto {

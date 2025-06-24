@@ -47,7 +47,7 @@
           </li>
         <?php else: ?>
           <li class="nav-item" >
-            <a class="nav-link" href="<?= base_url('/IniciarSesion#inicio-sesion') ?>" style="color: rgba(238, 178, 0, 0.69)" >
+            <a class="nav-link" href="<?= base_url('/IniciarSesion#inicio-sesion') ?>" style="color: rgba(238, 178, 0, 0.81)" >
               <i class="bi bi-person-circle"></i> Iniciar sesión
             </a>
           </li>
@@ -58,15 +58,6 @@
 </nav>
 </section>
 
-<script>
-  document.addEventListener('DOMContentLoaded', () => {
-    const dropdownToggles = document.querySelectorAll('.dropdown-toggle');
-    dropdownToggles.forEach(toggle => {
-      toggle.addEventListener('click', function (e) {
-        e.preventDefault();
-        const dropdown = new bootstrap.Dropdown(this);
-        dropdown.toggle();
-      });
-    });
-  });
-</script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YOUR_HASH" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+

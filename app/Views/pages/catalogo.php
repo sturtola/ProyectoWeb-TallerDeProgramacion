@@ -140,7 +140,7 @@
                     <!-- Modal reutilizable -->
                     <div id="modal-producto" class="modal-producto">
                         <div class="modal-contenido">
-                            <button type="button" class="btn-close" data-bs-dismiss="modal-producto" aria-label="Cerrar"></button>
+                            <button type="button" class="btn-close btn-close-white" aria-label="Cerrar" onclick="cerrarModalProducto()"></button>
                             <div class="modal-body">
                                 <div class="modal-imagen">
                                     <img src="" alt="Imagen producto">
@@ -151,7 +151,7 @@
                                     <p><strong>Marca:</strong> <span class="marca"></span></p>
                                     <p><strong>Material:</strong> <span class="material"></span></p>
                                     <p><strong>Categoría:</strong> <span class="genero"></span></p>
-                                    <form method="post" action="<?= site_url('carrito/agregar')?>" id="form-agregar-carrito">
+                                    <form method="post" action="<?= site_url('carrito/agregar') ?>" id="form-agregar-carrito">
                                         <input type="hidden" name="id_producto" id="modal-id-producto">
                                         <div class="cantidad-container">
                                             <label for="cantidad">Cantidad:</label>
@@ -188,10 +188,13 @@
 </div>
 
 <script>
+    function cerrarModalProducto() {
+        document.getElementById('modal-producto').style.display="none";
+    }
+
     const BASE_URL = "<?= base_url() ?>";
 
     const modal = document.getElementById("modal-producto");
-    const cerrarModal = document.querySelector(".cerrar-modal");
     const btns = document.querySelectorAll(".btn-comprar");
 
     btns.forEach(btn => {
@@ -246,10 +249,6 @@
             modal.querySelector("#mensaje-stock").classList.add("d-none");
             modal.querySelector("#mensaje-stock").textContent = '';
         });
-    });
-
-    cerrarModal.addEventListener("click", () => {
-        modal.style.display = "none";
     });
 
     window.addEventListener("click", (e) => {
@@ -345,6 +344,8 @@
         })
     })
 </script>
+
+
 
 
 <!-- Solo el JS de Bootstrap (funcionalidad de carrusel) -->

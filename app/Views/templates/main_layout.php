@@ -104,46 +104,55 @@
                                 <!-- Método de pago -->
                                 <div class="mb-4">
                                     <h5>Método de pago</h5>
-                                    <?php foreach (['transferencia', 'tarjeta', 'efectivo'] as $mp): ?>
-                                        <div class="form-check">
-                                            <input class="form-check-input" type="radio" name="metodo_pago" value="<?= $mp ?>" required id="pago-<?= $mp ?>">
-                                            <label class="form-check-label" for="pago-<?= $mp ?>"><?= ucfirst($mp) ?></label>
-                                        </div>
-                                    <?php endforeach; ?>
+                                    <div class="metodo-pago">
+                                        <?php foreach (['transferencia', 'tarjeta', 'efectivo'] as $mp): ?>
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="radio" name="metodo_pago" value="<?= $mp ?>" required id="pago-<?= $mp ?>">
+                                                <label class="form-check-label" for="pago-<?= $mp ?>"><?= ucfirst($mp) ?></label>
+                                            </div>
+                                        <?php endforeach; ?>
+                                    </div>
+
                                 </div>
 
                                 <!-- Tipo de entrega -->
                                 <div class="mb-4">
                                     <h5>Tipo de entrega</h5>
-                                    <div class="form-check">
-                                        <input class="form-check-input" type="radio" name="tipo_entrega" id="entrega-envio" value="envio" required>
-                                        <label class="form-check-label" for="entrega-envio">Envío a domicilio</label>
+                                    <div class="tipo-entrega">
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="radio" name="tipo_entrega" id="entrega-envio" value="envio" required>
+                                            <label class="form-check-label" for="entrega-envio">Envío a domicilio</label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="radio" name="tipo_entrega" id="entrega-retiro" value="retiro">
+                                            <label class="form-check-label" for="entrega-retiro">Retiro en sucursal</label>
+                                        </div>
                                     </div>
-                                    <div class="form-check">
-                                        <input class="form-check-input" type="radio" name="tipo_entrega" id="entrega-retiro" value="retiro">
-                                        <label class="form-check-label" for="entrega-retiro">Retiro en sucursal</label>
-                                    </div>
+
                                 </div>
 
                                 <!-- Formulario domicilio -->
                                 <div id="form-domicilio" class="d-none">
                                     <h5>Datos de envío</h5>
-                                    <div class="mb-2">
-                                        <label class="form-label">Provincia</label>
-                                        <input type="text" class="form-control" id="provincia">
+                                    <div>
+                                        <div class="mb-2">
+                                            <label class="form-label">Provincia</label>
+                                            <input type="text" class="form-control" id="provincia_input" name="provincia">
+                                        </div>
+                                        <div class="mb-2">
+                                            <label class="form-label">Calle</label>
+                                            <input type="text" class="form-control" id="calle_input" name="calle">
+                                        </div>
+                                        <div class="mb-2">
+                                            <label class="form-label">Número</label>
+                                            <input type="number" class="form-control" id="numero_input" name="numero">
+                                        </div>
+                                        <div class="mb-2">
+                                            <label class="form-label">Descripción adicional</label>
+                                            <textarea class="form-control" id="descripcion" name="descripcion_input"></textarea>
+                                        </div>
                                     </div>
-                                    <div class="mb-2">
-                                        <label class="form-label">Calle</label>
-                                        <input type="text" class="form-control" id="calle">
-                                    </div>
-                                    <div class="mb-2">
-                                        <label class="form-label">Número</label>
-                                        <input type="number" class="form-control" id="numero">
-                                    </div>
-                                    <div class="mb-2">
-                                        <label class="form-label">Descripción adicional</label>
-                                        <textarea class="form-control" id="descripcion"></textarea>
-                                    </div>
+
                                 </div>
 
                                 <!-- Totales -->
@@ -172,6 +181,47 @@
             </div>
         </div>
     <?php endif; ?>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const form = document.getElementById('form-finalizar-compra');
+
+            const calle = document.getElementById('calle');
+            const numero = document.getElementById('numero');
+            const provincia = document.getElementById('provincia');
+            const descripcion = document.getElementById('descripcion');
+
+            const calle_input = document.getElementById('calle_input');
+            const numero_input = document.getElementById('numero_input');
+            const provincia_input = document.getElementById('provincia_input');
+            const descripcion_input = document.getElementById('descripcion_input');
+
+            const entregaEnvio = document.getElementById('entrega-envio');
+            const formDomicilio = document.getElementById('form-domicilio');
+
+            // Mostrar u ocultar el formulario de domicilio
+            entregaEnvio.addEventListener('change', function() {
+                formDomicilio.classList.remove('d-none');
+            });
+
+            document.getElementById('entrega-retiro').addEventListener('change', function() {
+                formDomicilio.classList.add('d-none');
+            });
+
+            // Antes de enviar el formulario, copiar datos de inputs visibles a ocultos
+            form.addEventListener('submit', function() {
+                provincia_input.value = provincia.value;
+                calle_input.value = calle.value;
+                numero_input.value = numero.value;
+                descripcion_input.value = descripcion.value;
+            });
+        });
+    </script>
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YOUR_HASH" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
     <?php if (session()->getFlashdata('abrir_carrito')): ?>
         <script>
@@ -347,11 +397,6 @@
             }
         });
     </script>
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YOUR_HASH" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-
-
 
 </body>
 

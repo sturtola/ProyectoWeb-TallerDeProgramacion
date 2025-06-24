@@ -69,6 +69,28 @@ $routes->get('carrito/vaciar', 'Carrito_controller::vaciar');
 $routes->post('/pedido/finalizar', 'pedido_controller::finalizar');
 $routes->get('/factura/(:num)', 'factura_controller::ver/$1');
 
-$routes->get('pedidos', 'adminPedido_controller::index');
-$routes->get('pedidos/ver/(:num)', 'adminPedido_controller::ver/$1');
-$routes->post('pedidos/cambiarEstado', 'adminPedido_controller::cambiarEstado');
+$routes->get('adminPedido_controller', 'adminPedido_controller::index');
+$routes->get('adminPedido_controller/ver/(:num)', 'adminPedido_controller::ver/$1');
+$routes->post('adminPedido_controller/cambiarEstado', 'adminPedido_controller::cambiarEstado');
+
+// Productos
+$routes->get('/admin/productos', 'producto_controller::index');
+// Podés agregar más si usás crear, editar, etc.
+
+// Usuarios
+$routes->get('/admin/usuarios', 'usuario_controller::index');
+
+// Consultas
+$routes->get('/admin/consultas', 'consulta_controller::index');
+
+// Pedidos (adminPedidoController)
+$routes->get('/admin/pedidos', 'adminPedido_controller::index');
+$routes->get('/admin/pedidos/ver/(:num)', 'adminPedido_controller::ver/$1');
+$routes->post('/admin/pedidos/cambiarEstado', 'adminPedido_controller::cambiarEstado');
+
+// Facturas (si querés una sección general para admins, además de la factura individual del cliente)
+$routes->get('/admin/facturas/ver/(:num)', 'factura_controller::ver/$1');
+$routes->get('/admin/facturas', 'factura_controller::index');
+
+$routes->get('/admin/index', 'admin::index');
+$routes->get('/admin/recuento', 'admin::recuento');
