@@ -29,14 +29,6 @@
           <input type="password" class="form-control border-0" id="password" style="background-color: rgba(9, 9, 9, 0.87);"
             name="contraseña" rows="3" value="<?= old('contraseña') ?>" required placeholder="Contraseña...">
         </div>
-
-        <div class="form-check mt-2" style="padding-left: 30px; padding-bottom: 10px;">
-          <input class="form-check-input" type="checkbox" name="ingresar_como_admin" id="ingresar_como_admin">
-          <label class="form-check-label text-white" for="ingresar_como_admin">
-            Ingresar como administrador
-          </label>
-        </div>
-
         <button type="submit" class="btn btn-dark btn-lg w-100" style="background-color:  rgba(238, 178, 0, 0.69); font-size: medium;">Ingresar</button>
         <div class="mb-3">
           <p class="text-center mt-3">

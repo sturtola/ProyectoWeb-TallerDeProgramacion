@@ -11,7 +11,7 @@
     </button>
 
     <div class="collapse navbar-collapse justify-content-end" id="navbarContenido">
-      <ul class="navbar-nav align-items-center gap-5">
+      <ul class="navbar-nav align-items-center gap-4">
         <li class="nav-item">
           <a class="nav-link" href="<?= base_url('/#inicio-inicio') ?>">Inicio</a>
         </li>
@@ -43,8 +43,8 @@
             </a>
           </li>
         <?php else: ?>
-          <li class="nav-item" >
-            <a class="nav-link" href="<?= base_url('/IniciarSesion#inicio-sesion') ?>" style="color: rgba(238, 178, 0, 0.81)" >
+          <li class="nav-item iniciar-sesion" >
+            <a class="nav-link" href="<?= base_url('/IniciarSesion#inicio-sesion') ?>" >
               <i class="bi bi-person-circle"></i> Iniciar sesión
             </a>
           </li>
@@ -55,6 +55,5 @@
 </nav>
 </section>
 
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YOUR_HASH" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 

@@ -176,7 +176,7 @@
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-custom fixed-top">
         <div class="container">
-            <a class="navbar-brand d-flex align-items-center" href="#dashboard">
+            <a class="navbar-brand d-flex align-items-center">
                 <img src="../assets/img/nombremarca1.png" alt="Logo Auren" class="logo-navbar">
             </a>
 
@@ -239,44 +239,6 @@
                                 <i class="bi bi-globe"></i> Ver Sitio Web
                             </a>
                         </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Stats Section -->
-    <div class="container">
-        <div class="stats-section">
-            <div class="row" style="justify-content: space-between; padding: 15px">
-                <div class="col-md-2">
-                    <div class="stat-item">
-                        <div class="stat-number" id="totalProductos"><?= $totalProductos ?? 0 ?></div>
-                        <div class="stat-label">Total Productos</div>
-                    </div>
-                </div>
-                <div class="col-md-2">
-                    <div class="stat-item">
-                        <div class="stat-number" id="totalClientes"><?= $totalClientes ?? 0 ?></div>
-                        <div class="stat-label text-center">Total Clientes</div>
-                    </div>
-                </div>
-                <div class="col-md-2">
-                    <div class="stat-item">
-                        <div class="stat-number" id="totalConsultas"><?= $totalConsultas ?? 0 ?></div>
-                        <div class="stat-label">Total Consultas</div>
-                    </div>
-                </div>
-                <div class="col-md-2">
-                    <div class="stat-item">
-                        <div class="stat-number" id="pedidosPendientes"><?= $pedidosPendientes ?? 0 ?></div>
-                        <div class="stat-label">Pedidos Pendientes</div>
-                    </div>
-                </div>
-                <div class="col-md-2">
-                    <div class="stat-item">
-                        <div class="stat-number" id="pedidosEnviados"><?= $pedidosEnviados ?? 0 ?></div>
-                        <div class="stat-label">Pedidos Enviados</div>
                     </div>
                 </div>
             </div>

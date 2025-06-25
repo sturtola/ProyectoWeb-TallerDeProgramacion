@@ -330,7 +330,6 @@
 <!-- JS para el mensaje si el usuario no esta logueado -->
 
 <script>
-    const BASE_URL = "<?= base_url() ?>";
     document.addEventListener("DOMContentLoaded", () => {
         const modal = document.getElementById("modal-producto");
 
